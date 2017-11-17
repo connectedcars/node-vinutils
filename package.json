@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/connectedcars/node-vinutils.git"
   },
-  "author": "",
+  "author": "Connected Cars <oss@connectedcars.io>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/connectedcars/node-vinutils/issues"
