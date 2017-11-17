@@ -1,0 +1,36 @@
+{
+  "name": "vinutils",
+  "version": "1.0.0",
+  "description": "Utilities to extract model and engine information from vin and car description text",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "mocha \"src/**/*.test.js\"",
+    "test-watch": "npm test -- --watch",
+    "cov": "nyc npm test",
+    "cov-watch": "mochista --watch \"src/**/*.test.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connectedcars/node-vinutils.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/connectedcars/node-vinutils/issues"
+  },
+  "homepage": "https://github.com/connectedcars/node-vinutils#readme",
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.4.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-prettier": "^2.1.2",
+    "mocha": "^3.5.0",
+    "mochista": "^0.12.2",
+    "mock-require": "^2.0.2",
+    "nyc": "^11.1.0",
+    "prettier": "^1.5.3",
+    "sinon": "^3.0.0",
+    "unexpected": "^10.33.1"
+  }
+}
