@@ -50,7 +50,8 @@ const Model = {
     KODIAQ: 'Kodiaq',
     OCTAVIA: 'Octavia',
     RAPID: 'Rapid',
-    SUPERB: 'Superb'
+    SUPERB: 'Superb',
+    YETI: 'Yeti'
   },
   [Make.VOLKSWAGEN]: {
     AMAROK: 'Amarok',
@@ -268,6 +269,9 @@ const getModel = car => {
     }
     if (car.name.match(/superb/i)) {
       return Model[Make.SKODA].SUPERB
+    }
+    if (car.name.match(/yeti/i)) {
+      return Model[Make.SKODA].YETI
     }
     if (car.name.match(/amarok/i)) {
       return Model[Make.VOLKSWAGEN].AMAROK
