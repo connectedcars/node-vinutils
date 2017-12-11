@@ -140,25 +140,25 @@ const getMake = car => {
 
 const getModel = car => {
   if (car.name) {
-    if (car.name.match(/(audi a1|(^a1( |$))|audi a1|(^a1( |$)))/i)) {
+    if (car.name.match(/(audi a1|(^a1( |$))|audi s1|(^s1( |$)))/i)) {
       return Model[Make.AUDI].A1
     }
-    if (car.name.match(/(audi a3|(^a3( |$))|audi a3|(^a3( |$))|audi rs3|(^rs3( |$)))/i)) {
+    if (car.name.match(/(audi a3|(^a3( |$))|audi s3|(^s3( |$))|audi rs3|(^rs3( |$)))/i)) {
       return Model[Make.AUDI].A3
     }
-    if (car.name.match(/(audi a4|(^a4( |$))|audi a4|(^a4( |$))|audi rs4|(^rs4( |$)))/i)) {
+    if (car.name.match(/(audi a4|(^a4( |$))|audi s4|(^s4( |$))|audi rs4|(^rs4( |$)))/i)) {
       return Model[Make.AUDI].A4
     }
-    if (car.name.match(/(audi a5|(^a5( |$))|audi a5|(^a5( |$))|audi rs5|(^rs5( |$)))/i)) {
+    if (car.name.match(/(audi a5|(^a5( |$))|audi s5|(^s5( |$))|audi rs5|(^rs5( |$)))/i)) {
       return Model[Make.AUDI].A5
     }
-    if (car.name.match(/(audi a6|(^a6( |$))|audi a6|(^a6( |$))|audi rs6|(^rs6( |$)))/i)) {
+    if (car.name.match(/(audi a6|(^a6( |$))|audi s6|(^s6( |$))|audi rs6|(^rs6( |$)))/i)) {
       return Model[Make.AUDI].A6
     }
-    if (car.name.match(/(audi a7|(^a7( |$))|audi a7|(^a7( |$))|audi rs7|(^rs7( |$)))/i)) {
+    if (car.name.match(/(audi a7|(^a7( |$))|audi s7|(^s7( |$))|audi rs7|(^rs7( |$)))/i)) {
       return Model[Make.AUDI].A7
     }
-    if (car.name.match(/(audi a8|(^a8( |$))|audi a8|(^a8( |$)))/i)) {
+    if (car.name.match(/(audi a8|(^a8( |$))|audi s8|(^s8( |$)))/i)) {
       return Model[Make.AUDI].A8
     }
     if (car.name.match(/(audi q2|(^q2( |$)))/i)) {
@@ -167,10 +167,10 @@ const getModel = car => {
     if (car.name.match(/(audi q3|(^q3( |$)))/i)) {
       return Model[Make.AUDI].Q3
     }
-    if (car.name.match(/(audi q5|(^q5( |$)))/i)) {
+    if (car.name.match(/(audi q5|(^q5( |$))|audi sq5|(^sq5( |$)))/i)) {
       return Model[Make.AUDI].Q5
     }
-    if (car.name.match(/(audi q7|(^q7( |$)))/i)) {
+    if (car.name.match(/(audi q7|(^q7( |$))|audi sq7|(^sq7( |$)))/i)) {
       return Model[Make.AUDI].Q7
     }
     if (car.name.match(/(audi r8|(^r8( |$)))/i)) {
