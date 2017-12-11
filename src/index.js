@@ -38,6 +38,7 @@ const Model = {
     ALTEA: 'Altea',
     ARONA: 'Arona',
     ATECA: 'Ateca',
+    CORDOBA: 'Cordoba',
     IBIZA: 'Ibiza',
     LEON: 'Leon',
     MII: 'Mii',
@@ -50,6 +51,7 @@ const Model = {
     KODIAQ: 'Kodiaq',
     OCTAVIA: 'Octavia',
     RAPID: 'Rapid',
+    ROOMSTER: 'Roomster',
     SUPERB: 'Superb',
     YETI: 'Yeti'
   },
@@ -237,6 +239,9 @@ const getModel = car => {
     if (car.name.match(/ateca/i)) {
       return Model[Make.SEAT].ATECA
     }
+    if (car.name.match(/cordoba/i)) {
+      return Model[Make.SEAT].CORDOBA
+    }
     if (car.name.match(/ibiza/i)) {
       return Model[Make.SEAT].IBIZA
     }
@@ -266,6 +271,9 @@ const getModel = car => {
     }
     if (car.name.match(/rapid/i)) {
       return Model[Make.SKODA].RAPID
+    }
+    if (car.name.match(/roomster/i)) {
+      return Model[Make.SKODA].ROOMSTER
     }
     if (car.name.match(/superb/i)) {
       return Model[Make.SKODA].SUPERB
