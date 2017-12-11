@@ -205,6 +205,11 @@ describe('utils/car', () => {
       'Hybrid'
     )
     expect(
+      getFuelType({ name: 'Audi A8 2.0 TFSI Hybrid 4dr Tip Auto' }),
+      'to be',
+      'Hybrid'
+    )
+    expect(
       getFuelType({ name: 'VW e-Golf 115HK 85kW 1AUT' }),
       'to be',
       'Electric'

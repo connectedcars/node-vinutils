@@ -19,18 +19,6 @@ const Model = {
     Q5: 'Q5',
     Q7: 'Q7',
     R8: 'R8',
-    RS3: 'RS3',
-    RS4: 'RS4',
-    RS5: 'RS5',
-    RS6: 'RS6',
-    RS7: 'RS7',
-    S1: 'S1',
-    S3: 'S3',
-    S4: 'S4',
-    S5: 'S5',
-    S6: 'S6',
-    S7: 'S7',
-    S8: 'S8',
     TT: 'TT'
   },
   [Make.SEAT]: {
@@ -152,25 +140,25 @@ const getMake = car => {
 
 const getModel = car => {
   if (car.name) {
-    if (car.name.match(/(audi a1|(^a1( |$)))/i)) {
+    if (car.name.match(/(audi a1|(^a1( |$))|audi a1|(^a1( |$)))/i)) {
       return Model[Make.AUDI].A1
     }
-    if (car.name.match(/(audi a3|(^a3( |$)))/i)) {
+    if (car.name.match(/(audi a3|(^a3( |$))|audi a3|(^a3( |$))|audi rs3|(^rs3( |$)))/i)) {
       return Model[Make.AUDI].A3
     }
-    if (car.name.match(/(audi a4|(^a4( |$)))/i)) {
+    if (car.name.match(/(audi a4|(^a4( |$))|audi a4|(^a4( |$))|audi rs4|(^rs4( |$)))/i)) {
       return Model[Make.AUDI].A4
     }
-    if (car.name.match(/(audi a5|(^a5( |$)))/i)) {
+    if (car.name.match(/(audi a5|(^a5( |$))|audi a5|(^a5( |$))|audi rs5|(^rs5( |$)))/i)) {
       return Model[Make.AUDI].A5
     }
-    if (car.name.match(/(audi a6|(^a6( |$)))/i)) {
+    if (car.name.match(/(audi a6|(^a6( |$))|audi a6|(^a6( |$))|audi rs6|(^rs6( |$)))/i)) {
       return Model[Make.AUDI].A6
     }
-    if (car.name.match(/(audi a7|(^a7( |$)))/i)) {
+    if (car.name.match(/(audi a7|(^a7( |$))|audi a7|(^a7( |$))|audi rs7|(^rs7( |$)))/i)) {
       return Model[Make.AUDI].A7
     }
-    if (car.name.match(/(audi a8|(^a8( |$)))/i)) {
+    if (car.name.match(/(audi a8|(^a8( |$))|audi a8|(^a8( |$)))/i)) {
       return Model[Make.AUDI].A8
     }
     if (car.name.match(/(audi q2|(^q2( |$)))/i)) {
@@ -187,42 +175,6 @@ const getModel = car => {
     }
     if (car.name.match(/(audi r8|(^r8( |$)))/i)) {
       return Model[Make.AUDI].R8
-    }
-    if (car.name.match(/(audi rs3|(^rs3( |$)))/i)) {
-      return Model[Make.AUDI].RS3
-    }
-    if (car.name.match(/(audi rs4|(^rs4( |$)))/i)) {
-      return Model[Make.AUDI].RS4
-    }
-    if (car.name.match(/(audi rs5|(^rs5( |$)))/i)) {
-      return Model[Make.AUDI].RS5
-    }
-    if (car.name.match(/(audi rs6|(^rs6( |$)))/i)) {
-      return Model[Make.AUDI].RS6
-    }
-    if (car.name.match(/(audi rs7|(^rs7( |$)))/i)) {
-      return Model[Make.AUDI].RS7
-    }
-    if (car.name.match(/(audi s1|(^s1( |$)))/i)) {
-      return Model[Make.AUDI].S1
-    }
-    if (car.name.match(/(audi s3|(^s3( |$)))/i)) {
-      return Model[Make.AUDI].S3
-    }
-    if (car.name.match(/(audi s4|(^s4( |$)))/i)) {
-      return Model[Make.AUDI].S4
-    }
-    if (car.name.match(/(audi s5|(^s5( |$)))/i)) {
-      return Model[Make.AUDI].S5
-    }
-    if (car.name.match(/(audi s6|(^s6( |$)))/i)) {
-      return Model[Make.AUDI].S6
-    }
-    if (car.name.match(/(audi s7|(^s7( |$)))/i)) {
-      return Model[Make.AUDI].S7
-    }
-    if (car.name.match(/(audi s8|(^s8( |$)))/i)) {
-      return Model[Make.AUDI].S8
     }
     if (car.name.match(/(audi tt|(^tt( |$)))/i)) {
       return Model[Make.AUDI].TT
@@ -386,7 +338,7 @@ const getFuelType = car => {
     if (car.name.match(/(e-golf|e-up!|e-up( |$))/i)) {
       return FuelType.ELECTRIC
     }
-    if (car.name.match(/(gte|e-tron)/i)) {
+    if (car.name.match(/(gte|e-tron|hybrid)/i)) {
       return FuelType.HYBRID
     }
     if (car.name.match(/(sdi|tdi)/i)) {
