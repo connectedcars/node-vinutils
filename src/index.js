@@ -299,7 +299,7 @@ const getModel = car => {
     if (car.name.match(/touran/i)) {
       return Model[Make.VOLKSWAGEN].TOURAN
     }
-    if (car.name.match(/(kassevogn|transporter)/i)) {
+    if (car.name.match(/(kassevogn|transporter|vw t6)/i)) {
       return Model[Make.VOLKSWAGEN].TRANSPORTER
     }
     if (car.name.match(/(up!|up( |$))/i)) {
