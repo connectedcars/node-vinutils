@@ -1,11 +1,5 @@
 const expect = require('unexpected')
-const {
-  getMake,
-  getModel,
-  getEngineSize,
-  getFuelType,
-  getYear
-} = require('.')
+const { getMake, getModel, getEngineSize, getFuelType, getYear } = require('.')
 
 describe('utils/car', () => {
   it('runs getMake', () => {

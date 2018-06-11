@@ -22,15 +22,14 @@
   "homepage": "https://github.com/connectedcars/node-vinutils#readme",
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "eslint": "^4.4.0",
+    "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.3.0",
     "eslint-plugin-prettier": "^2.1.2",
-    "mocha": "^3.5.0",
-    "mochista": "^0.12.2",
+    "mocha": "^5.2.0",
     "mock-require": "^2.0.2",
-    "nyc": "^11.1.0",
+    "nyc": "^13.0.0",
     "prettier": "^1.5.3",
-    "sinon": "^3.0.0",
+    "sinon": "^6.0.0",
     "unexpected": "^10.33.1"
   }
 }
