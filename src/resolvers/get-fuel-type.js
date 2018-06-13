@@ -20,19 +20,21 @@ const getFuelTypeFromDescription = description => {
 }
 
 /**
- * This method retrieves the fuel type for a car from the vehicle description
- * (name) or by some predefined rules for specific models.
+ * This method retrieves the fuel type for a vehicle from the description (name)
+ * or by some predefined rules for specific models.
  *
- * @param {{ vin: string, name: string }} car
+ * @param {Object} vehicle
+ * @param {string} vehicle.vin
+ * @param {string} [vehicle.name]
  * @returns {string|null}
  */
-module.exports = car => {
+module.exports = vehicle => {
   let fuelType = null
-  if (car.name) {
-    fuelType = getFuelTypeFromDescription(car.name)
+  if (vehicle.name) {
+    fuelType = getFuelTypeFromDescription(vehicle.name)
   }
   if (!fuelType) {
-    const model = getModel(car)
+    const model = getModel(vehicle)
     if (
       model === Model[Make.SEAT].MII ||
       model === Model[Make.SKODA].CITIGO ||

@@ -191,16 +191,18 @@ const getModelFromDescription = description => {
 }
 
 /**
- * This method retrieves the model for a car from the vehicle VIN or description
+ * This method retrieves the model for a vehicle from the VIN or description
  * (name).
  *
- * @param {{ vin: string, name: string }} car
+ * @param {Object} vehicle
+ * @param {string} vehicle.vin
+ * @param {string} [vehicle.name]
  * @returns {string|null}
  */
-module.exports = car => {
+module.exports = vehicle => {
   let model = null
-  if (car.name) {
-    model = getModelFromDescription(car.name)
+  if (vehicle.name) {
+    model = getModelFromDescription(vehicle.name)
   }
   return model
 }
