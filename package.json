@@ -8,7 +8,7 @@
     "test": "mocha \"src/**/*.test.js\"",
     "test-watch": "npm test -- --watch",
     "cov": "nyc npm test",
-    "cov-watch": "mochista --watch \"src/**/*.test.js\""
+    "integration": "mocha \"src/**/*.it.js\""
   },
   "repository": {
     "type": "git",
