@@ -1,0 +1,4 @@
+fixtures
+tools
+*.it.js
+*.test.js
