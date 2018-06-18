@@ -7,16 +7,18 @@ const getEngineSizeFromDescription = description => {
 }
 
 /**
- * This method retrieves the engine size for a car from the vehicle description
+ * This method retrieves the engine size for a vehicle from the description
  * (name).
  *
- * @param {{ name: string }} car
+ * @param {Object} vehicle
+ * @param {string} vehicle.vin
+ * @param {string} [vehicle.name]
  * @returns {string|null} Formatted as `1.4`
  */
-module.exports = car => {
+module.exports = vehicle => {
   let engineSize = null
-  if (car.name) {
-    engineSize = getEngineSizeFromDescription(car.name)
+  if (vehicle.name) {
+    engineSize = getEngineSizeFromDescription(vehicle.name)
   }
   return engineSize
 }

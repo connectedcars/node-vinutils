@@ -3,6 +3,30 @@ const validateVIN = require('../validators/validate-vin')
 
 const getMakeFromVIN = vin => {
   switch (vin.substr(0, 3)) {
+    case 'TRU':
+    case 'WAU':
+    case 'WA1':
+    case 'WUA':
+    case '93U':
+    case '93V':
+    case '99A':
+      return Make.AUDI
+    case 'ZHW':
+      return Make.LAMBORGHINI
+    case 'WP1':
+    case 'WP0':
+    case 'VP1':
+    case 'EP0':
+    case 'VP0':
+    case 'MP1':
+    case '0P0':
+      return Make.PORSCHE
+    case 'VSS':
+      return Make.SEAT
+    case 'TMB':
+    case 'TMP':
+    case 'TM9':
+      return Make.SKODA
     case 'AAV':
     case 'LFV':
     case 'LSV':
@@ -22,26 +46,18 @@ const getMakeFromVIN = vin => {
     case '8AW':
     case '9BW':
       return Make.VOLKSWAGEN
-    case 'TMB':
-    case 'TMP':
-    case 'TM9':
-      return Make.SKODA
-    case 'TRU':
-    case 'WAU':
-    case 'WA1':
-    case 'WUA':
-    case '93U':
-    case '93V':
-    case '99A':
-      return Make.AUDI
-    case 'VSS':
-      return Make.SEAT
   }
   return null
 }
 const getMakeFromDescription = description => {
   if (description.match(/audi/i)) {
     return Make.AUDI
+  }
+  if (description.match(/lamborghini/i)) {
+    return Make.LAMBORGHINI
+  }
+  if (description.match(/porsche/i)) {
+    return Make.PORSCHE
   }
   if (description.match(/seat/i)) {
     return Make.SEAT
@@ -56,20 +72,22 @@ const getMakeFromDescription = description => {
 }
 
 /**
- * This method retrieves the make of a car from the vehicle VIN or description
+ * This method retrieves the make of a vehicle from the VIN or description
  * (name).
  *
- * @param {{ vin: string, name: string }} car
+ * @param {Object} vehicle
+ * @param {string} vehicle.vin
+ * @param {string} [vehicle.name]
  * @returns {string|null}
  */
-module.exports = car => {
+module.exports = vehicle => {
   let make = null
-  if (validateVIN(car.vin)) {
-    make = getMakeFromVIN(car.vin)
+  if (validateVIN(vehicle.vin)) {
+    make = getMakeFromVIN(vehicle.vin)
   }
   if (!make) {
-    if (car.name) {
-      make = getMakeFromDescription(car.name)
+    if (vehicle.name) {
+      make = getMakeFromDescription(vehicle.name)
     }
   }
   return make
