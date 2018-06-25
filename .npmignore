@@ -2,3 +2,4 @@ fixtures
 tools
 *.it.js
 *.test.js
+ESStatistikListeModtag*.json
