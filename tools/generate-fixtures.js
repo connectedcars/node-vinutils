@@ -2,6 +2,7 @@ const fs = require('fs')
 const es = require('event-stream')
 const validateVIN = require('../src/validators/validate-vin')
 
+var vinStream = fs.createWriteStream('./fixtures/vin.json')
 var makeStream = fs.createWriteStream('./fixtures/vin-to-make.json')
 // var modelStream = fs.createWriteStream('./fixtures/vin-to-model.json')
 var yearStream = fs.createWriteStream('./fixtures/vin-to-year.json')
@@ -20,6 +21,15 @@ let s = fs
         if (line) {
           const data = JSON.parse(line)
           const vin = data.vin
+
+          if (data.modelYear && data.modelYear >= 1980) {
+            if (vinStream.bytesWritten < 10 * 1024 * 1024) {
+              let hasEntries =
+                vinStream.bytesWritten || vinStream.writableLength
+              vinStream.write(`${hasEntries ? ',' : '['}"${vin}"`)
+            }
+          }
+
           switch (vin.substr(0, 3)) {
             case 'TRU':
             case 'WAU':
@@ -128,6 +138,8 @@ let s = fs
         throw err
       })
       .on('end', function() {
+        vinStream.write(']\n')
+        vinStream.end()
         makeStream.write('}\n')
         makeStream.end()
         // modelStream.write('}\n')

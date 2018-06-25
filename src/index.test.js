@@ -1,7 +1,7 @@
 const expect = require('unexpected')
 const { getMake, getModel, getEngineSize, getFuelType, getYear } = require('.')
 
-describe('utils/car', () => {
+describe('index', () => {
   it('runs getMake', () => {
     expect(getMake({ vin: 'AAVZZZAAZFD123456' }), 'to be', 'Volkswagen')
     expect(getMake({ vin: 'LFVZZZAAZFD123456' }), 'to be', 'Volkswagen')
