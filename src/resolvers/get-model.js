@@ -181,7 +181,7 @@ const getModelFromDescription = description => {
   if (description.match(/touran/i)) {
     return Model[Make.VOLKSWAGEN].TOURAN
   }
-  if (description.match(/(kassevogn|transporter)/i)) {
+  if (description.match(/(kassevogn|transporter|vw t5|vw t6)/i)) {
     return Model[Make.VOLKSWAGEN].TRANSPORTER
   }
   if (description.match(/(up!|up( |$))/i)) {

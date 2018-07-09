@@ -136,6 +136,207 @@ describe('index', () => {
     expect(getModel({ name: 'Bogus CCS' }), 'to be null')
     expect(getModel({ name: 'bogus' }), 'to be null')
     expect(getModel({}), 'to be null')
+
+    expect(
+      getModel({
+        vin: 'WV3ZZZ7JZJX025243',
+        name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({
+        vin: 'WV3ZZZ7JZJX025196',
+        name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({
+        vin: 'WV3ZZZ7JZJX025248',
+        name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({
+        vin: 'WV3ZZZ7JZJX025285',
+        name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({
+        vin: 'WV3ZZZ7JZJX025288',
+        name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({
+        vin: 'WV3ZZZ7JZJX025167',
+        name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({
+        vin: 'WV3ZZZ7JZJX024941',
+        name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({
+        vin: 'WV3ZZZ7JZJX025210',
+        name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({
+        vin: 'WV1ZZZ7JZGX007903',
+        name: 'VW T6 Lang Enka 2,0TDI 102hk 5G'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({
+        vin: 'WV3ZZZ7JZFX011455',
+        name: 'VW T5 CHASSIS LANG 2,0 TDI 140 HK BMT 6G'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({
+        vin: 'WV1ZZZ7JZGX013128',
+        name: 'VW T6 Kort Enka 2,0TDI 84hk 5G'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({
+        vin: 'WV1ZZZ2FZG7008327',
+        name: 'VW Crafter 35 Enka 4325mm 2,0 TDI 136 hk'
+      }),
+      'to be',
+      'Crafter'
+    )
+    expect(
+      getModel({
+        vin: 'WV3ZZZ7JZGX017632',
+        name: 'VW T6 Lang Enka 2,0TDI 102hk 5G'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({
+        vin: 'WV1ZZZ2FZG7008368',
+        name: 'VW Crafter 35 Enka 4325mm 2,0 TDI 136 hk'
+      }),
+      'to be',
+      'Crafter'
+    )
+    expect(
+      getModel({
+        vin: 'WV1ZZZ7JZGX017649',
+        name: 'VW T6 Kort Enka 2,0TDI 84hk 5G'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({
+        vin: 'WV3ZZZ7JZGX017668',
+        name: 'VW T6 Lang Enka 2,0TDI 102hk 5G'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({
+        vin: 'WV3ZZZ7JZFX020998',
+        name: 'VW T5 CHASSIS LANG 2,0 TDI 140 HK BMT DSG7'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({
+        vin: 'WV3ZZZ7JZFX021129',
+        name: 'VW T5 CHASSIS LANG 2,0 TDI 140 HK BMT DSG7'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({
+        vin: 'WV3ZZZ7JZGX017676',
+        name: 'VW T6 Lang Enka 2,0TDI 102hk 5G'
+      }),
+      'to be',
+      'Transporter'
+    )
+    expect(
+      getModel({ vin: 'VF7YDDMFC11473862', name: 'Citroen Jumper' }),
+      'to be',
+      null
+    )
+    expect(
+      getModel({ vin: 'WF0FXXTTFF9M76528', name: 'Ford Transit' }),
+      'to be',
+      null
+    )
+    expect(
+      getModel({ vin: 'ZFA26300006159840', name: 'Fiat Doblo' }),
+      'to be',
+      null
+    )
+    expect(
+      getModel({ vin: 'ZFA25000001989139', name: 'Fiat Ducato' }),
+      'to be',
+      null
+    )
+    expect(
+      getModel({ vin: 'TYBFB83BD4DU19451', name: 'Mitsubishi Canter' }),
+      'to be',
+      null
+    )
+    expect(
+      getModel({
+        vin: 'WV1ZZZ2FZG7009218',
+        name: 'VW Crafter 35 Enka 4325mm 2,0 TDI 136 hk'
+      }),
+      'to be',
+      'Crafter'
+    )
+    expect(
+      getModel({ vin: 'WF0FXXTTFF9M78256', name: 'Ford Transit' }),
+      'to be',
+      null
+    )
+    expect(
+      getModel({ vin: 'VNVV2U4S151094656', name: 'Nissan NV400' }),
+      'to be',
+      null
+    )
+    expect(
+      getModel({ vin: 'ZFA25000002A17538', name: 'Fiat Ducato' }),
+      'to be',
+      null
+    )
   })
 
   it('runs getEngineSize', () => {
