@@ -76,7 +76,6 @@ const getMakeFromVIN = vin => {
     case 'MCA':
     case 'SUF':
     case 'ZFA':
-    case 'ZFC':
     case '2FA':
     case '8AP':
     case '9BD':
@@ -152,6 +151,7 @@ const getMakeFromVIN = vin => {
       return Make.ISUZU
     case 'WJM':
     case 'ZCF':
+    case 'ZFC':
       return Make.IVECO
     case 'SAD':
     case 'SAJ':
@@ -236,6 +236,7 @@ const getMakeFromVIN = vin => {
     case 'MDH':
     case 'MNT':
     case 'SJN':
+    case 'VNV':
     case 'VSK':
     case 'VWA':
     case '5N1':
