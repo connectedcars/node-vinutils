@@ -2,7 +2,7 @@ const Make = require('../constants/make')
 const validateVIN = require('../validators/validate-vin')
 
 const getMakeFromVIN = vin => {
-  switch (vin.substr(0, 3)) {
+  switch (vin.substr(0, 3).toUpperCase()) {
     case 'ZAR':
       return Make.ALFA_ROMEO
     case 'SCF':
