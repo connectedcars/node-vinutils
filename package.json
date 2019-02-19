@@ -21,16 +21,16 @@
   },
   "homepage": "https://github.com/connectedcars/node-vinutils#readme",
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.3.0",
-    "eslint-plugin-prettier": "^2.1.2",
-    "event-stream": "^3.3.4",
-    "mocha": "^5.2.0",
-    "mock-require": "^2.0.2",
-    "nyc": "^13.0.0",
-    "prettier": "^1.5.3",
-    "sinon": "^6.0.0",
-    "unexpected": "^10.33.1"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.14.1",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "event-stream": "^4.0.1",
+    "mocha": "^6.0.0",
+    "mock-require": "^3.0.3",
+    "nyc": "^13.3.0",
+    "prettier": "^1.16.4",
+    "sinon": "^7.2.4",
+    "unexpected": "^11.0.1"
   }
 }
