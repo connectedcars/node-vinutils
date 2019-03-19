@@ -43,11 +43,14 @@ const getModelFromDescription = description => {
   if (description.match(/(audi a8|(^a8( |$))|audi s8|(^s8( |$)))/i)) {
     return Model[Make.AUDI].A8
   }
-  if (description.match(/(audi q2|(^q2( |$)))/i)) {
+  if (description.match(/(audi q2|(^q2( |$))|audi sq2|(^sq2( |$)))/i)) {
     return Model[Make.AUDI].Q2
   }
-  if (description.match(/(audi q3|(^q3( |$)))/i)) {
+  if (description.match(/(audi q3|(^q3( |$))|audi sq3|(^sq3( |$)))/i)) {
     return Model[Make.AUDI].Q3
+  }
+  if (description.match(/(audi q4|(^q4( |$))|audi sq4|(^sq4( |$)))/i)) {
+    return Model[Make.AUDI].Q4
   }
   if (description.match(/(audi q5|(^q5( |$))|audi sq5|(^sq5( |$)))/i)) {
     return Model[Make.AUDI].Q5
@@ -55,11 +58,17 @@ const getModelFromDescription = description => {
   if (description.match(/(audi q7|(^q7( |$))|audi sq7|(^sq7( |$)))/i)) {
     return Model[Make.AUDI].Q7
   }
+  if (description.match(/(audi q8|(^q8( |$))|audi sq8|(^sq8( |$)))/i)) {
+    return Model[Make.AUDI].Q8
+  }
   if (description.match(/(audi r8|(^r8( |$)))/i)) {
     return Model[Make.AUDI].R8
   }
   if (description.match(/(audi tt|(^tt( |$)))/i)) {
     return Model[Make.AUDI].TT
+  }
+  if (description.match(/(audi e-tron|(^e-tron( |$)))/i)) {
+    return Model[Make.AUDI].ETRON
   }
   if (description.match(/alhambra/i)) {
     return Model[Make.SEAT].ALHAMBRA
@@ -85,6 +94,9 @@ const getModelFromDescription = description => {
   if (description.match(/mii/i)) {
     return Model[Make.SEAT].MII
   }
+  if (description.match(/tarraco/i)) {
+    return Model[Make.SEAT].TARRACO
+  }
   if (description.match(/toledo/i)) {
     return Model[Make.SEAT].TOLEDO
   }
@@ -93,6 +105,9 @@ const getModelFromDescription = description => {
   }
   if (description.match(/fabia/i)) {
     return Model[Make.SKODA].FABIA
+  }
+  if (description.match(/kamiq/i)) {
+    return Model[Make.SKODA].KAMIQ
   }
   if (description.match(/karoq/i)) {
     return Model[Make.SKODA].KAROQ
@@ -108,6 +123,9 @@ const getModelFromDescription = description => {
   }
   if (description.match(/roomster/i)) {
     return Model[Make.SKODA].ROOMSTER
+  }
+  if (description.match(/scala/i)) {
+    return Model[Make.SKODA].SCALA
   }
   if (description.match(/superb/i)) {
     return Model[Make.SKODA].SUPERB
@@ -126,6 +144,9 @@ const getModelFromDescription = description => {
   }
   if (description.match(/caddy/i)) {
     return Model[Make.VOLKSWAGEN].CADDY
+  }
+  if (description.match(/grand california/i)) {
+    return Model[Make.VOLKSWAGEN].GRAND_CALIFORNIA
   }
   if (description.match(/california/i)) {
     return Model[Make.VOLKSWAGEN].CALIFORNIA
@@ -168,6 +189,9 @@ const getModelFromDescription = description => {
   }
   if (description.match(/sharan/i)) {
     return Model[Make.VOLKSWAGEN].SHARAN
+  }
+  if (description.match(/(tcross|t-cross|t cross)/i)) {
+    return Model[Make.VOLKSWAGEN].TCROSS
   }
   if (description.match(/(troc|t-roc|t roc)/i)) {
     return Model[Make.VOLKSWAGEN].TROC

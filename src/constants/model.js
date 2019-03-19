@@ -11,10 +11,13 @@ module.exports = {
     A8: 'A8',
     Q2: 'Q2',
     Q3: 'Q3',
+    Q4: 'Q4',
     Q5: 'Q5',
     Q7: 'Q7',
+    Q8: 'Q8',
     R8: 'R8',
-    TT: 'TT'
+    TT: 'TT',
+    ETRON: 'e-tron'
   },
   [Make.SEAT]: {
     ALHAMBRA: 'Alhambra',
@@ -25,16 +28,19 @@ module.exports = {
     IBIZA: 'Ibiza',
     LEON: 'Leon',
     MII: 'Mii',
+    TARRACO: 'Tarraco',
     TOLEDO: 'Toledo'
   },
   [Make.SKODA]: {
     CITIGO: 'Citigo',
     FABIA: 'Fabia',
+    KAMIQ: 'Kamiq',
     KAROQ: 'Karoq',
     KODIAQ: 'Kodiaq',
     OCTAVIA: 'Octavia',
     RAPID: 'Rapid',
     ROOMSTER: 'Roomster',
+    SCALA: 'Scala',
     SUPERB: 'Superb',
     YETI: 'Yeti'
   },
@@ -50,6 +56,7 @@ module.exports = {
     EOS: 'Eos',
     FOX: 'Fox',
     GOLF: 'Golf',
+    GRAND_CALIFORNIA: 'Grand California',
     JETTA: 'Jetta',
     LUPO: 'Lupo',
     PASSAT: 'Passat',
@@ -57,6 +64,7 @@ module.exports = {
     MULTIVAN: 'Multivan',
     SCIROCCO: 'Scirocco',
     SHARAN: 'Sharan',
+    TCROSS: 'T-Cross',
     TROC: 'T-Roc',
     TIGUAN: 'Tiguan',
     TOUAREG: 'Touareg',

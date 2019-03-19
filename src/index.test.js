@@ -168,6 +168,8 @@ describe('index', () => {
     expect(getModel({ name: 'Audi SQ7' }), 'to be', 'Q7')
     expect(getModel({ name: 'up!' }), 'to be', 'up!')
     expect(getModel({ name: 'Volkswagen CC' }), 'to be', 'CC')
+    expect(getModel({ name: 'California' }), 'to be', 'California')
+    expect(getModel({ name: 'Grand California' }), 'to be', 'Grand California')
     expect(getModel({ name: 'Bogus CCS' }), 'to be null')
     expect(getModel({ name: 'bogus' }), 'to be null')
     expect(getModel({}), 'to be null')
@@ -443,6 +445,7 @@ describe('index', () => {
       'to be',
       'Hybrid'
     )
+    expect(getFuelType({ name: 'Audi e-tron 55 quattro' }), 'to be', 'Electric')
     expect(
       getFuelType({ name: 'VW e-Golf 115HK 85kW 1AUT' }),
       'to be',
