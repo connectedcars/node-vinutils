@@ -250,6 +250,7 @@ const getMakeFromVIN = vin => {
     case '2G3':
       return Make.OLDSMOBILE
     case 'SKF':
+    case 'VN1':
     case 'VSX':
     case 'W0L':
     case 'W0V':
