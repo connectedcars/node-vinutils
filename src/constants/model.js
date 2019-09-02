@@ -19,6 +19,45 @@ module.exports = {
     TT: 'TT',
     ETRON: 'e-tron'
   },
+  [Make.CITROEN]: {
+    BERLINGO: 'Berlingo',
+    JUMPER: 'Jumper',
+    JUMPY: 'Jumpy'
+  },
+  [Make.DACIA]: {
+    DOKKER: 'Dokker'
+  },
+  [Make.FIAT]: {
+    DUCATO: 'Ducato',
+    DOBLO: 'Doblò'
+  },
+  [Make.FORD]: {
+    C_MAX: 'C-MAX',
+    MONDEO: 'Mondeo',
+    TRANSIT: 'Transit'
+  },
+  [Make.IVECO]: {
+    DAILY: 'Daily'
+  },
+  [Make.MERCEDES_BENZ]: {
+    SPRINTER: 'Sprinter',
+    VITO: 'Vito'
+  },
+  [Make.NISSAN]: {
+    NV400: 'NV400'
+  },
+  [Make.OPEL]: {
+    VIVARO: 'Vivaro',
+    ZAFIRA: 'Zafira'
+  },
+  [Make.PEUGEOT]: {
+    EXPERT: 'Expert',
+    PARTNER: 'Partner'
+  },
+  [Make.RENAULT]: {
+    KANGOO: 'Kangoo',
+    MASTER: 'Master'
+  },
   [Make.SEAT]: {
     ALHAMBRA: 'Alhambra',
     ALTEA: 'Altea',
@@ -44,10 +83,14 @@ module.exports = {
     SUPERB: 'Superb',
     YETI: 'Yeti'
   },
+  [Make.TOYOTA]: {
+    HIACE: 'Hiace'
+  },
   [Make.VOLKSWAGEN]: {
     AMAROK: 'Amarok',
     ARTEON: 'Arteon',
     BEETLE: 'Beetle',
+    BORA: 'Bora',
     CADDY: 'Caddy',
     CALIFORNIA: 'California',
     CARAVELLE: 'Caravelle',
@@ -60,6 +103,7 @@ module.exports = {
     JETTA: 'Jetta',
     LUPO: 'Lupo',
     PASSAT: 'Passat',
+    PHAETON: 'Phaeton',
     POLO: 'Polo',
     MULTIVAN: 'Multivan',
     SCIROCCO: 'Scirocco',
