@@ -1,21 +1,16 @@
 {
-  "parser": "babel-eslint",
-  "extends": [
-    "prettier"
-  ],
-  "plugins": [
-    "prettier"
-  ],
+  "extends": ["plugin:prettier/recommended"],	
   "parserOptions": {
-    "ecmaVersion": 2016,
-    "sourceType": "module"
+    "ecmaVersion": 2018
   },
   "rules": {
-    "no-unused-vars": "warn",
+    "no-unused-vars": "error",
     "prettier/prettier": ["error", {
+      "printWidth": 120,
       "singleQuote": true,
       "semi": false
-    }]
+    }],
+    "curly": "error"
   },
   "env": {
     "es6": true,

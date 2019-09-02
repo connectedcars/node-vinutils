@@ -2,9 +2,7 @@ const expect = require('unexpected')
 const fs = require('fs')
 const getYear = require('./get-year')
 
-const fixture = JSON.parse(
-  fs.readFileSync('./fixtures/vin-to-year.json', 'utf8')
-)
+const fixture = JSON.parse(fs.readFileSync('./fixtures/vin-to-year.json', 'utf8'))
 
 const skippedVINs = [
   'TRUZZZ8J981024811',
@@ -145,12 +143,7 @@ describe('resolvers/get-year', () => {
         continue
       }
       it(`gets model year close to ${fixture[vin]} from ${vin}`, () => {
-        expect(
-          getYear({ vin }),
-          'to be within',
-          fixture[vin] - 1,
-          fixture[vin] + 1
-        )
+        expect(getYear({ vin }), 'to be within', fixture[vin] - 1, fixture[vin] + 1)
       })
     }
   })

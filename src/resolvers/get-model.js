@@ -5,39 +5,19 @@ const getModelFromDescription = description => {
   if (description.match(/(audi a1|(^a1( |$))|audi s1|(^s1( |$)))/i)) {
     return Model[Make.AUDI].A1
   }
-  if (
-    description.match(
-      /(audi a3|(^a3( |$))|audi s3|(^s3( |$))|audi rs3|(^rs3( |$)))/i
-    )
-  ) {
+  if (description.match(/(audi a3|(^a3( |$))|audi s3|(^s3( |$))|audi rs3|(^rs3( |$)))/i)) {
     return Model[Make.AUDI].A3
   }
-  if (
-    description.match(
-      /(audi a4|(^a4( |$))|audi s4|(^s4( |$))|audi rs4|(^rs4( |$)))/i
-    )
-  ) {
+  if (description.match(/(audi a4|(^a4( |$))|audi s4|(^s4( |$))|audi rs4|(^rs4( |$)))/i)) {
     return Model[Make.AUDI].A4
   }
-  if (
-    description.match(
-      /(audi a5|(^a5( |$))|audi s5|(^s5( |$))|audi rs5|(^rs5( |$)))/i
-    )
-  ) {
+  if (description.match(/(audi a5|(^a5( |$))|audi s5|(^s5( |$))|audi rs5|(^rs5( |$)))/i)) {
     return Model[Make.AUDI].A5
   }
-  if (
-    description.match(
-      /(audi a6|(^a6( |$))|audi s6|(^s6( |$))|audi rs6|(^rs6( |$)))/i
-    )
-  ) {
+  if (description.match(/(audi a6|(^a6( |$))|audi s6|(^s6( |$))|audi rs6|(^rs6( |$)))/i)) {
     return Model[Make.AUDI].A6
   }
-  if (
-    description.match(
-      /(audi a7|(^a7( |$))|audi s7|(^s7( |$))|audi rs7|(^rs7( |$)))/i
-    )
-  ) {
+  if (description.match(/(audi a7|(^a7( |$))|audi s7|(^s7( |$))|audi rs7|(^rs7( |$)))/i)) {
     return Model[Make.AUDI].A7
   }
   if (description.match(/(audi a8|(^a8( |$))|audi s8|(^s8( |$)))/i)) {
