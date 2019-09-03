@@ -2,9 +2,7 @@ const expect = require('unexpected')
 const fs = require('fs')
 const getMake = require('./get-make')
 
-const fixture = JSON.parse(
-  fs.readFileSync('./fixtures/vin-to-make.json', 'utf8')
-)
+const fixture = JSON.parse(fs.readFileSync('./fixtures/vin-to-make.json', 'utf8'))
 
 const skippedVINs = [
   'WDBADK7103C783435',

@@ -1,5 +1,5 @@
 const expect = require('unexpected')
-const { getMake, getModel, getEngineSize, getFuelType, getYear } = require('.')
+const { getMake, getEngineSize, getFuelType, getYear } = require('.')
 
 describe('index', () => {
   it('runs getMake', () => {
@@ -91,289 +91,15 @@ describe('index', () => {
     expect(getMake({ name: 'SEAT' }), 'to be', 'SEAT')
     expect(getMake({ name: 'Seat' }), 'to be', 'SEAT')
     expect(getMake({ name: ' seat something' }), 'to be', 'SEAT')
-    expect(
-      getMake({ vin: 'WVWZZZAAZFD123456', name: 'Audi' }),
-      'to be',
-      'Volkswagen'
-    )
-    expect(
-      getMake({ vin: 'TMBJE73T3E9123456', name: 'Audi' }),
-      'to be',
-      'Škoda'
-    )
-    expect(
-      getMake({ vin: 'WAUZZZ8V1H1123456', name: 'Volkswagen' }),
-      'to be',
-      'Audi'
-    )
+    expect(getMake({ vin: 'WVWZZZAAZFD123456', name: 'Audi' }), 'to be', 'Volkswagen')
+    expect(getMake({ vin: 'TMBJE73T3E9123456', name: 'Audi' }), 'to be', 'Škoda')
+    expect(getMake({ vin: 'WAUZZZ8V1H1123456', name: 'Volkswagen' }), 'to be', 'Audi')
     expect(getMake({ vin: 'VSSZZZ5FZGR123456', name: 'Audi' }), 'to be', 'SEAT')
     expect(getMake({ vin: 'VSSbogus', name: 'Audi' }), 'to be', 'Audi')
     expect(getMake({ vin: 'AAAUNKNOWNMAKEAAA' }), 'to be null')
     expect(getMake({ vin: 'VSS-invalid-vin' }), 'to be null')
     expect(getMake({ name: 'bogus' }), 'to be null')
     expect(getMake({}), 'to be null')
-  })
-
-  it('runs getModel', () => {
-    expect(
-      getModel({ name: 'VW Touran CL 1,4TSI 150HK DSG7 BMT 110kW' }),
-      'to be',
-      'Touran'
-    )
-    expect(getModel({ name: 'MOVE UP! 1,0MPI 60HK 5G BMT ' }), 'to be', 'up!')
-    expect(
-      getModel({ name: 'SKODA Octavia HB Style 1,4 TSI 150 HK DSG' }),
-      'to be',
-      'Octavia'
-    )
-    expect(
-      getModel({ name: 'VW PASSAT VAR COMF. 1,6TDI 105HK 6G' }),
-      'to be',
-      'Passat'
-    )
-    expect(
-      getModel({ name: 'VW POLO COMF 1,6TDI 90HK 5G BMT 66KW' }),
-      'to be',
-      'Polo'
-    )
-    expect(getModel({ name: 'VW move up 1,0MPI 60HK 5G BMT' }), 'to be', 'up!')
-    expect(
-      getModel({ name: 'TOLEDO STYLE 1,2 TSI 105HK 6 G' }),
-      'to be',
-      'Toledo'
-    )
-    expect(
-      getModel({ name: 'SKODA Superb Combi Style 2,0 TDI 150 hk DSG' }),
-      'to be',
-      'Superb'
-    )
-    expect(getModel({ name: 'Tiguan' }), 'to be', 'Tiguan')
-    expect(
-      getModel({ name: 'VW Golf Var Allstar 1,4TSI 125HK 6G BMT' }),
-      'to be',
-      'Golf'
-    )
-    expect(getModel({ name: 'Golf ' }), 'to be', 'Golf')
-    expect(
-      getModel({ name: 'VW Sharan HL 2,0TDI 184hk DSG6 BMT SCR 135k' }),
-      'to be',
-      'Sharan'
-    )
-    expect(getModel({ name: 'a4' }), 'to be', 'A4')
-    expect(getModel({ name: 'NotA4' }), 'to be null')
-    expect(getModel({ name: 'Audi A3' }), 'to be', 'A3')
-    expect(getModel({ name: 'Audi S3' }), 'to be', 'A3')
-    expect(getModel({ name: 'Audi RS5' }), 'to be', 'A5')
-    expect(getModel({ name: 'Audi Q7' }), 'to be', 'Q7')
-    expect(getModel({ name: 'Audi SQ7' }), 'to be', 'Q7')
-    expect(getModel({ name: 'up!' }), 'to be', 'up!')
-    expect(getModel({ name: 'Volkswagen CC' }), 'to be', 'CC')
-    expect(getModel({ name: 'California' }), 'to be', 'California')
-    expect(getModel({ name: 'Grand California' }), 'to be', 'Grand California')
-    expect(getModel({ name: 'Bogus CCS' }), 'to be null')
-    expect(getModel({ name: 'bogus' }), 'to be null')
-    expect(getModel({}), 'to be null')
-
-    expect(
-      getModel({
-        vin: 'WV3ZZZ7JZJX025243',
-        name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({
-        vin: 'WV3ZZZ7JZJX025196',
-        name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({
-        vin: 'WV3ZZZ7JZJX025248',
-        name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({
-        vin: 'WV3ZZZ7JZJX025285',
-        name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({
-        vin: 'WV3ZZZ7JZJX025288',
-        name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({
-        vin: 'WV3ZZZ7JZJX025167',
-        name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({
-        vin: 'WV3ZZZ7JZJX024941',
-        name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({
-        vin: 'WV3ZZZ7JZJX025210',
-        name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({
-        vin: 'WV1ZZZ7JZGX007903',
-        name: 'VW T6 Lang Enka 2,0TDI 102hk 5G'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({
-        vin: 'WV3ZZZ7JZFX011455',
-        name: 'VW T5 CHASSIS LANG 2,0 TDI 140 HK BMT 6G'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({
-        vin: 'WV1ZZZ7JZGX013128',
-        name: 'VW T6 Kort Enka 2,0TDI 84hk 5G'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({
-        vin: 'WV1ZZZ2FZG7008327',
-        name: 'VW Crafter 35 Enka 4325mm 2,0 TDI 136 hk'
-      }),
-      'to be',
-      'Crafter'
-    )
-    expect(
-      getModel({
-        vin: 'WV3ZZZ7JZGX017632',
-        name: 'VW T6 Lang Enka 2,0TDI 102hk 5G'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({
-        vin: 'WV1ZZZ2FZG7008368',
-        name: 'VW Crafter 35 Enka 4325mm 2,0 TDI 136 hk'
-      }),
-      'to be',
-      'Crafter'
-    )
-    expect(
-      getModel({
-        vin: 'WV1ZZZ7JZGX017649',
-        name: 'VW T6 Kort Enka 2,0TDI 84hk 5G'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({
-        vin: 'WV3ZZZ7JZGX017668',
-        name: 'VW T6 Lang Enka 2,0TDI 102hk 5G'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({
-        vin: 'WV3ZZZ7JZFX020998',
-        name: 'VW T5 CHASSIS LANG 2,0 TDI 140 HK BMT DSG7'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({
-        vin: 'WV3ZZZ7JZFX021129',
-        name: 'VW T5 CHASSIS LANG 2,0 TDI 140 HK BMT DSG7'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({
-        vin: 'WV3ZZZ7JZGX017676',
-        name: 'VW T6 Lang Enka 2,0TDI 102hk 5G'
-      }),
-      'to be',
-      'Transporter'
-    )
-    expect(
-      getModel({ vin: 'VF7YDDMFC11473862', name: 'Citroen Jumper' }),
-      'to be',
-      null
-    )
-    expect(
-      getModel({ vin: 'WF0FXXTTFF9M76528', name: 'Ford Transit' }),
-      'to be',
-      null
-    )
-    expect(
-      getModel({ vin: 'ZFA26300006159840', name: 'Fiat Doblo' }),
-      'to be',
-      null
-    )
-    expect(
-      getModel({ vin: 'ZFA25000001989139', name: 'Fiat Ducato' }),
-      'to be',
-      null
-    )
-    expect(
-      getModel({ vin: 'TYBFB83BD4DU19451', name: 'Mitsubishi Canter' }),
-      'to be',
-      null
-    )
-    expect(
-      getModel({
-        vin: 'WV1ZZZ2FZG7009218',
-        name: 'VW Crafter 35 Enka 4325mm 2,0 TDI 136 hk'
-      }),
-      'to be',
-      'Crafter'
-    )
-    expect(
-      getModel({ vin: 'WF0FXXTTFF9M78256', name: 'Ford Transit' }),
-      'to be',
-      null
-    )
-    expect(
-      getModel({ vin: 'VNVV2U4S151094656', name: 'Nissan NV400' }),
-      'to be',
-      null
-    )
-    expect(
-      getModel({ vin: 'ZFA25000002A17538', name: 'Fiat Ducato' }),
-      'to be',
-      null
-    )
   })
 
   it('runs getEngineSize', () => {
@@ -390,77 +116,25 @@ describe('index', () => {
   })
 
   it('runs getFuelType', () => {
-    expect(
-      getFuelType({ name: 'Passat Var HL 2,0TSI 280HK DSG6 4M BMT' }),
-      'to be',
-      'Gasoline'
-    )
-    expect(
-      getFuelType({ name: 'Tiguan CL 2,0TDI 150HK DSG7 BMT SCR' }),
-      'to be',
-      'Diesel'
-    )
-    expect(
-      getFuelType({ name: 'tiguan cl 2,0tdi 150hk dsg7 bmt scr' }),
-      'to be',
-      'Diesel'
-    )
-    expect(
-      getFuelType({ name: 'Audi A3 Cab Sport 1,4 TFSI 150 HK' }),
-      'to be',
-      'Gasoline'
-    )
-    expect(
-      getFuelType({ name: 'high up! 1,0MPI 75HK 5G BMT 55kW' }),
-      'to be',
-      'Gasoline'
-    )
-    expect(
-      getFuelType({ name: 'HIGH UP 1,0MPI 75HK 5G BMT 55kW' }),
-      'to be',
-      'Gasoline'
-    )
-    expect(
-      getFuelType({ name: 'VW move up! 1,0 60HK 5G' }),
-      'to be',
-      'Gasoline'
-    )
-    expect(
-      getFuelType({ name: 'VW PASSAT L COMF 2,0L FSI 150 HK 110KW 6G' }),
-      'to be',
-      'Gasoline'
-    )
-    expect(
-      getFuelType({ name: 'VW Golf Limo GTE 1,4TSI 204HK Hybrid DSG6' }),
-      'to be',
-      'Hybrid'
-    )
-    expect(
-      getFuelType({ name: 'Audi A3 e-tron Sport 1,4 TFSI 150 HK' }),
-      'to be',
-      'Hybrid'
-    )
-    expect(
-      getFuelType({ name: 'Audi A8 2.0 TFSI Hybrid 4dr Tip Auto' }),
-      'to be',
-      'Hybrid'
-    )
+    expect(getFuelType({ name: 'Passat Var HL 2,0TSI 280HK DSG6 4M BMT' }), 'to be', 'Gasoline')
+    expect(getFuelType({ name: 'Tiguan CL 2,0TDI 150HK DSG7 BMT SCR' }), 'to be', 'Diesel')
+    expect(getFuelType({ name: 'tiguan cl 2,0tdi 150hk dsg7 bmt scr' }), 'to be', 'Diesel')
+    expect(getFuelType({ name: 'Audi A3 Cab Sport 1,4 TFSI 150 HK' }), 'to be', 'Gasoline')
+    expect(getFuelType({ name: 'high up! 1,0MPI 75HK 5G BMT 55kW' }), 'to be', 'Gasoline')
+    expect(getFuelType({ name: 'HIGH UP 1,0MPI 75HK 5G BMT 55kW' }), 'to be', 'Gasoline')
+    expect(getFuelType({ name: 'VW move up! 1,0 60HK 5G' }), 'to be', 'Gasoline')
+    expect(getFuelType({ name: 'VW PASSAT L COMF 2,0L FSI 150 HK 110KW 6G' }), 'to be', 'Gasoline')
+    expect(getFuelType({ name: 'VW Golf Limo GTE 1,4TSI 204HK Hybrid DSG6' }), 'to be', 'Hybrid')
+    expect(getFuelType({ name: 'Audi A3 e-tron Sport 1,4 TFSI 150 HK' }), 'to be', 'Hybrid')
+    expect(getFuelType({ name: 'Audi A8 2.0 TFSI Hybrid 4dr Tip Auto' }), 'to be', 'Hybrid')
     expect(getFuelType({ name: 'Audi e-tron 55 quattro' }), 'to be', 'Electric')
-    expect(
-      getFuelType({ name: 'VW e-Golf 115HK 85kW 1AUT' }),
-      'to be',
-      'Electric'
-    )
-    expect(
-      getFuelType({ name: 'VW E-UP! 82HK AUT1 60KW' }),
-      'to be',
-      'Electric'
-    )
+    expect(getFuelType({ name: 'VW e-Golf 115HK 85kW 1AUT' }), 'to be', 'Electric')
+    expect(getFuelType({ name: 'VW E-UP! 82HK AUT1 60KW' }), 'to be', 'Electric')
     expect(getFuelType({ name: 'vw e-up 82hk aut1 60kw' }), 'to be', 'Electric')
     expect(getFuelType({ name: 'e-golf' }), 'to be', 'Electric')
-    expect(getFuelType({ name: 'mii' }), 'to be', 'Gasoline')
-    expect(getFuelType({ name: 'citigo' }), 'to be', 'Gasoline')
-    expect(getFuelType({ name: 'up!' }), 'to be', 'Gasoline')
+    expect(getFuelType({ vin: 'VSSAAAAAAAA123456', name: 'mii' }), 'to be', 'Gasoline')
+    expect(getFuelType({ vin: 'TMBAAAAAAAA123456', name: 'citigo' }), 'to be', 'Gasoline')
+    expect(getFuelType({ vin: 'WVWAAAAAAAA123456', name: 'up!' }), 'to be', 'Gasoline')
     expect(getFuelType({ name: 'e-upper' }), 'to be null')
     expect(getFuelType({ name: 'bogus' }), 'to be null')
     expect(getFuelType({}), 'to be null')

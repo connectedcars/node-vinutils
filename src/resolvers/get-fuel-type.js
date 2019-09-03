@@ -35,11 +35,7 @@ module.exports = vehicle => {
   }
   if (!fuelType) {
     const model = getModel(vehicle)
-    if (
-      model === Model[Make.SEAT].MII ||
-      model === Model[Make.SKODA].CITIGO ||
-      model === Model[Make.VOLKSWAGEN].UP
-    ) {
+    if (model === Model[Make.SEAT].MII || model === Model[Make.SKODA].CITIGO || model === Model[Make.VOLKSWAGEN].UP) {
       fuelType = FuelType.GASOLINE
     }
   }
