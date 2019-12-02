@@ -296,7 +296,7 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/touran/i)) {
         return Model[make].TOURAN
       }
-      if (description.match(/(kassevogn|transporter|vw t5|(^t5)|vw t6|(^t6))/i)) {
+      if (description.match(/(kassevogn|transporter|vw t5|(^t5)|vw t6|(^t6)|(^TRP))/i)) {
         return Model[make].TRANSPORTER
       }
       if (description.match(/(up!|up(\W| |$))/i)) {
