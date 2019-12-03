@@ -19,7 +19,9 @@ const cases = [
   { description: 'Transporter T6 2.0 TDI BMT 4MOTION (204hk)', result: 204 },
   { description: 'Transporter T6 2.0 TDI BMT (150hk)', result: 150 },
   { description: 'Transporter T5 2.0 TDI Pickup (140hk)', result: 140 },
-  { description: 'Transporter skåp', result: null }
+  { description: 'Transporter skåp', result: null },
+  { description: 'TRP PROLINE P-U EH 102HP 300', result: 102 },
+  { description: 'TRP PROLINE P-U DH 102 HP 340', result: 102 }
 ]
 
 describe('get-engine-hp', () => {
