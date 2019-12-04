@@ -1,10 +1,10 @@
-export type FuelType = {
+type FuelType = {
   DIESEL: 'Diesel'
   GASOLINE: 'Gasoline'
   ELECTRIC: 'Electric'
   HYBRID: 'Hybrid'
 }
-export type Make = {
+type MakeType = {
   ALFA_ROMEO: 'Alfa Romeo'
   ASTON_MARTIN: 'Aston Martin'
   AUDI: 'Audi'
@@ -84,8 +84,8 @@ export type Make = {
   YAMAHA: 'Yamaha'
   WESTERN_STAR: 'Western Star'
 }
-export type Model = {
-  AUDI: {
+type ModelType = {
+  ['Audi']: {
     A1: 'A1'
     A3: 'A3'
     A4: 'A4'
@@ -103,46 +103,46 @@ export type Model = {
     TT: 'TT'
     ETRON: 'e-tron'
   }
-  CITROEN: {
+  ['Citroen']: {
     BERLINGO: 'Berlingo'
     JUMPER: 'Jumper'
     JUMPY: 'Jumpy'
   }
-  DACIA: {
+  ['Dacia']: {
     DOKKER: 'Dokker'
   }
-  FIAT: {
+  ['Fiat']: {
     DUCATO: 'Ducato'
     DOBLO: 'Doblò'
   }
-  FORD: {
+  ['Ford']: {
     C_MAX: 'C-MAX'
     MONDEO: 'Mondeo'
     TRANSIT: 'Transit'
   }
-  IVECO: {
+  ['Iveco']: {
     DAILY: 'Daily'
   }
-  MERCEDES_BENZ: {
+  ['Mercedes-Benz']: {
     SPRINTER: 'Sprinter'
     VITO: 'Vito'
   }
-  NISSAN: {
+  ['Nissan']: {
     NV400: 'NV400'
   }
-  OPEL: {
+  ['Opel']: {
     VIVARO: 'Vivaro'
     ZAFIRA: 'Zafira'
   }
-  PEUGEOT: {
+  ['Peugeot']: {
     EXPERT: 'Expert'
     PARTNER: 'Partner'
   }
-  RENAULT: {
+  ['Renault']: {
     KANGOO: 'Kangoo'
     MASTER: 'Master'
   }
-  SEAT: {
+  ['Seat']: {
     ALHAMBRA: 'Alhambra'
     ALTEA: 'Altea'
     ARONA: 'Arona'
@@ -154,7 +154,7 @@ export type Model = {
     TARRACO: 'Tarraco'
     TOLEDO: 'Toledo'
   }
-  SKODA: {
+  ['Skoda']: {
     CITIGO: 'Citigo'
     FABIA: 'Fabia'
     KAMIQ: 'Kamiq'
@@ -167,10 +167,10 @@ export type Model = {
     SUPERB: 'Superb'
     YETI: 'Yeti'
   }
-  TOYOTA: {
+  ['Toyota']: {
     HIACE: 'Hiace'
   }
-  VOLKSWAGEN: {
+  ['Volkswagen']: {
     AMAROK: 'Amarok'
     ARTEON: 'Arteon'
     BEETLE: 'Beetle'
@@ -202,25 +202,29 @@ export type Model = {
   }
 }
 
-export type MakeType = Make[keyof Make]
+export const Make: MakeType
+export const Model: ModelType
+export const FuelType: FuelType
 
+export type Makes = MakeType[keyof MakeType]
 type ValueOf<T> = T[keyof T]
-export type ModelType =
-| ValueOf<Model['AUDI']>
-| ValueOf<Model['CITROEN']>
-| ValueOf<Model['DACIA']>
-| ValueOf<Model['FIAT']>
-| ValueOf<Model['FORD']>
-| ValueOf<Model['IVECO']>
-| ValueOf<Model['MERCEDES_BENZ']>
-| ValueOf<Model['NISSAN']>
-| ValueOf<Model['OPEL']>
-| ValueOf<Model['PEUGEOT']>
-| ValueOf<Model['RENAULT']>
-| ValueOf<Model['SEAT']>
-| ValueOf<Model['SKODA']>
-| ValueOf<Model['TOYOTA']>
-| ValueOf<Model['VOLKSWAGEN']>
+export type Models =
+| ValueOf<ModelType['Audi']>
+| ValueOf<ModelType['Citroen']>
+| ValueOf<ModelType['Dacia']>
+| ValueOf<ModelType['Fiat']>
+| ValueOf<ModelType['Ford']>
+| ValueOf<ModelType['Iveco']>
+| ValueOf<ModelType['Mercedes-Benz']>
+| ValueOf<ModelType['Nissan']>
+| ValueOf<ModelType['Opel']>
+| ValueOf<ModelType['Peugeot']>
+| ValueOf<ModelType['Renault']>
+| ValueOf<ModelType['Seat']>
+| ValueOf<ModelType['Skoda']>
+| ValueOf<ModelType['Toyota']>
+| ValueOf<ModelType['Volkswagen']>
+export type Fuels = FuelType[keyof FuelType]
 
 export function getEngineSize(vehicle: any): any
 export function getFuelType(vehicle: any): any
