@@ -1,4 +1,4 @@
-export const FuelType: {
+export type FuelType = {
   DIESEL: 'Diesel'
   GASOLINE: 'Gasoline'
   ELECTRIC: 'Electric'
