@@ -38,7 +38,7 @@ const mapFuelTypeVariation = invalidFuelType => {
 module.exports = vehicle => {
   let fuelType = null
 
-  if (vehicle.fuelType && !FuelType.values().includes(result.fuelType)) {
+  if (vehicle.fuelType && !Object.values(FuelType).includes(vehicle.fuelType)) {
     fuelType = mapFuelTypeVariation(vehicle.fuelType)
   }
 
