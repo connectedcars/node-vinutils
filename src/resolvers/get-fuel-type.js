@@ -19,6 +19,13 @@ const getFuelTypeFromDescription = description => {
   return null
 }
 
+const mapFuelTypeVariation = invalidFuelType => {
+  if (invalidFuelType.match(/(benzin)/i)) {
+    return FuelType.GASOLINE
+  }
+  return null
+}
+
 /**
  * This method retrieves the fuel type for a vehicle from the description (name)
  * or by some predefined rules for specific models.
@@ -30,7 +37,12 @@ const getFuelTypeFromDescription = description => {
  */
 module.exports = vehicle => {
   let fuelType = null
-  if (vehicle.name) {
+
+  if (vehicle.fuelType && !FuelType.values().includes(result.fuelType)) {
+    fuelType = mapFuelTypeVariation(vehicle.fuelType)
+  }
+
+  if (!fuelType && vehicle.name) {
     fuelType = getFuelTypeFromDescription(vehicle.name)
   }
   if (!fuelType) {

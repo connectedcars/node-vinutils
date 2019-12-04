@@ -36,6 +36,12 @@ const cases = [
   { vin: 'WVWAAAAAAAA123456', name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI', result: 'Transporter' },
   { vin: 'WVWAAAAAAAA123456', name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI', result: 'Transporter' },
   { vin: 'WVWAAAAAAAA123456', name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI', result: 'Transporter' },
+
+  { vin: 'WVWAAAAAAAA123456', name: 'TRP PROLINE P-U DH 102HK 340', result: 'Transporter' },
+  { vin: 'WVWAAAAAAAA123456', name: 'TRP PROLINE SKÅP 102HK 300', result: 'Transporter' },
+  { vin: 'WVWAAAAAAAA123456', name: 'TRP KOM 150HK TDI DSG', result: 'Transporter' },
+  { vin: 'WVWAAAAAAAA123456', name: 'TRP PROLINE P-U EH 102HK 340', result: 'Transporter' },
+
   { vin: 'WVWAAAAAAAA123456', name: 'VW T6 Lang Enka 2,0TDI 102hk 5G', result: 'Transporter' },
   { vin: 'WVWAAAAAAAA123456', name: 'VW T5 CHASSIS LANG 2,0 TDI 140 HK BMT 6G', result: 'Transporter' },
   { vin: 'WVWAAAAAAAA123456', name: 'VW T6 Kort Enka 2,0TDI 84hk 5G', result: 'Transporter' },

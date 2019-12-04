@@ -7,6 +7,7 @@ const getEngineSize = require('./resolvers/get-engine-size')
 const getFuelType = require('./resolvers/get-fuel-type')
 const getYear = require('./resolvers/get-year')
 const validateVIN = require('./validators/validate-vin')
+const getEngineHorsepower = require('./resolvers/get-engine-hp')
 
 module.exports = {
   Make,
@@ -17,5 +18,6 @@ module.exports = {
   getEngineSize,
   getFuelType,
   getYear,
-  validateVIN
+  validateVIN,
+  getEngineHorsepower
 }
