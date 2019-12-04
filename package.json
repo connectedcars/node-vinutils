@@ -10,6 +10,7 @@
     "cov": "nyc npm test",
     "integration": "mocha \"src/**/*.it.js\""
   },
+  "types": "src/types/@connectedcars/vinutils/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/connectedcars/node-vinutils.git"
