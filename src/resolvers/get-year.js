@@ -1,4 +1,6 @@
 const validateVIN = require('../validators/validate-vin')
+const getMake = require('./get-make')
+const Make = require('../constants/make')
 
 const yearMap = {
   A: 1980,
@@ -403,6 +405,13 @@ const getYearFromVIN = vin => {
   return year
 }
 
+const acceptedMakes = [
+  Make.AUDI,
+  Make.SEAT, 
+  Make.SKODA, 
+  Make.VOLKSWAGEN,
+]
+
 /**
  * This method retrieves the year for a vehicle from the VIN.
  * Year from VIN uses the 10th character according to the specification with 7th
@@ -416,7 +425,7 @@ const getYearFromVIN = vin => {
  */
 module.exports = vehicle => {
   let year = null
-  if (validateVIN(vehicle.vin)) {
+  if (validateVIN(vehicle.vin) && acceptedMakes.includes(getMake(vehicle))) {
     year = getYearFromVIN(vehicle.vin)
   }
   return year

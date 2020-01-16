@@ -178,7 +178,7 @@ describe('index', () => {
     expect(getYear({ vin: 'WVWZZZAAZ7D123456' }), 'to be', 2037)
     expect(getYear({ vin: 'WVWZZZAAZ8D123456' }), 'to be', 2038)
     expect(getYear({ vin: 'WVWZZZAAZ9D123456' }), 'to be', 2039)
-    expect(getYear({ vin: 'AAAAAAAAAaAAAAAAA' }), 'to be', 2010)
+    expect(getYear({ vin: 'AAAAAAAAAaAAAAAAA' }), 'to be null') //make is null
     expect(getYear({ vin: 'AAAAAAAAA0AAAAAAA' }), 'to be null')
     expect(getYear({ vin: 'VSS-invalid-vin' }), 'to be null')
     expect(getYear({ vin: 'bogus' }), 'to be null')
