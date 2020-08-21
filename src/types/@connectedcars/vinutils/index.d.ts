@@ -3,6 +3,7 @@ type FuelType = {
   GASOLINE: 'Gasoline'
   ELECTRIC: 'Electric'
   HYBRID: 'Hybrid'
+  NATURAL_GAS: 'Natural Gas'
 }
 type MakeType = {
   ALFA_ROMEO: 'Alfa Romeo'
