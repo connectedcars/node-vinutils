@@ -14,7 +14,8 @@ const cases = [
     result: 'Gasoline',
     fuelType: 'Gasoline'
   },
-  { vin: 'WVWAAAAAAAA123458', name: 'gte', result: 'Hybrid' }
+  { vin: 'WVWAAAAAAAA123458', name: 'gte', result: 'Hybrid' },
+  { vin: 'WV1ZZZ2KZLX086718', name: 'tgi', result: 'Natural Gas' }
 ]
 
 describe('get-fuel-type', () => {

@@ -2,5 +2,6 @@ module.exports = {
   DIESEL: 'Diesel',
   GASOLINE: 'Gasoline',
   ELECTRIC: 'Electric',
-  HYBRID: 'Hybrid'
+  HYBRID: 'Hybrid',
+  NATURAL_GAS: 'Natural Gas'
 }
