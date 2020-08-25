@@ -29,7 +29,8 @@ module.exports = {
   },
   [Make.FIAT]: {
     DUCATO: 'Ducato',
-    DOBLO: 'Doblò'
+    DOBLO: 'Doblò',
+    FIORINO: 'Fiorino'
   },
   [Make.FORD]: {
     C_MAX: 'C-MAX',
