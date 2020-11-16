@@ -45,11 +45,13 @@ module.exports = {
     VITO: 'Vito'
   },
   [Make.NISSAN]: {
-    NV400: 'NV400'
+    NV400: 'NV400',
+    ENV200: 'e-NV200'
   },
   [Make.OPEL]: {
     VIVARO: 'Vivaro',
-    ZAFIRA: 'Zafira'
+    ZAFIRA: 'Zafira',
+    MOVANO: 'Movano'
   },
   [Make.PEUGEOT]: {
     EXPERT: 'Expert',
