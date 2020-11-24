@@ -1,9 +1,10 @@
 type FuelType = {
-  DIESEL: 'Diesel'
-  GASOLINE: 'Gasoline'
-  ELECTRIC: 'Electric'
-  HYBRID: 'Hybrid'
-  NATURAL_GAS: 'Natural Gas'
+  DIESEL: 'diesel',
+  GASOLINE: 'gasoline',
+  ELECTRIC: 'electric',
+  HYBRID: 'hybrid',
+  NATURAL_GAS: 'natural_gas',
+  HYDROGEN: 'hydrogen'
 }
 type MakeType = {
   ALFA_ROMEO: 'Alfa Romeo'
@@ -228,7 +229,7 @@ export type Models =
 export type Fuels = FuelType[keyof FuelType]
 
 export function getEngineSize(vehicle: any): any
-export function getFuelType(vehicle: any): any
+export function getFuelType(vehicle: any): FuelType
 export function getMake(vehicle: any): any
 export function getModel(vehicle: any): any
 export function getYear(vehicle: any): any

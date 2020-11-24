@@ -1,7 +1,8 @@
 module.exports = {
-  DIESEL: 'Diesel',
-  GASOLINE: 'Gasoline',
-  ELECTRIC: 'Electric',
-  HYBRID: 'Hybrid',
-  NATURAL_GAS: 'Natural Gas'
+  DIESEL: 'diesel',
+  GASOLINE: 'gasoline',
+  ELECTRIC: 'electric',
+  HYBRID: 'hybrid',
+  NATURAL_GAS: 'natural_gas',
+  HYDROGEN: 'hydrogen'
 }
