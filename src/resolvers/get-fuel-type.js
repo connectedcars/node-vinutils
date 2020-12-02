@@ -36,7 +36,7 @@ const mapFuelTypeVariation = invalidFuelType => {
  * @param {Object} vehicle
  * @param {string} vehicle.vin
  * @param {string} [vehicle.name]
- * @returns {string|null}
+ * @returns {Fuels|null}
  */
 module.exports = vehicle => {
   let fuelType = null
