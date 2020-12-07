@@ -257,6 +257,12 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/golf/i)) {
         return Model[make].GOLF
       }
+      if (description.match(/id.3/i)) {
+        return Model[make]['ID.3']
+      }
+      if (description.match(/id.4/i)) {
+        return Model[make]['ID.4']
+      }
       if (description.match(/jetta/i)) {
         return Model[make].JETTA
       }

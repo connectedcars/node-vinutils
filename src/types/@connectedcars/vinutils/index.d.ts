@@ -186,6 +186,8 @@ type ModelType = {
     FOX: 'Fox'
     GOLF: 'Golf'
     GRAND_CALIFORNIA: 'Grand California'
+    'ID.3': 'ID.3'
+    'ID.4': 'ID.4'
     JETTA: 'Jetta'
     LUPO: 'Lupo'
     PASSAT: 'Passat'
