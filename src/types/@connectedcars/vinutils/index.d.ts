@@ -232,8 +232,8 @@ export type Fuels = FuelType[keyof FuelType]
 
 export function getEngineSize(vehicle: any): any
 export function getFuelType(vehicle: any): Fuels | null
-export function getMake(vehicle: any): any
-export function getModel(vehicle: any): any
+export function getMake(vehicle: any): Makes | null
+export function getModel(vehicle: any): Models | null
 export function getYear(vehicle: any): any
 export function getEngineHorsepower(description: string): number | null
 export function validateVIN(vin: any): any
