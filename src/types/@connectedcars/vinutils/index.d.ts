@@ -214,7 +214,7 @@ export type Makes = MakeType[keyof MakeType]
 type ValueOf<T> = T[keyof T]
 export type Models =
 | ValueOf<ModelType['Audi']>
-| ValueOf<ModelType['Citroen']>
+| ValueOf<ModelType['Citroën']>
 | ValueOf<ModelType['Dacia']>
 | ValueOf<ModelType['Fiat']>
 | ValueOf<ModelType['Ford']>
@@ -224,8 +224,8 @@ export type Models =
 | ValueOf<ModelType['Opel']>
 | ValueOf<ModelType['Peugeot']>
 | ValueOf<ModelType['Renault']>
-| ValueOf<ModelType['Seat']>
-| ValueOf<ModelType['Skoda']>
+| ValueOf<ModelType['SEAT']>
+| ValueOf<ModelType['Škoda']>
 | ValueOf<ModelType['Toyota']>
 | ValueOf<ModelType['Volkswagen']>
 export type Fuels = FuelType[keyof FuelType]
