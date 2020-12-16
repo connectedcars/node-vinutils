@@ -105,7 +105,7 @@ type ModelType = {
     TT: 'TT'
     ETRON: 'e-tron'
   }
-  ['Citroen']: {
+  ['Citroën']: {
     BERLINGO: 'Berlingo'
     JUMPER: 'Jumper'
     JUMPY: 'Jumpy'
@@ -144,7 +144,7 @@ type ModelType = {
     KANGOO: 'Kangoo'
     MASTER: 'Master'
   }
-  ['Seat']: {
+  ['SEAT']: {
     ALHAMBRA: 'Alhambra'
     ALTEA: 'Altea'
     ARONA: 'Arona'
@@ -156,7 +156,7 @@ type ModelType = {
     TARRACO: 'Tarraco'
     TOLEDO: 'Toledo'
   }
-  ['Skoda']: {
+  ['Škoda']: {
     CITIGO: 'Citigo'
     FABIA: 'Fabia'
     KAMIQ: 'Kamiq'
