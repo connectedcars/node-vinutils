@@ -22,7 +22,13 @@ const cases = [
   { vin: '', name: 'Audi A6 Avant 55 TFSI e 367 hk quattro S tronic S line', result: FuelType.HYBRID },
   { vin: '', name: 'AUDI A6 AVANT 3,0 TDI 204 HK 150 KW 8 TRINS M', result: FuelType.DIESEL },
   { vin: '', name: 'AUDI A6 ALLROAD 3,0 TFSI 333 HK 245 KW QUATTR', result: FuelType.GASOLINE },
-  { vin: '', name: 'VW ID.3 1st Max 204HK AUT1 Performance', result: FuelType.ELECTRIC }
+  { vin: '', name: 'VW ID.3 1st Max 204HK AUT1 Performance', result: FuelType.ELECTRIC },
+  { vin: '', name: 'VW Golf Life 1,5eTSI 150HK DSG7 Mild hybrid', result: FuelType.GASOLINE },
+  { vin: '', name: 'VW Golf Style eHybrid 1,4TSI 204HK DSG6', result: FuelType.HYBRID },
+  { vin: '', name: 'SEAT Ny Leon 5D e-HYB 1,4 TSI 204 HK e-HYBRID', result: FuelType.HYBRID },
+  { vin: '', name: 'VW Passat Var GTE Hybrid 1,4TSI 218HK DSG6', result: FuelType.HYBRID },
+  { vin: '', name: 'SEAT Ny Leon SP Xcellence 1,5 eTSI 150 HK DSG', result: FuelType.GASOLINE },
+  { vin: '', name: 'SKODA OCTAVIA A8 COMBI Style 1ED 1,0 eTSI 110', result: FuelType.GASOLINE }
 ]
 
 describe('get-fuel-type', () => {
