@@ -4,10 +4,10 @@ const FuelType = require('../constants/fuel-type')
 const getModel = require('./get-model')
 
 const getFuelTypeFromDescription = description => {
-  if (description.match(/(gte|a3.+e-tron|q7.+e-tron|hybrid)/i)) {
+  if (description.match(/(gte|a3.+e-tron|q7.+e-tron|hybrid|tfsi e)/i)) {
     return FuelType.HYBRID
   }
-  if (description.match(/(e-golf|citigoe|mii electric|e-up!|e-up( |$)|e-tron)/i)) {
+  if (description.match(/(e-golf|citigoe|mii electric|e-up!|e-up( |$)|e-tron|id\.3)/i)) {
     return FuelType.ELECTRIC
   }
   if (description.match(/(sdi|tdi)/i)) {
