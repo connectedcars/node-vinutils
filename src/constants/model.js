@@ -17,7 +17,8 @@ module.exports = {
     Q8: 'Q8',
     R8: 'R8',
     TT: 'TT',
-    ETRON: 'e-tron'
+    ETRON: 'e-tron',
+    ETRON_GT: 'e-tron GT'
   },
   [Make.CITROEN]: {
     BERLINGO: 'Berlingo',
@@ -67,6 +68,7 @@ module.exports = {
     ARONA: 'Arona',
     ATECA: 'Ateca',
     CORDOBA: 'Cordoba',
+    FORMENTOR: 'Formentor',
     IBIZA: 'Ibiza',
     LEON: 'Leon',
     MII: 'Mii',
@@ -75,6 +77,7 @@ module.exports = {
   },
   [Make.SKODA]: {
     CITIGO: 'Citigo',
+    ENYAQ: 'Enyaq',
     FABIA: 'Fabia',
     KAMIQ: 'Kamiq',
     KAROQ: 'Karoq',
