@@ -50,6 +50,9 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/(audi tt|((^| )tt( |$)))/i)) {
         return Model[make].TT
       }
+      if (description.match(/(audi e-tron gt|((^| )e-tron gt( |$)))/i)) {
+        return Model[make].ETRON_GT
+      }
       if (description.match(/(audi e-tron|((^| )e-tron( |$)))/i)) {
         return Model[make].ETRON
       }
@@ -158,6 +161,9 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/cordoba/i)) {
         return Model[make].CORDOBA
       }
+      if (description.match(/formentor/i)) {
+        return Model[make].FORMENTOR
+      }
       if (description.match(/ibiza/i)) {
         return Model[make].IBIZA
       }
@@ -178,6 +184,9 @@ const getModelFromMakeDescription = (make, description) => {
     case Make.SKODA: {
       if (description.match(/citigo/i)) {
         return Model[make].CITIGO
+      }
+      if (description.match(/enyaq/i)) {
+        return Model[make].ENYAQ
       }
       if (description.match(/fabia/i)) {
         return Model[make].FABIA
