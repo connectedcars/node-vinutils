@@ -143,7 +143,8 @@ type ModelType = {
   }
   ['Renault']: {
     KANGOO: 'Kangoo'
-    MASTER: 'Master'
+    MASTER: 'Master',
+    TRAFIC: 'Trafic'
   }
   ['SEAT']: {
     ALHAMBRA: 'Alhambra'

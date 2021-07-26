@@ -60,7 +60,8 @@ module.exports = {
   },
   [Make.RENAULT]: {
     KANGOO: 'Kangoo',
-    MASTER: 'Master'
+    MASTER: 'Master',
+    TRAFIC: 'Trafic'
   },
   [Make.SEAT]: {
     ALHAMBRA: 'Alhambra',
