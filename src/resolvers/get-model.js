@@ -74,6 +74,9 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/dokker/i)) {
         return Model[make].DOKKER
       }
+      if (description.match(/duster/i)) {
+        return Model[make].DUSTER
+      }
       break
     }
     case Make.FIAT: {

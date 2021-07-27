@@ -112,7 +112,8 @@ type ModelType = {
     JUMPY: 'Jumpy'
   }
   ['Dacia']: {
-    DOKKER: 'Dokker'
+    DOKKER: 'Dokker',
+    DUSTER: 'Duster'
   }
   ['Fiat']: {
     DUCATO: 'Ducato'
