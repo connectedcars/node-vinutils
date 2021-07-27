@@ -26,7 +26,8 @@ module.exports = {
     JUMPY: 'Jumpy'
   },
   [Make.DACIA]: {
-    DOKKER: 'Dokker'
+    DOKKER: 'Dokker',
+    DUSTER: 'Duster'
   },
   [Make.FIAT]: {
     DUCATO: 'Ducato',

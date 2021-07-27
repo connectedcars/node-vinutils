@@ -691,6 +691,8 @@ const cases = [
   { vin: 'VS7AAAAAAAA123456', name: 'Citroen Jumper 2,2', result: Model[Make.CITROEN].JUMPER },
   { vin: 'WDFAAAAAAAA123456', name: 'Mercedes Sprinter', result: Model[Make.MERCEDES_BENZ].SPRINTER },
   { vin: 'UU1AAAAAAAA123456', name: 'Dacia Dokker', result: Model[Make.DACIA].DOKKER },
+  { vin: 'UU1AAAAAAAA123456', name: 'Dacia Duster', result: Model[Make.DACIA].DUSTER },
+  { vin: 'UU1AAAAAAAA123456', name: 'DACIA Duster dCi 115 6MT (115 HP)', result: Model[Make.DACIA].DUSTER },
   { vin: 'WDFAAAAAAAA123456', name: 'Mercedes Vito', result: Model[Make.MERCEDES_BENZ].VITO },
   { vin: 'VF1AAAAAAAA123456', name: 'RENAULT KANGOO 33 KWH AUT', result: Model[Make.RENAULT].KANGOO },
   {
