@@ -717,6 +717,10 @@ const cases = [
   },
   { vin: 'VF1AAAAAAAA123456', name: 'Kangoo', result: Model[Make.RENAULT].KANGOO },
   { vin: 'VF1AAAAAAAA123456', name: 'Renault Kangoo', result: Model[Make.RENAULT].KANGOO },
+  { vin: 'VF1AAAAAAAA123456', name: 'Trafic', result: Model[Make.RENAULT].TRAFIC },
+  { vin: 'VF1AAAAAAAA123456', name: 'Renault Trafic', result: Model[Make.RENAULT].TRAFIC },
+  { vin: 'VF1AAAAAAAA123456', name: 'Renaul Trafic', result: Model[Make.RENAULT].TRAFIC },
+  { vin: 'VF1AAAAAAAA123456', name: '2014 Renault Trafic L1H1 T27 DCi', result: Model[Make.RENAULT].TRAFIC },
   { vin: 'VF3AAAAAAAA123456', name: 'PEUGEOT EXPERT BlueHDi 120 L3', result: Model[Make.PEUGEOT].EXPERT },
   {
     vin: 'VS6AAAAAAAA123456',

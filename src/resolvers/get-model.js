@@ -143,6 +143,9 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/master/i)) {
         return Model[make].MASTER
       }
+      if (description.match(/trafic/i)) {
+        return Model[make].TRAFIC
+      }
       break
     }
     case Make.SEAT: {
