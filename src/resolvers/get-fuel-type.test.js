@@ -33,6 +33,7 @@ const cases = [
   { vin: '', name: 'Audi Q7 SUV e-tron 3,0 TDI 374 hk 275 kW E-tr', result: FuelType.HYBRID_DIESEL },
   { vin: '', name: 'Audi Q7 SUV TdI 3,0 E-tRoN 374 hk 275 kW E-tr', result: FuelType.HYBRID_DIESEL },
   { vin: '', name: 'VW ID.4 1st 204HK AUT1 Performance', result: FuelType.ELECTRIC },
+  { vin: '', name: 'VW ID.6 1st 204HK AUT1 Performance', result: null },
   { vin: '', name: 'VW e-Crafter L3 Kassevogn EL 136HK AUT1G', result: FuelType.ELECTRIC },
   { vin: '', name: 'AUDI A6 ALLROAD 3,0 TFSIe 333 HK 245 KW QUATTR', result: FuelType.HYBRID }
 ]
