@@ -8,12 +8,12 @@ const getFuelTypeFromDescription = description => {
     return FuelType.HYBRID_DIESEL
   }
   if (
-    description.match(/(gte|a3.+e-tron|q7.+e-tron|tfsi e)/i) ||
+    description.match(/(gte|a3.+e-tron|q7.+e-tron|tfsi ?e)/i) ||
     (description.match(/hybrid/i) && !description.match(/mild hybrid/i))
   ) {
     return FuelType.HYBRID
   }
-  if (description.match(/(e-golf|citigoe|mii electric|e-up!|e-up( |$)|e-tron|id\.3)/i)) {
+  if (description.match(/(e-golf|citigoe|mii electric|e-up!|e-up( |$)|e-tron|id\.[3-5]|e-crafter)/i)) {
     return FuelType.ELECTRIC
   }
   if (description.match(/(sdi|tdi)/i)) {
