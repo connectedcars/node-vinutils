@@ -7,6 +7,10 @@ const getFuelTypeFromDescription = description => {
   if (description.match(/e-tron/i) && description.match(/tdi/i)) {
     return FuelType.HYBRID_DIESEL
   }
+  // Some of the following regexes uses negative look-behinds to account for
+  // malicious input that will cause them to perform poorly.
+  //
+  // https://codeql.github.com/codeql-query-help/javascript/js-polynomial-redos/
   if (
     description.match(/(gte|(?<!(a3))a3.+e-tron|(?<!(q7))q7.+e-tron|tfsi ?e)/i) ||
     (description.match(/hybrid/i) && !description.match(/mild hybrid/i))
