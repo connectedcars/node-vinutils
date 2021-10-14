@@ -30,6 +30,7 @@ type MakeType = {
   FIAT: 'Fiat'
   FORD: 'Ford'
   FREIGHTLINER: 'Freightliner'
+  GARIA: 'Garia'
   GENERAL_MOTORS: 'General Motors'
   HARLEY_DAVIDSON: 'Harley Davidson'
   HONDA: 'Honda'
@@ -123,6 +124,9 @@ type ModelType = {
     C_MAX: 'C-MAX'
     MONDEO: 'Mondeo'
     TRANSIT: 'Transit'
+  }
+  ['Garia']: {
+    UTILITY_CITY: 'Utility City'
   }
   ['Iveco']: {
     DAILY: 'Daily'
@@ -221,6 +225,7 @@ export type Models =
 | ValueOf<ModelType['Dacia']>
 | ValueOf<ModelType['Fiat']>
 | ValueOf<ModelType['Ford']>
+| ValueOf<ModelType['Garia']>
 | ValueOf<ModelType['Iveco']>
 | ValueOf<ModelType['Mercedes-Benz']>
 | ValueOf<ModelType['Nissan']>

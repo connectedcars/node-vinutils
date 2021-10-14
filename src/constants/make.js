@@ -21,6 +21,7 @@ module.exports = {
   FIAT: 'Fiat',
   FORD: 'Ford',
   FREIGHTLINER: 'Freightliner',
+  GARIA: 'Garia',
   GENERAL_MOTORS: 'General Motors',
   HARLEY_DAVIDSON: 'Harley Davidson',
   HONDA: 'Honda',

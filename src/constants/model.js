@@ -39,6 +39,9 @@ module.exports = {
     MONDEO: 'Mondeo',
     TRANSIT: 'Transit'
   },
+  [Make.GARIA]: {
+    UTILITY_CITY: 'Utility City'
+  },
   [Make.IVECO]: {
     DAILY: 'Daily'
   },
