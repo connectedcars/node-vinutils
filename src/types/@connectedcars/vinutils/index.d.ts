@@ -124,6 +124,9 @@ type ModelType = {
     C_MAX: 'C-MAX'
     MONDEO: 'Mondeo'
     TRANSIT: 'Transit'
+    FOCUS: 'Focus'
+    S_MAX: 'S-MAX'
+    FIESTA: 'Fiesta'
   }
   ['Garia']: {
     UTILITY_CITY: 'Utility City'
@@ -134,6 +137,7 @@ type ModelType = {
   ['Mercedes-Benz']: {
     SPRINTER: 'Sprinter'
     VITO: 'Vito'
+    LASTBIL: 'Lastbil'
   }
   ['Nissan']: {
     NV400: 'NV400'
@@ -178,6 +182,8 @@ type ModelType = {
   }
   ['Toyota']: {
     HIACE: 'Hiace'
+    AURIS: 'Auris'
+    HILUX: 'Hilux'
   }
   ['Volkswagen']: {
     AMAROK: 'Amarok'

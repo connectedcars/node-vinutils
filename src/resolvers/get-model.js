@@ -98,6 +98,15 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/transit/i)) {
         return Model[make].TRANSIT
       }
+      if (description.match(/focus/i)) {
+        return Model[make].FOCUS
+      }
+      if (description.match(/s-max/i)) {
+        return Model[make].S_MAX
+      }
+      if (description.match(/fiesta/i)) {
+        return Model[make].FIESTA
+      }
       break
     }
     case Make.IVECO: {
@@ -112,6 +121,9 @@ const getModelFromMakeDescription = (make, description) => {
       }
       if (description.match(/vito/i)) {
         return Model[make].VITO
+      }
+      if (description.match(/lastbil/i)) {
+        return Model[make].LASTBIL
       }
       break
     }
@@ -229,6 +241,12 @@ const getModelFromMakeDescription = (make, description) => {
     case Make.TOYOTA: {
       if (description.match(/hiace/i)) {
         return Model[make].HIACE
+      }
+      if (description.match(/auris/i)) {
+        return Model[make].AURIS
+      }
+      if (description.match(/hilux/i)) {
+        return Model[make].HILUX
       }
       break
     }
