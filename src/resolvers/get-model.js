@@ -245,8 +245,8 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/auris/i)) {
         return Model[make].AURIS
       }
-      if (description.match(/hi-lux/i)) {
-        return Model[make].HI_LUX
+      if (description.match(/hilux/i)) {
+        return Model[make].HILUX
       }
       break
     }

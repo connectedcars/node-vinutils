@@ -740,7 +740,7 @@ const cases = [
   { vin: 'VS6AAAAAAAA123456', name: 'Focus C-max 1,6', result: Model[Make.FORD].C_MAX },
   { vin: 'VNKAAAAAAAA123456', name: 'Hiace 2,5', result: Model[Make.TOYOTA].HIACE },
   { vin: 'VNKAAAAAAAA123456', name: 'AuRIS 2,5', result: Model[Make.TOYOTA].AURIS },
-  { vin: 'VNKAAAAAAAA123456', name: 'ok Hi-LUX 2,5', result: Model[Make.TOYOTA].HI_LUX },
+  { vin: 'VNKAAAAAAAA123456', name: 'ok HiLUX 2,5', result: Model[Make.TOYOTA].HILUX },
   { vin: 'VS6AAAAAAAA123456', name: 'C-max 1.6 Tdci (115 Hk) Van Forhjulstræk Manuel', result: Model[Make.FORD].C_MAX },
   { vin: 'VS6AAAAAAAA123456', name: 'Ford Mondeo 2.0 TDCi 150 HK STAT', result: Model[Make.FORD].MONDEO },
   { vin: 'VS6AAAAAAAA123456', name: 'Ford Mondeo', result: Model[Make.FORD].MONDEO },

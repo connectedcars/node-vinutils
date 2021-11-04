@@ -101,7 +101,7 @@ module.exports = {
   [Make.TOYOTA]: {
     HIACE: 'Hiace',
     AURIS: 'Auris',
-    HI_LUX: 'Hi-Lux'
+    HILUX: 'Hilux'
   },
   [Make.VOLKSWAGEN]: {
     AMAROK: 'Amarok',

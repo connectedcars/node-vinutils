@@ -183,7 +183,7 @@ type ModelType = {
   ['Toyota']: {
     HIACE: 'Hiace'
     AURIS: 'Auris'
-    HI_LUX: 'Hi-Lux'
+    HILUX: 'Hilux'
   }
   ['Volkswagen']: {
     AMAROK: 'Amarok'
