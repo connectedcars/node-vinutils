@@ -37,7 +37,10 @@ module.exports = {
   [Make.FORD]: {
     C_MAX: 'C-MAX',
     MONDEO: 'Mondeo',
-    TRANSIT: 'Transit'
+    TRANSIT: 'Transit',
+    FOCUS: 'Focus',
+    S_MAX: 'S-MAX',
+    FIESTA: 'Fiesta'
   },
   [Make.GARIA]: {
     UTILITY_CITY: 'Utility City'
@@ -47,7 +50,8 @@ module.exports = {
   },
   [Make.MERCEDES_BENZ]: {
     SPRINTER: 'Sprinter',
-    VITO: 'Vito'
+    VITO: 'Vito',
+    LASTBIL: 'Lastbil'
   },
   [Make.NISSAN]: {
     NV400: 'NV400',
@@ -95,7 +99,9 @@ module.exports = {
     YETI: 'Yeti'
   },
   [Make.TOYOTA]: {
-    HIACE: 'Hiace'
+    HIACE: 'Hiace',
+    AURIS: 'Auris',
+    HI_LUX: 'Hi-Lux'
   },
   [Make.VOLKSWAGEN]: {
     AMAROK: 'Amarok',
