@@ -165,7 +165,8 @@ type ModelType = {
     LEON: 'Leon'
     MII: 'Mii'
     TARRACO: 'Tarraco'
-    TOLEDO: 'Toledo'
+    TOLEDO: 'Toledo',
+    BORN: 'Born'
   }
   ['Škoda']: {
     CITIGO: 'Citigo'
