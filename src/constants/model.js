@@ -82,7 +82,8 @@ module.exports = {
     LEON: 'Leon',
     MII: 'Mii',
     TARRACO: 'Tarraco',
-    TOLEDO: 'Toledo'
+    TOLEDO: 'Toledo',
+    BORN: 'Born'
   },
   [Make.SKODA]: {
     CITIGO: 'Citigo',

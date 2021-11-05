@@ -197,6 +197,9 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/toledo/i)) {
         return Model[make].TOLEDO
       }
+      if (description.match(/born/i)) {
+        return Model[make].BORN
+      }
       break
     }
     case Make.SKODA: {

@@ -663,6 +663,7 @@ const cases = [
   { vin: 'VSSAAAAAAAA123456', name: 'SEAT ALTEA XL STYLANCE 1.8 TSI 160HK', result: Model[Make.SEAT].ALTEA },
   { vin: 'WAUAAAAAAAA123456', name: 'AUDI RS 6 AVANT 4,0 TFSI 560 HK 412 KW QUATTR', result: Model[Make.AUDI].A6 },
   { vin: 'VSSAAAAAAAA123456', name: 'Alhambra', result: Model[Make.SEAT].ALHAMBRA },
+  { vin: 'VSSAAAAAAAA123456', name: 'SEAT BoRn', result: Model[Make.SEAT].BORN },
   { vin: 'VF3AAAAAAAA123456', name: 'Expert 1.6 Bluehdi 115 Hk L2', result: Model[Make.PEUGEOT].EXPERT },
   { vin: 'VS6AAAAAAAA123456', name: 'Ford C-max', result: Model[Make.FORD].C_MAX },
   { vin: 'VS7AAAAAAAA123456', name: 'Citroen Jumper', result: Model[Make.CITROEN].JUMPER },
