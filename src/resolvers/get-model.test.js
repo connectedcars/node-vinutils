@@ -742,6 +742,8 @@ const cases = [
   { vin: 'VNKAAAAAAAA123456', name: 'Hiace 2,5', result: Model[Make.TOYOTA].HIACE },
   { vin: 'VNKAAAAAAAA123456', name: 'AuRIS 2,5', result: Model[Make.TOYOTA].AURIS },
   { vin: 'VNKAAAAAAAA123456', name: 'ok HiLUX 2,5', result: Model[Make.TOYOTA].HILUX },
+  { vin: 'VNKAAAAAAAA123456', name: 'Toyota pRoAce Electric 2.0', result: Model[Make.TOYOTA].PROACE_ELECTRIC },
+  { vin: 'VNKAAAAAAAA123456', name: 'Toyota dyNA 3.0', result: Model[Make.TOYOTA].DYNA },
   { vin: 'VS6AAAAAAAA123456', name: 'C-max 1.6 Tdci (115 Hk) Van Forhjulstræk Manuel', result: Model[Make.FORD].C_MAX },
   { vin: 'VS6AAAAAAAA123456', name: 'Ford Mondeo 2.0 TDCi 150 HK STAT', result: Model[Make.FORD].MONDEO },
   { vin: 'VS6AAAAAAAA123456', name: 'Ford Mondeo', result: Model[Make.FORD].MONDEO },
@@ -749,7 +751,13 @@ const cases = [
     vin: 'WVWAAAAAAAA123456',
     name: 'VW T5 CHASSIS LANG 2,0 TDI 140HK BMT 4MOT',
     result: Model[Make.VOLKSWAGEN].TRANSPORTER
-  }
+  },
+  {
+    vin: 'WVWAAAAAAAA123456',
+    name: 'VW ComfortLine 2,0 TDI',
+    result: Model[Make.VOLKSWAGEN].COMFORTLINE
+  },
+  { vin: 'WMAL20S644G128551', name: 'Man TGe car', result: Model[Make.MAN].TGE }
 ]
 
 describe('get-model', () => {

@@ -251,6 +251,12 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/hilux/i)) {
         return Model[make].HILUX
       }
+      if (description.match(/proace electric/i)) {
+        return Model[make].PROACE_ELECTRIC
+      }
+      if (description.match(/dyna/i)) {
+        return Model[make].DYNA
+      }
       break
     }
     case Make.VOLKSWAGEN: {
@@ -343,6 +349,15 @@ const getModelFromMakeDescription = (make, description) => {
       }
       if (description.match(/(up!|up(\W| |$))/i)) {
         return Model[make].UP
+      }
+      if (description.match(/comfortline/i)) {
+        return Model[make].COMFORTLINE
+      }
+      break
+    }
+    case Make.MAN: {
+      if (description.match(/tge/i)) {
+        return Model[make].TGE
       }
       break
     }
