@@ -185,6 +185,8 @@ type ModelType = {
     HIACE: 'Hiace'
     AURIS: 'Auris'
     HILUX: 'Hilux'
+    PROACE_ELECTRIC: 'Proace Electric'
+    DYNA: 'Dyna'
   }
   ['Volkswagen']: {
     AMAROK: 'Amarok'
@@ -217,6 +219,10 @@ type ModelType = {
     TOURAN: 'Touran'
     TRANSPORTER: 'Transporter'
     UP: 'up!'
+    COMFORTLINE: 'Comfortline'
+  }
+  ['MAN']: {
+    TGE: 'TGE'
   }
 }
 

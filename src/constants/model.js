@@ -102,7 +102,9 @@ module.exports = {
   [Make.TOYOTA]: {
     HIACE: 'Hiace',
     AURIS: 'Auris',
-    HILUX: 'Hilux'
+    HILUX: 'Hilux',
+    PROACE_ELECTRIC: 'Proace Electric',
+    DYNA: 'Dyna'
   },
   [Make.VOLKSWAGEN]: {
     AMAROK: 'Amarok',
@@ -134,6 +136,10 @@ module.exports = {
     TOUAREG: 'Touareg',
     TOURAN: 'Touran',
     TRANSPORTER: 'Transporter',
-    UP: 'up!'
+    UP: 'up!',
+    COMFORTLINE: 'Comfortline'
+  },
+  [Make.MAN]: {
+    TGE: 'TGE'
   }
 }
