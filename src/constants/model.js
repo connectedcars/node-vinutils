@@ -137,9 +137,11 @@ module.exports = {
     TOURAN: 'Touran',
     TRANSPORTER: 'Transporter',
     UP: 'up!',
-    COMFORTLINE: 'Comfortline'
+    COMFORTLINE: 'Comfortline',
+    TAIGO: 'Taigo'
   },
   [Make.MAN]: {
-    TGE: 'TGE'
+    TGE: 'TGE',
+    LASTBIL: 'Lastbil'
   }
 }

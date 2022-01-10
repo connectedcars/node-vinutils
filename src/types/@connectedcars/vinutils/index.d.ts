@@ -113,7 +113,7 @@ type ModelType = {
     JUMPY: 'Jumpy'
   }
   ['Dacia']: {
-    DOKKER: 'Dokker',
+    DOKKER: 'Dokker'
     DUSTER: 'Duster'
   }
   ['Fiat']: {
@@ -152,7 +152,7 @@ type ModelType = {
   }
   ['Renault']: {
     KANGOO: 'Kangoo'
-    MASTER: 'Master',
+    MASTER: 'Master'
     TRAFIC: 'Trafic'
   }
   ['SEAT']: {
@@ -165,7 +165,7 @@ type ModelType = {
     LEON: 'Leon'
     MII: 'Mii'
     TARRACO: 'Tarraco'
-    TOLEDO: 'Toledo',
+    TOLEDO: 'Toledo'
     BORN: 'Born'
   }
   ['Škoda']: {
@@ -220,9 +220,11 @@ type ModelType = {
     TRANSPORTER: 'Transporter'
     UP: 'up!'
     COMFORTLINE: 'Comfortline'
+    TAIGO: 'Taigo'
   }
   ['MAN']: {
     TGE: 'TGE'
+    LASTBIL: 'Lastbil'
   }
 }
 

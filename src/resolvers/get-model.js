@@ -353,11 +353,17 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/comfortline/i)) {
         return Model[make].COMFORTLINE
       }
+      if (description.match(/taigo/i)) {
+        return Model[make].TAIGO
+      }
       break
     }
     case Make.MAN: {
       if (description.match(/tge/i)) {
         return Model[make].TGE
+      }
+      if (description.match(/lastbil/i)) {
+        return Model[make].LASTBIL
       }
       break
     }
