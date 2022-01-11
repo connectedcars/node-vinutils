@@ -757,7 +757,13 @@ const cases = [
     name: 'VW ComfortLine 2,0 TDI',
     result: Model[Make.VOLKSWAGEN].COMFORTLINE
   },
-  { vin: 'WMAL20S644G128551', name: 'Man TGe car', result: Model[Make.MAN].TGE }
+  {
+    vin: 'WVWAAAAAAAA123456',
+    name: 'VW TaigO HK STAT',
+    result: Model[Make.VOLKSWAGEN].TAIGO
+  },
+  { vin: 'WMAL20S644G128551', name: 'Man TGe car', result: Model[Make.MAN].TGE },
+  { vin: 'WMAL20S644G128551', name: 'Man some kind of LastBil', result: Model[Make.MAN].LASTBIL }
 ]
 
 describe('get-model', () => {
