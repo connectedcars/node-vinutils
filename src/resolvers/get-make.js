@@ -212,6 +212,7 @@ const getMakeFromVIN = vin => {
     case 'WDD':
     case 'WDF':
     case 'WMX':
+    case 'W1V':
     case '4JG':
     case '9BM':
       return Make.MERCEDES_BENZ
