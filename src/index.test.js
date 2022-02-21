@@ -55,6 +55,7 @@ describe('index', () => {
     expect(getMake({ vin: 'SARRTMLWRAD136172' }), 'to be', Make.LAND_ROVER)
     expect(getMake({ vin: 'JMZDE135200111346' }), 'to be', Make.MAZDA)
     expect(getMake({ vin: 'WDD2042021G139923' }), 'to be', Make.MERCEDES_BENZ)
+    expect(getMake({ vin: 'W1VZZZAAZFD123456' }), 'to be', Make.MERCEDES_BENZ)
     expect(getMake({ vin: 'TYBFB83BD4DU19451' }), 'to be', Make.MITSUBISHI)
     expect(getMake({ vin: 'VNVV2U4S151094656' }), 'to be', Make.NISSAN)
     expect(getMake({ vin: 'VSKF4B1B8UY649146' }), 'to be', Make.NISSAN)
