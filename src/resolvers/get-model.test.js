@@ -704,7 +704,6 @@ const cases = [
     name: 'MERCEDES-B SPRINTER 316 CDI KASSEVOGN  S',
     result: Model[Make.MERCEDES_BENZ].SPRINTER
   },
-  { vin: 'WDFAAAAAAAA123456', name: 'MERCEDES-B LASTBIL SOMETHING', result: Model[Make.MERCEDES_BENZ].LASTBIL },
   { vin: 'VF1AAAAAAAA123456', name: 'RENAUL KANGOO', result: Model[Make.RENAULT].KANGOO },
   { vin: 'ZFCAAAAAAAA123456', name: 'Iveco Daily', result: Model[Make.IVECO].DAILY },
   { vin: 'VS7AAAAAAAA123456', name: 'Citroen Jumpy 2,0 Bluehedi 180 hk', result: Model[Make.CITROEN].JUMPY },
@@ -762,8 +761,7 @@ const cases = [
     name: 'VW TaigO HK STAT',
     result: Model[Make.VOLKSWAGEN].TAIGO
   },
-  { vin: 'WMAL20S644G128551', name: 'Man TGe car', result: Model[Make.MAN].TGE },
-  { vin: 'WMAL20S644G128551', name: 'Man some kind of LastBil', result: Model[Make.MAN].LASTBIL }
+  { vin: 'WMAL20S644G128551', name: 'Man TGe car', result: Model[Make.MAN].TGE }
 ]
 
 describe('get-model', () => {

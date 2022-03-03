@@ -122,9 +122,6 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/vito/i)) {
         return Model[make].VITO
       }
-      if (description.match(/lastbil/i)) {
-        return Model[make].LASTBIL
-      }
       break
     }
     case Make.NISSAN: {
@@ -361,9 +358,6 @@ const getModelFromMakeDescription = (make, description) => {
     case Make.MAN: {
       if (description.match(/tge/i)) {
         return Model[make].TGE
-      }
-      if (description.match(/lastbil/i)) {
-        return Model[make].LASTBIL
       }
       break
     }
