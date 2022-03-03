@@ -22,12 +22,14 @@ module.exports = {
   },
   [Make.CITROEN]: {
     BERLINGO: 'Berlingo',
+    C3: 'C3',
     JUMPER: 'Jumper',
     JUMPY: 'Jumpy'
   },
   [Make.DACIA]: {
     DOKKER: 'Dokker',
-    DUSTER: 'Duster'
+    DUSTER: 'Duster',
+    SANDERO: 'Sandero'
   },
   [Make.FIAT]: {
     DUCATO: 'Ducato',
@@ -47,6 +49,9 @@ module.exports = {
   },
   [Make.IVECO]: {
     DAILY: 'Daily'
+  },
+  [Make.KIA]: {
+    CEED: 'Ceed'
   },
   [Make.MERCEDES_BENZ]: {
     SPRINTER: 'Sprinter',

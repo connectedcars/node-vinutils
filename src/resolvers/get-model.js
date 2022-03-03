@@ -62,6 +62,9 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/berlingo/i)) {
         return Model[make].BERLINGO
       }
+      if (description.match(/c3/i)) {
+        return Model[make].C3
+      }
       if (description.match(/jumper/i)) {
         return Model[make].JUMPER
       }
@@ -76,6 +79,9 @@ const getModelFromMakeDescription = (make, description) => {
       }
       if (description.match(/duster/i)) {
         return Model[make].DUSTER
+      }
+      if (description.match(/sandero/i)) {
+        return Model[make].SANDERO
       }
       break
     }
@@ -112,6 +118,12 @@ const getModelFromMakeDescription = (make, description) => {
     case Make.IVECO: {
       if (description.match(/daily/i)) {
         return Model[make].DAILY
+      }
+      break
+    }
+    case Make.KIA: {
+      if (description.match(/ceed/i)) {
+        return Model[make].CEED
       }
       break
     }

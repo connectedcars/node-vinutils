@@ -697,6 +697,7 @@ const cases = [
   { vin: 'UU1AAAAAAAA123456', name: 'Dacia Dokker', result: Model[Make.DACIA].DOKKER },
   { vin: 'UU1AAAAAAAA123456', name: 'Dacia Duster', result: Model[Make.DACIA].DUSTER },
   { vin: 'UU1AAAAAAAA123456', name: 'DACIA Duster dCi 115 6MT (115 HP)', result: Model[Make.DACIA].DUSTER },
+  { vin: 'UU1AAAAAAAA123456', name: 'Dacia Sandero', result: Model[Make.DACIA].SANDERO },
   { vin: 'WDFAAAAAAAA123456', name: 'Mercedes Vito', result: Model[Make.MERCEDES_BENZ].VITO },
   { vin: 'VF1AAAAAAAA123456', name: 'RENAULT KANGOO 33 KWH AUT', result: Model[Make.RENAULT].KANGOO },
   {
@@ -714,8 +715,10 @@ const cases = [
     result: Model[Make.FORD].TRANSIT
   },
   { vin: 'VS7AAAAAAAA123456', name: 'Citroen Berlingo', result: Model[Make.CITROEN].BERLINGO },
+  { vin: 'VS7AAAAAAAA123456', name: 'Citroen C3', result: Model[Make.CITROEN].C3 },
   { vin: 'VF1AAAAAAAA123456', name: 'Renault Master', result: Model[Make.RENAULT].MASTER },
   { vin: 'VN1AAAAAAAA123456', name: 'Opel Vivaro 2,0 CDTI', result: Model[Make.OPEL].VIVARO },
+  { vin: 'MS0AAAAAAAA123456', name: 'Kia Ceed', result: Model[Make.KIA].CEED },
   {
     vin: 'WDFAAAAAAAA123456',
     name: 'Mercedes-Benz Sprinter 316 Cdi Kassevogn Standard',
