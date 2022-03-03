@@ -697,6 +697,7 @@ const cases = [
   { vin: 'UU1AAAAAAAA123456', name: 'Dacia Dokker', result: Model[Make.DACIA].DOKKER },
   { vin: 'UU1AAAAAAAA123456', name: 'Dacia Duster', result: Model[Make.DACIA].DUSTER },
   { vin: 'UU1AAAAAAAA123456', name: 'DACIA Duster dCi 115 6MT (115 HP)', result: Model[Make.DACIA].DUSTER },
+  { vin: 'UU1AAAAAAAA123456', name: 'Dacia Sandero', result: Model[Make.DACIA].SANDERO },
   { vin: 'WDFAAAAAAAA123456', name: 'Mercedes Vito', result: Model[Make.MERCEDES_BENZ].VITO },
   { vin: 'VF1AAAAAAAA123456', name: 'RENAULT KANGOO 33 KWH AUT', result: Model[Make.RENAULT].KANGOO },
   {
@@ -704,7 +705,6 @@ const cases = [
     name: 'MERCEDES-B SPRINTER 316 CDI KASSEVOGN  S',
     result: Model[Make.MERCEDES_BENZ].SPRINTER
   },
-  { vin: 'WDFAAAAAAAA123456', name: 'MERCEDES-B LASTBIL SOMETHING', result: Model[Make.MERCEDES_BENZ].LASTBIL },
   { vin: 'VF1AAAAAAAA123456', name: 'RENAUL KANGOO', result: Model[Make.RENAULT].KANGOO },
   { vin: 'ZFCAAAAAAAA123456', name: 'Iveco Daily', result: Model[Make.IVECO].DAILY },
   { vin: 'VS7AAAAAAAA123456', name: 'Citroen Jumpy 2,0 Bluehedi 180 hk', result: Model[Make.CITROEN].JUMPY },
@@ -715,8 +715,10 @@ const cases = [
     result: Model[Make.FORD].TRANSIT
   },
   { vin: 'VS7AAAAAAAA123456', name: 'Citroen Berlingo', result: Model[Make.CITROEN].BERLINGO },
+  { vin: 'VS7AAAAAAAA123456', name: 'Citroen C3', result: Model[Make.CITROEN].C3 },
   { vin: 'VF1AAAAAAAA123456', name: 'Renault Master', result: Model[Make.RENAULT].MASTER },
   { vin: 'VN1AAAAAAAA123456', name: 'Opel Vivaro 2,0 CDTI', result: Model[Make.OPEL].VIVARO },
+  { vin: 'MS0AAAAAAAA123456', name: 'Kia Ceed', result: Model[Make.KIA].CEED },
   {
     vin: 'WDFAAAAAAAA123456',
     name: 'Mercedes-Benz Sprinter 316 Cdi Kassevogn Standard',
@@ -762,8 +764,7 @@ const cases = [
     name: 'VW TaigO HK STAT',
     result: Model[Make.VOLKSWAGEN].TAIGO
   },
-  { vin: 'WMAL20S644G128551', name: 'Man TGe car', result: Model[Make.MAN].TGE },
-  { vin: 'WMAL20S644G128551', name: 'Man some kind of LastBil', result: Model[Make.MAN].LASTBIL }
+  { vin: 'WMAL20S644G128551', name: 'Man TGe car', result: Model[Make.MAN].TGE }
 ]
 
 describe('get-model', () => {

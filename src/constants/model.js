@@ -22,12 +22,14 @@ module.exports = {
   },
   [Make.CITROEN]: {
     BERLINGO: 'Berlingo',
+    C3: 'C3',
     JUMPER: 'Jumper',
     JUMPY: 'Jumpy'
   },
   [Make.DACIA]: {
     DOKKER: 'Dokker',
-    DUSTER: 'Duster'
+    DUSTER: 'Duster',
+    SANDERO: 'Sandero'
   },
   [Make.FIAT]: {
     DUCATO: 'Ducato',
@@ -48,10 +50,13 @@ module.exports = {
   [Make.IVECO]: {
     DAILY: 'Daily'
   },
+  [Make.KIA]: {
+    CEED: 'Ceed'
+  },
   [Make.MERCEDES_BENZ]: {
     SPRINTER: 'Sprinter',
     VITO: 'Vito',
-    LASTBIL: 'Lastbil'
+    TRUCK: 'Truck'
   },
   [Make.NISSAN]: {
     NV400: 'NV400',
@@ -62,6 +67,11 @@ module.exports = {
     ZAFIRA: 'Zafira',
     MOVANO: 'Movano'
   },
+  [Make.OTHER]: {
+    TRUCK: 'Truck',
+    TRAILER: 'Trailer',
+    OTHER: 'Other'
+  },
   [Make.PEUGEOT]: {
     EXPERT: 'Expert',
     PARTNER: 'Partner'
@@ -70,6 +80,9 @@ module.exports = {
     KANGOO: 'Kangoo',
     MASTER: 'Master',
     TRAFIC: 'Trafic'
+  },
+  [Make.SCANIA]: {
+    TRUCK: 'Truck'
   },
   [Make.SEAT]: {
     ALHAMBRA: 'Alhambra',
@@ -140,8 +153,11 @@ module.exports = {
     COMFORTLINE: 'Comfortline',
     TAIGO: 'Taigo'
   },
+  [Make.VOLVO]: {
+    TRUCK: 'Truck'
+  },
   [Make.MAN]: {
     TGE: 'TGE',
-    LASTBIL: 'Lastbil'
+    TRUCK: 'Truck'
   }
 }

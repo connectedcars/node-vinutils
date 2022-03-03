@@ -62,6 +62,9 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/berlingo/i)) {
         return Model[make].BERLINGO
       }
+      if (description.match(/c3/i)) {
+        return Model[make].C3
+      }
       if (description.match(/jumper/i)) {
         return Model[make].JUMPER
       }
@@ -76,6 +79,9 @@ const getModelFromMakeDescription = (make, description) => {
       }
       if (description.match(/duster/i)) {
         return Model[make].DUSTER
+      }
+      if (description.match(/sandero/i)) {
+        return Model[make].SANDERO
       }
       break
     }
@@ -115,15 +121,18 @@ const getModelFromMakeDescription = (make, description) => {
       }
       break
     }
+    case Make.KIA: {
+      if (description.match(/ceed/i)) {
+        return Model[make].CEED
+      }
+      break
+    }
     case Make.MERCEDES_BENZ: {
       if (description.match(/sprinter/i)) {
         return Model[make].SPRINTER
       }
       if (description.match(/vito/i)) {
         return Model[make].VITO
-      }
-      if (description.match(/lastbil/i)) {
-        return Model[make].LASTBIL
       }
       break
     }
@@ -361,9 +370,6 @@ const getModelFromMakeDescription = (make, description) => {
     case Make.MAN: {
       if (description.match(/tge/i)) {
         return Model[make].TGE
-      }
-      if (description.match(/lastbil/i)) {
-        return Model[make].LASTBIL
       }
       break
     }
