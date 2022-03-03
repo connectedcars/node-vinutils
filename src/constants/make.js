@@ -55,6 +55,7 @@ module.exports = {
   NOVA: 'Nova',
   OLDSMOBILE: 'Oldsmobile',
   OPEL: 'Opel',
+  OTHER: 'Other',
   PEUGEOT: 'Peugeot',
   PLYMOUTH: 'Plymouth',
   PONTIAC: 'Pontiac',

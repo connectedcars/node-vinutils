@@ -62,6 +62,11 @@ module.exports = {
     ZAFIRA: 'Zafira',
     MOVANO: 'Movano'
   },
+  [Make.OTHER]: {
+    TRUCK: 'Truck',
+    TRAILER: 'Trailer',
+    OTHER: 'Other'
+  },
   [Make.PEUGEOT]: {
     EXPERT: 'Expert',
     PARTNER: 'Partner'
