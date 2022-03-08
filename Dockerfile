@@ -2,13 +2,9 @@ ARG NODE_VERSION=14.x
 
 FROM gcr.io/connectedcars-staging/node-builder.master:$NODE_VERSION as builder
 
-ARG SSH_KEY_PASSWORD
-ARG NPM_TOKEN
 ARG COMMIT_SHA=master
 
 WORKDIR /app
-
-RUN apt-get update
 
 USER builder
 
@@ -24,4 +20,5 @@ RUN npm run ci-mocha
 
 RUN npm run ci-eslint
 
+# Run tests (to possibly fail build)
 RUN npm test
