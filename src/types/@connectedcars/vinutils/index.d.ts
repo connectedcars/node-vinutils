@@ -3,7 +3,7 @@ type FuelType = {
   GASOLINE: 'gasoline',
   ELECTRIC: 'electric',
   HYBRID: 'hybrid',
-  HYBRID_DIESEL: 'hybrid_disel',
+  HYBRID_DIESEL: 'hybrid_diesel',
   NATURAL_GAS: 'natural_gas',
   HYDROGEN: 'hydrogen'
 }
