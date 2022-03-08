@@ -11,7 +11,7 @@
     "integration": "mocha \"src/**/*.it.js\"",
     "ci-audit": "checks audit",
     "ci-eslint": "checks eslint -- --ignore-pattern=\"src/**/*.test.js\" --format=\"json\" src/ ",
-    "ci-mocha": "NODE_ENV=test checks mocha -- --no-deprecation --timeout 120000 \"src/**/*.+(test).js\" --forbid-only --exit"
+    "ci-mocha": "NODE_ENV=test checks mocha --hard-fail -- --no-deprecation --timeout 120000 \"src/**/*.+(test).js\" --forbid-only --exit"
   },
   "types": "src/types/@connectedcars/vinutils/index.d.ts",
   "repository": {

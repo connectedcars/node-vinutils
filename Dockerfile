@@ -19,6 +19,3 @@ RUN npm run ci-audit
 RUN npm run ci-mocha
 
 RUN npm run ci-eslint
-
-# Run tests (to possibly fail build)
-RUN npm test
