@@ -405,12 +405,7 @@ const getYearFromVIN = vin => {
   return year
 }
 
-const acceptedMakes = [
-  Make.AUDI,
-  Make.SEAT, 
-  Make.SKODA, 
-  Make.VOLKSWAGEN,
-]
+const acceptedMakes = [Make.AUDI, Make.SEAT, Make.SKODA, Make.VOLKSWAGEN]
 
 /**
  * This method retrieves the year for a vehicle from the VIN.

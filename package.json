@@ -8,7 +8,10 @@
     "test": "mocha \"src/**/*.test.js\"",
     "test-watch": "npm test -- --watch",
     "cov": "nyc npm test",
-    "integration": "mocha \"src/**/*.it.js\""
+    "integration": "mocha \"src/**/*.it.js\"",
+    "ci-audit": "checks audit",
+    "ci-eslint": "checks eslint -- --ignore-pattern=\"src/**/*.test.js\" --format=\"json\" src/ ",
+    "ci-mocha": "NODE_ENV=test checks mocha -- --no-deprecation --timeout 120000 \"src/**/*.+(test).js\" --forbid-only --exit"
   },
   "types": "src/types/@connectedcars/vinutils/index.d.ts",
   "repository": {
@@ -22,6 +25,7 @@
   },
   "homepage": "https://github.com/connectedcars/node-vinutils#readme",
   "devDependencies": {
+    "@connectedcars/test": "^0.21.1",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.14.1",
     "eslint-config-prettier": "^4.0.0",
