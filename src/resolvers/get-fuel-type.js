@@ -2,23 +2,65 @@ const Make = require('../constants/make')
 const Model = require('../constants/model')
 const FuelType = require('../constants/fuel-type')
 const getModel = require('./get-model')
+const getMake = require('./get-make')
 
-const getFuelTypeFromDescription = description => {
-  if (description.match(/e-tron/i) && description.match(/tdi/i)) {
-    return FuelType.HYBRID_DIESEL
+/**
+ * This method retrieves the fuel type for a vehicle information such
+ * as description and/or vin
+ *
+ * @param {Object} vehicle
+ * @param {string} vehicle.vin
+ * @param {string} vehicle.name
+ * @returns {Fuels|null}
+ */
+const getFuelTypeFromVehicleInfo = vehicle => {
+  const description = vehicle.name
+  const make = getMake(vehicle)
+  switch (make) {
+    case Make.AUDI:
+      if (description.match(/e-tron/i) && description.match(/tdi/i)) {
+        return FuelType.HYBRID_DIESEL
+      }
+      // Some of the following regexes uses negative look-behinds to account for
+      // malicious input that will cause them to perform poorly.
+      //
+      // https://codeql.github.com/codeql-query-help/javascript/js-polynomial-redos/
+      if (description.match(/((?<!(a3))a3.+e-tron|(?<!(q7))q7.+e-tron|tfsi ?e)/i)) {
+        return FuelType.HYBRID
+      }
+      if (description.match(/e-tron/i)) {
+        return FuelType.ELECTRIC
+      }
+      break
+    case Make.VOLKSWAGEN:
+      if (description.match(/gte/i)) {
+        return FuelType.HYBRID
+      }
+      if (description.match(/(e-golf|e-up!|e-up( |$)|id\.[3-5])/i)) {
+        return FuelType.ELECTRIC
+      }
+      break
+    case Make.SKODA:
+      if (description.match(/citigoe/i)) {
+        return FuelType.ELECTRIC
+      }
+      if (description.match(/ iv /i)) {
+        return FuelType.HYBRID
+      }
+      break
+    case Make.SEAT:
+      if (description.match(/mii electric/i)) {
+        return FuelType.ELECTRIC
+      }
+      break
+    default:
+      break
   }
-  // Some of the following regexes uses negative look-behinds to account for
-  // malicious input that will cause them to perform poorly.
-  //
-  // https://codeql.github.com/codeql-query-help/javascript/js-polynomial-redos/
-  if (
-    description.match(/(gte|(?<!(a3))a3.+e-tron|(?<!(q7))q7.+e-tron|tfsi ?e)/i) ||
-    (description.match(/hybrid/i) && !description.match(/mild hybrid/i))
-  ) {
-    return FuelType.HYBRID
-  }
-  if (description.match(/(e-golf|citigoe|mii electric|e-up!|e-up( |$)|e-tron|id\.[3-5]|e-crafter)/i)) {
+  if (description.match(/e-crafter/i)) {
     return FuelType.ELECTRIC
+  }
+  if (description.match(/hybrid/i) && !description.match(/mild hybrid/i)) {
+    return FuelType.HYBRID
   }
   if (description.match(/(sdi|tdi)/i)) {
     return FuelType.DIESEL
@@ -56,7 +98,7 @@ module.exports = vehicle => {
   }
 
   if (!fuelType && vehicle.name) {
-    fuelType = getFuelTypeFromDescription(vehicle.name)
+    fuelType = getFuelTypeFromVehicleInfo(vehicle)
   }
   if (!fuelType) {
     const model = getModel(vehicle)
