@@ -29,6 +29,7 @@ const cases = [
   { vin: '', name: 'VW Passat Var GTE Hybrid 1,4TSI 218HK DSG6', result: FuelType.HYBRID },
   { vin: '', name: 'SEAT Ny Leon SP Xcellence 1,5 eTSI 150 HK DSG', result: FuelType.GASOLINE },
   { vin: '', name: 'SKODA OCTAVIA A8 COMBI Style 1ED 1,0 eTSI 110', result: FuelType.GASOLINE },
+  { vin: '', name: 'SKODA OCTAVIA A8 COUPÉ iV 1,4 TSI 204 hk DSG', result: FuelType.HYBRID },
   { vin: '', name: 'Audi Q7 e-tron 3,0 TDI qua 258 HK tip', result: FuelType.HYBRID_DIESEL },
   { vin: '', name: 'Audi Q7 SUV e-tron 3,0 TDI 374 hk 275 kW E-tr', result: FuelType.HYBRID_DIESEL },
   { vin: '', name: 'Audi Q7 SUV TdI 3,0 E-tRoN 374 hk 275 kW E-tr', result: FuelType.HYBRID_DIESEL },
