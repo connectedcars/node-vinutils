@@ -134,7 +134,7 @@ describe('index', () => {
     expect(getFuelType({ name: 'VW e-Golf 115HK 85kW 1AUT' }), 'to be', FuelType.ELECTRIC)
     expect(getFuelType({ name: 'VW E-UP! 82HK AUT1 60KW' }), 'to be', FuelType.ELECTRIC)
     expect(getFuelType({ name: 'vw e-up 82hk aut1 60kw' }), 'to be', FuelType.ELECTRIC)
-    expect(getFuelType({ name: 'e-golf' }), 'to be', FuelType.ELECTRIC)
+    expect(getFuelType({ name: 'vw e-golf' }), 'to be', FuelType.ELECTRIC)
     expect(getFuelType({ vin: 'VSSAAAAAAAA123456', name: 'mii' }), 'to be', FuelType.GASOLINE)
     expect(getFuelType({ vin: 'TMBAAAAAAAA123456', name: 'citigo' }), 'to be', FuelType.GASOLINE)
     expect(getFuelType({ vin: 'WVWAAAAAAAA123456', name: 'up!' }), 'to be', FuelType.GASOLINE)
