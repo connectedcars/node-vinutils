@@ -1,4 +1,4 @@
-ARG NODE_VERSION=14.x
+ARG NODE_VERSION=16.x
 
 FROM gcr.io/connectedcars-staging/node-builder.master:$NODE_VERSION as builder
 
