@@ -37,5 +37,8 @@
     "prettier": "^1.16.4",
     "sinon": "^7.2.4",
     "unexpected": "^11.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
