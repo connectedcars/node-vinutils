@@ -250,6 +250,12 @@ const getModelFromMakeDescription = (make, description) => {
       }
       break
     }
+    case Make.TESLA: {
+      if (description.match(/model 3/i)) {
+        return Model[make].MODEL_3
+      }
+      break
+    }
     case Make.TOYOTA: {
       if (description.match(/hiace/i)) {
         return Model[make].HIACE
@@ -313,6 +319,9 @@ const getModelFromMakeDescription = (make, description) => {
       }
       if (description.match(/id.4/i)) {
         return Model[make]['ID.4']
+      }
+      if (description.match(/id.5/i)) {
+        return Model[make]['ID.5']
       }
       if (description.match(/jetta/i)) {
         return Model[make].JETTA
