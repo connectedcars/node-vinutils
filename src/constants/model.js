@@ -112,6 +112,9 @@ module.exports = {
     SUPERB: 'Superb',
     YETI: 'Yeti'
   },
+  [Make.TESLA]: {
+    MODEL_3: 'Model 3'
+  },
   [Make.TOYOTA]: {
     HIACE: 'Hiace',
     AURIS: 'Auris',
@@ -135,6 +138,7 @@ module.exports = {
     GRAND_CALIFORNIA: 'Grand California',
     'ID.3': 'ID.3',
     'ID.4': 'ID.4',
+    'ID.5': 'ID.5',
     JETTA: 'Jetta',
     LUPO: 'Lupo',
     PASSAT: 'Passat',
