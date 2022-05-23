@@ -593,6 +593,7 @@ const cases = [
     name: 'Audi Rs Q3 Performance 2.5 Tfsi 367 Hk 5-dørs Quattro S Tronic',
     result: Model[Make.AUDI].Q3
   },
+  { vin: 'WAUAAAAAAAA123456', name: 'Audi Q4 Attitude 40  e-tron', result: Model[Make.AUDI].Q4 },
   { vin: 'WAUAAAAAAAA123456', name: 'SQ5', result: Model[Make.AUDI].Q5 },
   { vin: 'WAUAAAAAAAA123456', name: 'A5 CABRIOLET 1,8 TFSI 177 HK 130 KW 8 TR', result: Model[Make.AUDI].A5 },
   { vin: 'WAUAAAAAAAA123456', name: 'A5', result: Model[Make.AUDI].A5 },

@@ -35,6 +35,9 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/(audi ((rs ?)|s)?q3|((^| )((rs ?)|s)?q3( |$)))/i)) {
         return Model[make].Q3
       }
+      if (description.match(/(audi ((rs ?)|s)?q4|((^| )((rs ?)|s)?q4( |$)))/i)) {
+        return Model[make].Q4
+      }
       if (description.match(/(audi ((rs ?)|s)?q5|((^| )((rs ?)|s)?q5( |$)))/i)) {
         return Model[make].Q5
       }
