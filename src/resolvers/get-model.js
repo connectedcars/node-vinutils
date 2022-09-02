@@ -146,6 +146,9 @@ const getModelFromMakeDescription = (make, description) => {
       break
     }
     case Make.OPEL: {
+      if (description.match(/astra/i)) {
+        return Model[make].ASTRA
+      }
       if (description.match(/vivaro/i)) {
         return Model[make].VIVARO
       }
@@ -160,6 +163,18 @@ const getModelFromMakeDescription = (make, description) => {
       }
       if (description.match(/partner/i)) {
         return Model[make].PARTNER
+      }
+      break
+    }
+    case Make.PORSCHE: {
+      if (description.match(/boxter/i)) {
+        return Model[make].BOXSTER
+      }
+      if (description.match(/macan/i)) {
+        return Model[make].MACAN
+      }
+      if (description.match(/taycan/i)) {
+        return Model[make].TAYCAN
       }
       break
     }
