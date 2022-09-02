@@ -63,6 +63,7 @@ module.exports = {
     ENV200: 'e-NV200'
   },
   [Make.OPEL]: {
+    ASTRA: 'Astra',
     VIVARO: 'Vivaro',
     ZAFIRA: 'Zafira',
     MOVANO: 'Movano'
@@ -75,6 +76,11 @@ module.exports = {
   [Make.PEUGEOT]: {
     EXPERT: 'Expert',
     PARTNER: 'Partner'
+  },
+  [Make.PORSCHE]: {
+    BOXSTER: 'Boxster',
+    MACAN: 'Macan',
+    TAYCAN: 'Taycan'
   },
   [Make.RENAULT]: {
     KANGOO: 'Kangoo',
