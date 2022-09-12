@@ -167,13 +167,13 @@ const getModelFromMakeDescription = (make, description) => {
       break
     }
     case Make.POLESTAR: {
-      if (description.match(/1$/i)) {
+      if (description.match(/ 1$/i) || description.match(/polestar 1/i)) {
         return Model[make][1]
       }
-      if (description.match(/2$/i)) {
+      if (description.match(/ 2$/i) || description.match(/polestar 2/i)) {
         return Model[make][2]
       }
-      if (description.match(/3$/i)) {
+      if (description.match(/ 3$/i) || description.match(/polestar 3/i)) {
         return Model[make][3]
       }
       break
