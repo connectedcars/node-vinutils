@@ -77,6 +77,11 @@ module.exports = {
     EXPERT: 'Expert',
     PARTNER: 'Partner'
   },
+  [Make.POLESTAR]: {
+    1: '1',
+    2: '2',
+    3: '3'
+  },
   [Make.PORSCHE]: {
     BOXSTER: 'Boxster',
     MACAN: 'Macan',

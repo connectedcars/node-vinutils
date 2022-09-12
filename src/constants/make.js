@@ -58,6 +58,7 @@ module.exports = {
   OTHER: 'Other',
   PEUGEOT: 'Peugeot',
   PLYMOUTH: 'Plymouth',
+  POLESTAR: 'Polestar',
   PONTIAC: 'Pontiac',
   PORSCHE: 'Porsche',
   RENAULT: 'Renault',

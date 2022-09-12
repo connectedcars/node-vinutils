@@ -66,6 +66,7 @@ type MakeType = {
   OPEL: 'Opel'
   PEUGEOT: 'Peugeot'
   PLYMOUTH: 'Plymouth'
+  POLESTAR: 'Polestar'
   PONTIAC: 'Pontiac'
   PORSCHE: 'Porsche'
   RENAULT: 'Renault'
@@ -149,6 +150,11 @@ type ModelType = {
   ['Peugeot']: {
     EXPERT: 'Expert'
     PARTNER: 'Partner'
+  }
+  ['Polestar']: {
+    1: '1'
+    2: '2'
+    3: '3'
   }
   ['Renault']: {
     KANGOO: 'Kangoo'
@@ -246,6 +252,7 @@ export type Models =
 | ValueOf<ModelType['Nissan']>
 | ValueOf<ModelType['Opel']>
 | ValueOf<ModelType['Peugeot']>
+| ValueOf<ModelType['Polestar']>
 | ValueOf<ModelType['Renault']>
 | ValueOf<ModelType['SEAT']>
 | ValueOf<ModelType['Škoda']>

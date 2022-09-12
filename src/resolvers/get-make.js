@@ -266,6 +266,8 @@ const getMakeFromVIN = vin => {
     case '2P3':
     case '3P3':
       return Make.PLYMOUTH
+    case 'LPS':
+      return Make.POLESTAR
     case '1G2':
     case '1GM':
     case '2G2':
