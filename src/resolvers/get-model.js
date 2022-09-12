@@ -166,18 +166,6 @@ const getModelFromMakeDescription = (make, description) => {
       }
       break
     }
-    case Make.PORSCHE: {
-      if (description.match(/boxter/i)) {
-        return Model[make].BOXSTER
-      }
-      if (description.match(/macan/i)) {
-        return Model[make].MACAN
-      }
-      if (description.match(/taycan/i)) {
-        return Model[make].TAYCAN
-      }
-      break
-    }
     case Make.POLESTAR: {
       if (description.match(/1$/i)) {
         return Model[make][1]
@@ -187,6 +175,18 @@ const getModelFromMakeDescription = (make, description) => {
       }
       if (description.match(/3$/i)) {
         return Model[make][3]
+      }
+      break
+    }
+    case Make.PORSCHE: {
+      if (description.match(/boxter/i)) {
+        return Model[make].BOXSTER
+      }
+      if (description.match(/macan/i)) {
+        return Model[make].MACAN
+      }
+      if (description.match(/taycan/i)) {
+        return Model[make].TAYCAN
       }
       break
     }
