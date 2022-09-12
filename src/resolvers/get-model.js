@@ -178,6 +178,18 @@ const getModelFromMakeDescription = (make, description) => {
       }
       break
     }
+    case Make.POLESTAR: {
+      if (description.match(/1$/i)) {
+        return Model[make][1]
+      }
+      if (description.match(/2$/i)) {
+        return Model[make][2]
+      }
+      if (description.match(/3$/i)) {
+        return Model[make][3]
+      }
+      break
+    }
     case Make.RENAULT: {
       if (description.match(/kangoo/i)) {
         return Model[make].KANGOO

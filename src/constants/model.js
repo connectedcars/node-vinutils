@@ -82,6 +82,11 @@ module.exports = {
     MACAN: 'Macan',
     TAYCAN: 'Taycan'
   },
+  [Make.POLESTAR]: {
+    1: '1',
+    2: '2',
+    3: '3'
+  },
   [Make.RENAULT]: {
     KANGOO: 'Kangoo',
     MASTER: 'Master',

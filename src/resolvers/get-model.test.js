@@ -682,6 +682,9 @@ const cases = [
   { vin: 'VN1AAAAAAAA123456', name: 'Opel Zafira Flexivan', result: Model[Make.OPEL].ZAFIRA },
   { vin: 'VN1AAAAAAAA123456', name: 'Opel Vivaro Van', result: Model[Make.OPEL].VIVARO },
   { vin: 'VF3AAAAAAAA123456', name: 'Peugeot Partner', result: Model[Make.PEUGEOT].PARTNER },
+  { vin: 'LPSVSEDEENL046573', name: 'Polestar 1', result: Model[Make.POLESTAR][1] },
+  { vin: 'LPSVSEDEENL046573', name: 'Polestar 2', result: Model[Make.POLESTAR][2] },
+  { vin: 'LPSVSEDEENL046573', name: 'Polestar 3', result: Model[Make.POLESTAR][3] },
   {
     vin: 'VS6AAAAAAAA123456',
     name: 'Ford Transit 2.2 Tdci (140 Hk) 350m Van Fwd Manuel',

@@ -279,6 +279,8 @@ const getMakeFromVIN = vin => {
     case 'MP1':
     case '0P0':
       return Make.PORSCHE
+    case 'LPS':
+      return Make.POLESTAR
     case 'KNM':
     case 'MEE':
     case 'VF1':

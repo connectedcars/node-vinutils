@@ -60,6 +60,7 @@ module.exports = {
   PLYMOUTH: 'Plymouth',
   PONTIAC: 'Pontiac',
   PORSCHE: 'Porsche',
+  POLESTAR: 'Polestar',
   RENAULT: 'Renault',
   ROLLS_ROYCE: 'Rolls Royce',
   SAAB: 'Saab',
