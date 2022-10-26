@@ -44,6 +44,9 @@ const getFuelTypeFromVehicleInfo = vehicle => {
       if (description.match(/citigoe/i)) {
         return FuelType.ELECTRIC
       }
+      if (description.match(/enyaq/i)) {
+        return FuelType.ELECTRIC
+      }
       if (description.match(/ iv /i)) {
         return FuelType.HYBRID
       }

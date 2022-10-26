@@ -36,7 +36,8 @@ const cases = [
   { vin: '', name: 'VW ID.4 1st 204HK AUT1 Performance', result: FuelType.ELECTRIC },
   { vin: '', name: 'VW ID.6 1st 204HK AUT1 Performance', result: null },
   { vin: '', name: 'VW e-Crafter L3 Kassevogn EL 136HK AUT1G', result: FuelType.ELECTRIC },
-  { vin: '', name: 'AUDI A6 ALLROAD 3,0 TFSIe 333 HK 245 KW QUATTR', result: FuelType.HYBRID }
+  { vin: '', name: 'AUDI A6 ALLROAD 3,0 TFSIe 333 HK 245 KW QUATTR', result: FuelType.HYBRID },
+  { vin: '', name: 'SKODA ENYAQ 60 Plus EL 179 hk AUT', result: FuelType.ELECTRIC }
 ]
 
 describe('get-fuel-type', () => {
