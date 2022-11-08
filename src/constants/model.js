@@ -42,7 +42,8 @@ module.exports = {
     TRANSIT: 'Transit',
     FOCUS: 'Focus',
     S_MAX: 'S-MAX',
-    FIESTA: 'Fiesta'
+    FIESTA: 'Fiesta',
+    MUSTANG_MACH_E: 'Mustang Mach-E'
   },
   [Make.GARIA]: {
     UTILITY_CITY: 'Utility City'
@@ -56,11 +57,13 @@ module.exports = {
   [Make.MERCEDES_BENZ]: {
     SPRINTER: 'Sprinter',
     VITO: 'Vito',
-    TRUCK: 'Truck'
+    TRUCK: 'Truck',
+    EQB: 'EQB'
   },
   [Make.NISSAN]: {
     NV400: 'NV400',
-    ENV200: 'e-NV200'
+    ENV200: 'e-NV200',
+    LEAF: 'Leaf'
   },
   [Make.OPEL]: {
     ASTRA: 'Astra',
@@ -90,7 +93,8 @@ module.exports = {
   [Make.RENAULT]: {
     KANGOO: 'Kangoo',
     MASTER: 'Master',
-    TRAFIC: 'Trafic'
+    TRAFIC: 'Trafic',
+    ZOE: 'Zoe'
   },
   [Make.SCANIA]: {
     TRUCK: 'Truck'
@@ -150,6 +154,7 @@ module.exports = {
     'ID.3': 'ID.3',
     'ID.4': 'ID.4',
     'ID.5': 'ID.5',
+    'ID.Buzz': 'ID.Buzz',
     JETTA: 'Jetta',
     LUPO: 'Lupo',
     PASSAT: 'Passat',
@@ -158,6 +163,7 @@ module.exports = {
     MULTIVAN: 'Multivan',
     SCIROCCO: 'Scirocco',
     SHARAN: 'Sharan',
+    TAOS: 'Taos',
     TCROSS: 'T-Cross',
     TROC: 'T-Roc',
     TIGUAN: 'Tiguan',

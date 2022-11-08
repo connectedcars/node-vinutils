@@ -116,6 +116,9 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/fiesta/i)) {
         return Model[make].FIESTA
       }
+      if (description.match(/mustang mach-e/i)) {
+        return Model[make].MUSTANG_MACH_E
+      }
       break
     }
     case Make.IVECO: {
@@ -137,11 +140,17 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/vito/i)) {
         return Model[make].VITO
       }
+      if (description.match(/eqb/i)) {
+        return Model[make].EQB
+      }
       break
     }
     case Make.NISSAN: {
       if (description.match(/nv400/i)) {
         return Model[make].NV400
+      }
+      if (description.match(/leaf/i)) {
+        return Model[make].LEAF
       }
       break
     }
@@ -199,6 +208,9 @@ const getModelFromMakeDescription = (make, description) => {
       }
       if (description.match(/trafic/i)) {
         return Model[make].TRAFIC
+      }
+      if (description.match(/zoe/i)) {
+        return Model[make].ZOE
       }
       break
     }
@@ -353,6 +365,9 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/id.5/i)) {
         return Model[make]['ID.5']
       }
+      if (description.match(/id.buzz/i)) {
+        return Model[make]['ID.Buzz']
+      }
       if (description.match(/jetta/i)) {
         return Model[make].JETTA
       }
@@ -376,6 +391,9 @@ const getModelFromMakeDescription = (make, description) => {
       }
       if (description.match(/sharan/i)) {
         return Model[make].SHARAN
+      }
+      if (description.match(/taos/i)) {
+        return Model[make].TAOS
       }
       if (description.match(/(tcross|t-cross|t cross)/i)) {
         return Model[make].TCROSS
