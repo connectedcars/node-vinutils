@@ -782,11 +782,6 @@ const cases = [
     name: 'VW TaigO HK STAT',
     result: Model[Make.VOLKSWAGEN].TAIGO
   },
-  {
-    vin: 'WVWAAAAAAAA123456',
-    name: 'VW TaigO HK STAT',
-    result: Model[Make.VOLKSWAGEN].TAIGO
-  },
   { vin: 'WMAL20S644G128551', name: 'Man TGe car', result: Model[Make.MAN].TGE },
   { vin: '5YJAAAAAAAA123456', name: 'Tesla Model 3', result: Model[Make.TESLA].MODEL_3 }
 ]
