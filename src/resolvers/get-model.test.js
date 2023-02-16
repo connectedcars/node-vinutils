@@ -699,6 +699,11 @@ const cases = [
   },
   { vin: 'VS6AAAAAAAA123456', name: 'Ford Transit 2.2 Tdci (140 Hk) Kassevogn Man.', result: Model[Make.FORD].TRANSIT },
   {
+    vin: 'LSFAAAAAAAA123456',
+    name: 'MaXuS EuNiQ5',
+    result: Model[Make.MAXUS].EUNIQ5
+  },
+  {
     vin: 'WDFAAAAAAAA123456',
     name: 'Mercedes-benz Vito Kassevogn 111 Cdi Ksv Lang',
     result: Model[Make.MERCEDES_BENZ].VITO
@@ -712,6 +717,7 @@ const cases = [
   { vin: 'UU1AAAAAAAA123456', name: 'Dacia Duster', result: Model[Make.DACIA].DUSTER },
   { vin: 'UU1AAAAAAAA123456', name: 'DACIA Duster dCi 115 6MT (115 HP)', result: Model[Make.DACIA].DUSTER },
   { vin: 'UU1AAAAAAAA123456', name: 'Dacia Sandero', result: Model[Make.DACIA].SANDERO },
+  { vin: 'UU1AAAAAAAA123456', name: 'DaCIa sPRIng', result: Model[Make.DACIA].SPRING },
   { vin: 'WDFAAAAAAAA123456', name: 'Mercedes Vito', result: Model[Make.MERCEDES_BENZ].VITO },
   { vin: 'VF1AAAAAAAA123456', name: 'RENAULT KANGOO 33 KWH AUT', result: Model[Make.RENAULT].KANGOO },
   {
@@ -738,6 +744,8 @@ const cases = [
     name: 'Mercedes-Benz Sprinter 316 Cdi Kassevogn Standard',
     result: Model[Make.MERCEDES_BENZ].SPRINTER
   },
+  { vin: 'WDFAAAAAAAA123456', name: 'Mercedes-Benz CiTAN', result: Model[Make.MERCEDES_BENZ].CITAN },
+  { vin: 'WDFAAAAAAAA123456', name: 'Mercedes-Benz EqV', result: Model[Make.MERCEDES_BENZ].EQV },
   { vin: 'VF1AAAAAAAA123456', name: 'Kangoo', result: Model[Make.RENAULT].KANGOO },
   { vin: 'VF1AAAAAAAA123456', name: 'Renault Kangoo', result: Model[Make.RENAULT].KANGOO },
   { vin: 'VF1AAAAAAAA123456', name: 'Trafic', result: Model[Make.RENAULT].TRAFIC },
@@ -763,7 +771,10 @@ const cases = [
   { vin: 'VNKAAAAAAAA123456', name: 'AuRIS 2,5', result: Model[Make.TOYOTA].AURIS },
   { vin: 'VNKAAAAAAAA123456', name: 'ok HiLUX 2,5', result: Model[Make.TOYOTA].HILUX },
   { vin: 'VNKAAAAAAAA123456', name: 'Toyota pRoAce Electric 2.0', result: Model[Make.TOYOTA].PROACE_ELECTRIC },
-  { vin: 'VNKAAAAAAAA123456', name: 'Toyota dyNA 3.0', result: Model[Make.TOYOTA].DYNA },
+  { vin: 'VNKAAAAAAAA123456', name: 'Toyota dyNA 2.1', result: Model[Make.TOYOTA].DYNA },
+  { vin: 'VNKAAAAAAAA123456', name: 'Toyota CorOLLa 5.3', result: Model[Make.TOYOTA].COROLLA },
+  { vin: 'VNKAAAAAAAA123456', name: 'Toyota YaRIS 4.2', result: Model[Make.TOYOTA].YARIS },
+  { vin: 'VNKAAAAAAAA123456', name: 'Toyota PrOAce 4.2', result: Model[Make.TOYOTA].PROACE },
   { vin: 'VS6AAAAAAAA123456', name: 'C-max 1.6 Tdci (115 Hk) Van Forhjulstræk Manuel', result: Model[Make.FORD].C_MAX },
   { vin: 'VS6AAAAAAAA123456', name: 'Ford Mondeo 2.0 TDCi 150 HK STAT', result: Model[Make.FORD].MONDEO },
   { vin: 'VS6AAAAAAAA123456', name: 'Ford Mondeo', result: Model[Make.FORD].MONDEO },
@@ -781,6 +792,11 @@ const cases = [
     vin: 'WVWAAAAAAAA123456',
     name: 'VW TaigO HK STAT',
     result: Model[Make.VOLKSWAGEN].TAIGO
+  },
+  {
+    vin: 'WVWAAAAAAAA123456',
+    name: 'VW gOL-SAvEiRo',
+    result: Model[Make.VOLKSWAGEN].GOL_SAVEIRO
   },
   { vin: 'WMAL20S644G128551', name: 'Man TGe car', result: Model[Make.MAN].TGE },
   { vin: '5YJAAAAAAAA123456', name: 'Tesla Model 3', result: Model[Make.TESLA].MODEL_3 }

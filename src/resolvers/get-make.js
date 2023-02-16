@@ -182,6 +182,10 @@ const getMakeFromVIN = vin => {
     case 'WMA':
     case '6AB':
       return Make.MAN
+    case 'LSF':
+    case 'LSH':
+    case 'LSK':
+      return Make.MAXUS
     case 'LSJ':
       return Make.MG
     case 'WMW':

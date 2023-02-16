@@ -57,6 +57,7 @@ type MakeType = {
   MASERATI: 'Maserati'
   MAZDA: 'Mazda'
   MCLAREN: 'McLaren'
+  MAXUS: 'Maxus'
   MERCEDES_BENZ: 'Mercedes-Benz'
   MERCURY: 'Mercury'
   MITSUBISHI: 'Mitsubishi'
@@ -116,6 +117,7 @@ type ModelType = {
   ['Dacia']: {
     DOKKER: 'Dokker'
     DUSTER: 'Duster'
+    SPRING: 'Spring'
   }
   ['Fiat']: {
     DUCATO: 'Ducato'
@@ -135,10 +137,15 @@ type ModelType = {
   ['Iveco']: {
     DAILY: 'Daily'
   }
+  ['Maxus']: {
+    EUNIQ5: 'Euniq5'
+  },
   ['Mercedes-Benz']: {
     SPRINTER: 'Sprinter'
     VITO: 'Vito'
     LASTBIL: 'Lastbil'
+    CITAN: 'Citan'
+    EQV: 'EQV'
   }
   ['Nissan']: {
     NV400: 'NV400'
@@ -192,7 +199,10 @@ type ModelType = {
     AURIS: 'Auris'
     HILUX: 'Hilux'
     PROACE_ELECTRIC: 'Proace Electric'
-    DYNA: 'Dyna'
+    DYNA: 'Dyna',
+    COROLLA: 'Corolla'
+    YARIS: 'Yaris'
+    PROACE: 'Proace'
   }
   ['Volkswagen']: {
     AMAROK: 'Amarok'
@@ -227,6 +237,7 @@ type ModelType = {
     UP: 'up!'
     COMFORTLINE: 'Comfortline'
     TAIGO: 'Taigo'
+    GOL_SAVEIRO: 'Gol-Saveiro'
   }
   ['MAN']: {
     TGE: 'TGE'
@@ -248,6 +259,7 @@ export type Models =
 | ValueOf<ModelType['Ford']>
 | ValueOf<ModelType['Garia']>
 | ValueOf<ModelType['Iveco']>
+| ValueOf<ModelType['Maxus']>
 | ValueOf<ModelType['Mercedes-Benz']>
 | ValueOf<ModelType['Nissan']>
 | ValueOf<ModelType['Opel']>

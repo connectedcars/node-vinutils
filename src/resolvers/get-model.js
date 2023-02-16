@@ -86,6 +86,9 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/sandero/i)) {
         return Model[make].SANDERO
       }
+      if (description.match(/spring/i)) {
+        return Model[make].SPRING
+      }
       break
     }
     case Make.FIAT: {
@@ -133,6 +136,12 @@ const getModelFromMakeDescription = (make, description) => {
       }
       break
     }
+    case Make.MAXUS: {
+      if (description.match(/euniq5/i)) {
+        return Model[make].EUNIQ5
+      }
+      break
+    }
     case Make.MERCEDES_BENZ: {
       if (description.match(/sprinter/i)) {
         return Model[make].SPRINTER
@@ -142,6 +151,12 @@ const getModelFromMakeDescription = (make, description) => {
       }
       if (description.match(/eqb/i)) {
         return Model[make].EQB
+      }
+      if (description.match(/citan/i)) {
+        return Model[make].CITAN
+      }
+      if (description.match(/eqv/i)) {
+        return Model[make].EQV
       }
       break
     }
@@ -314,6 +329,15 @@ const getModelFromMakeDescription = (make, description) => {
       if (description.match(/dyna/i)) {
         return Model[make].DYNA
       }
+      if (description.match(/corolla/i)) {
+        return Model[make].COROLLA
+      }
+      if (description.match(/yaris/i)) {
+        return Model[make].YARIS
+      }
+      if (description.match(/proace/i)) {
+        return Model[make].PROACE
+      }
       break
     }
     case Make.VOLKSWAGEN: {
@@ -421,6 +445,9 @@ const getModelFromMakeDescription = (make, description) => {
       }
       if (description.match(/taigo/i)) {
         return Model[make].TAIGO
+      }
+      if (description.match(/gol-saveiro/i)) {
+        return Model[make].GOL_SAVEIRO
       }
       break
     }

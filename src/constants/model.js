@@ -29,7 +29,8 @@ module.exports = {
   [Make.DACIA]: {
     DOKKER: 'Dokker',
     DUSTER: 'Duster',
-    SANDERO: 'Sandero'
+    SANDERO: 'Sandero',
+    SPRING: 'Spring'
   },
   [Make.FIAT]: {
     DUCATO: 'Ducato',
@@ -54,11 +55,16 @@ module.exports = {
   [Make.KIA]: {
     CEED: 'Ceed'
   },
+  [Make.MAXUS]: {
+    EUNIQ5: 'Euniq5'
+  },
   [Make.MERCEDES_BENZ]: {
     SPRINTER: 'Sprinter',
     VITO: 'Vito',
     TRUCK: 'Truck',
-    EQB: 'EQB'
+    EQB: 'EQB',
+    CITAN: 'Citan',
+    EQV: 'EQV'
   },
   [Make.NISSAN]: {
     NV400: 'NV400',
@@ -135,7 +141,10 @@ module.exports = {
     AURIS: 'Auris',
     HILUX: 'Hilux',
     PROACE_ELECTRIC: 'Proace Electric',
-    DYNA: 'Dyna'
+    DYNA: 'Dyna',
+    COROLLA: 'Corolla',
+    YARIS: 'Yaris',
+    PROACE: 'Proace'
   },
   [Make.VOLKSWAGEN]: {
     AMAROK: 'Amarok',
@@ -172,7 +181,8 @@ module.exports = {
     TRANSPORTER: 'Transporter',
     UP: 'up!',
     COMFORTLINE: 'Comfortline',
-    TAIGO: 'Taigo'
+    TAIGO: 'Taigo',
+    GOL_SAVEIRO: 'Gol-Saveiro'
   },
   [Make.VOLVO]: {
     TRUCK: 'Truck'

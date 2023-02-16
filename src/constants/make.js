@@ -42,6 +42,7 @@ module.exports = {
   LINCOLN: 'Lincoln',
   LOTUS: 'Lotus',
   MAN: 'MAN',
+  MAXUS: 'Maxus',
   MG: 'MG',
   MINI: 'MINI',
   MACK: 'Mack',
