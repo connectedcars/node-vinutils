@@ -1,8 +1,9 @@
-const Make = require('../constants/make')
-const Model = require('../constants/model')
-const getMake = require('./get-make')
+import { Make } from '../constants/make'
+import { Model } from '../constants/model'
+import type { Vehicle } from '../types/vehicle-type'
+import { getMake } from './get-make'
 
-const getModelFromMakeDescription = (make, description) => {
+function getModelFromMakeDescription(make: Make, description: string): string | null {
   switch (make) {
     case Make.AUDI: {
       if (description.match(/(audi (a|s)1|((^| )(a|s)1( |$)))/i)) {
@@ -458,6 +459,7 @@ const getModelFromMakeDescription = (make, description) => {
       break
     }
   }
+
   return null
 }
 
@@ -465,18 +467,18 @@ const getModelFromMakeDescription = (make, description) => {
  * This method retrieves the model for a vehicle from the VIN or description
  * (name).
  *
- * @param {Object} vehicle
- * @param {string} vehicle.vin
- * @param {string} [vehicle.name]
- * @returns {string|null}
+ * @param vehicle Vehicle to get model from
  */
-module.exports = vehicle => {
-  let model = null
+export function getModel(vehicle: Vehicle): string | null {
+  let model: string | null = null
+
   if (vehicle.name) {
     const make = getMake(vehicle)
+
     if (make) {
       model = getModelFromMakeDescription(make, vehicle.name)
     }
   }
+
   return model
 }

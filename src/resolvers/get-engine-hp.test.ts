@@ -1,5 +1,4 @@
-const expect = require('unexpected')
-const getEngineHorsepower = require('./get-engine-hp')
+import { getEngineHorsepower } from './get-engine-hp'
 
 const cases = [
   { description: 'CADDY TRENDL EU6 TSI 84HK', result: 84 },
@@ -28,7 +27,7 @@ describe('get-engine-hp', () => {
   describe('getEngineHorsepower', () => {
     for (const { description, result } of cases) {
       it(`resolves engine for ${description} (${result})`, () => {
-        expect(getEngineHorsepower(description), 'to equal', result)
+        expect(getEngineHorsepower(description)).toEqual(result)
       })
     }
   })

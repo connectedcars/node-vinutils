@@ -12,10 +12,4 @@ USER builder
 COPY --chown=builder:builder . /app
 
 RUN npm i
-
-# Run ci checks
-RUN npm run ci-audit
-
-RUN npm run ci-mocha
-
-RUN npm run ci-eslint
+RUN npm run ci-auto

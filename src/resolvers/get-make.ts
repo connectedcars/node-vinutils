@@ -1,8 +1,9 @@
-const Make = require('../constants/make')
-const validateVIN = require('../validators/validate-vin')
+import { Make } from '../constants/make'
+import type { Vehicle } from '../types/vehicle-type'
+import { validateVin } from '../validators/validate-vin'
 
-const getMakeFromVIN = vin => {
-  switch (vin.substr(0, 3).toUpperCase()) {
+function getMakeFromVin(vin: string): Make | null {
+  switch (vin.substring(0, 3).toUpperCase()) {
     case 'ZAR':
       return Make.ALFA_ROMEO
     case 'SCF':
@@ -282,7 +283,6 @@ const getMakeFromVIN = vin => {
     case 'VP1':
     case 'EP0':
     case 'VP0':
-    case 'MP1':
     case '0P0':
       return Make.PORSCHE
     case 'KNM':
@@ -391,7 +391,8 @@ const getMakeFromVIN = vin => {
     case '2WM':
       return Make.WESTERN_STAR
   }
-  switch (vin.substr(0, 2)) {
+
+  switch (vin.substring(0, 2)) {
     case 'KL':
       return Make.DAEWOO
     case 'JD':
@@ -432,27 +433,25 @@ const getMakeFromVIN = vin => {
     case '5T':
       return Make.TOYOTA
   }
+
   return null
 }
-const getMakeFromDescription = description => {
+
+function getMakeFromDescription(description: string): Make | null {
   if (description.match(/audi/i)) {
     return Make.AUDI
-  }
-  if (description.match(/lamborghini/i)) {
+  } else if (description.match(/lamborghini/i)) {
     return Make.LAMBORGHINI
-  }
-  if (description.match(/porsche/i)) {
+  } else if (description.match(/porsche/i)) {
     return Make.PORSCHE
-  }
-  if (description.match(/seat/i)) {
+  } else if (description.match(/seat/i)) {
     return Make.SEAT
-  }
-  if (description.match(/(škoda|skoda)/i)) {
+  } else if (description.match(/(škoda|skoda)/i)) {
     return Make.SKODA
-  }
-  if (description.match(/(volkswagen|vw)/i)) {
+  } else if (description.match(/(volkswagen|vw)/i)) {
     return Make.VOLKSWAGEN
   }
+
   return null
 }
 
@@ -460,20 +459,18 @@ const getMakeFromDescription = description => {
  * This method retrieves the make of a vehicle from the VIN or description
  * (name).
  *
- * @param {Object} vehicle
- * @param {string} vehicle.vin
- * @param {string} [vehicle.name]
- * @returns {string|null}
+ * @param vehicle Vehicle to get make from
  */
-module.exports = vehicle => {
-  let make = null
-  if (validateVIN(vehicle.vin)) {
-    make = getMakeFromVIN(vehicle.vin)
+export function getMake(vehicle: Vehicle): Make | null {
+  let make: Make | null = null
+
+  if (vehicle.vin && validateVin(vehicle.vin)) {
+    make = getMakeFromVin(vehicle.vin)
   }
-  if (!make) {
-    if (vehicle.name) {
-      make = getMakeFromDescription(vehicle.name)
-    }
+
+  if (!make && vehicle.name) {
+    make = getMakeFromDescription(vehicle.name)
   }
+
   return make
 }

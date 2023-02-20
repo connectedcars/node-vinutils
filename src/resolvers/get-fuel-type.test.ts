@@ -1,6 +1,5 @@
-const expect = require('unexpected')
-const getFuelType = require('./get-fuel-type')
-const FuelType = require('../constants/fuel-type')
+import { FuelType } from '../constants/fuel-type'
+import { getFuelType } from './get-fuel-type'
 
 const cases = [
   {
@@ -44,7 +43,7 @@ describe('get-fuel-type', () => {
   describe('getFuelType', () => {
     for (const { vin, name, result, fuelType } of cases) {
       it(`resolves fuel type for ${name} (${fuelType})`, () => {
-        expect(getFuelType({ vin, name, result, fuelType }), 'to equal', result)
+        expect(getFuelType({ vin, name, fuelType })).toEqual(result)
       })
     }
   })

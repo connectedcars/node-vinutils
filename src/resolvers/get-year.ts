@@ -1,8 +1,9 @@
-const validateVIN = require('../validators/validate-vin')
-const getMake = require('./get-make')
-const Make = require('../constants/make')
+import { Make } from '../constants/make'
+import { Vehicle } from '../types/vehicle-type'
+import { validateVin } from '../validators/validate-vin'
+import { getMake } from './get-make'
 
-const yearMap = {
+const yearMap: Record<string, number> = {
   A: 1980,
   B: 1981,
   C: 1982,
@@ -35,19 +36,22 @@ const yearMap = {
   '9': 2009
 }
 
-const getYearFromVIN = vin => {
-  let model = vin.substr(3, 5)
-  let char = vin.substr(9, 1).toUpperCase()
-  let useNew = /^[A-Z]$/.test(vin.substr(6, 1))
-  switch (vin.substr(0, 3)) {
-    case '3VW':
+function getYearFromVin(vin: string): number | null {
+  const model = vin.substring(3, 8)
+  const char = vin.substring(9, 10).toUpperCase()
+  let useNew = /^[A-Z]$/.test(vin.substring(6, 7))
+
+  switch (vin.substring(0, 3)) {
+    case '3VW': {
       switch (model) {
         case 'CD61K':
           useNew = true
           break
       }
       break
-    case 'TMB':
+    }
+
+    case 'TMB': {
       switch (model) {
         case 'AB73T':
           useNew = /^[A-Y1-8]$/.test(char)
@@ -175,7 +179,9 @@ const getYearFromVIN = vin => {
           break
       }
       break
-    case 'TRU':
+    }
+
+    case 'TRU': {
       switch (model) {
         case 'ZZZ8J':
           useNew = /^[A-Y1-6]$/.test(char)
@@ -185,7 +191,9 @@ const getYearFromVIN = vin => {
           break
       }
       break
-    case 'VSS':
+    }
+
+    case 'VSS': {
       switch (model) {
         case 'ZZZ1P':
           useNew = /^[A-Y1-5]$/.test(char)
@@ -203,14 +211,18 @@ const getYearFromVIN = vin => {
           break
       }
       break
-    case 'VWV':
+    }
+
+    case 'VWV': {
       switch (model) {
         case 'ZZZ6R':
           useNew = true
           break
       }
       break
-    case 'WAU':
+    }
+
+    case 'WAU': {
       switch (model) {
         case 'ZZZ4E':
           useNew = /^[A-Y1-2]$/.test(char)
@@ -247,7 +259,9 @@ const getYearFromVIN = vin => {
           break
       }
       break
-    case 'WP0':
+    }
+
+    case 'WP0': {
       switch (model) {
         case 'ZZZ98':
           useNew = /^[A-T]$/.test(char)
@@ -260,7 +274,9 @@ const getYearFromVIN = vin => {
           break
       }
       break
-    case 'WP1':
+    }
+
+    case 'WP1': {
       switch (model) {
         case 'ZZZ92':
           useNew = /^[A-Y1-7]$/.test(char)
@@ -274,7 +290,9 @@ const getYearFromVIN = vin => {
           break
       }
       break
-    case 'WUA':
+    }
+
+    case 'WUA': {
       switch (model) {
         case 'ZZZ42':
           useNew = /^[A-Y1-7]$/.test(char)
@@ -299,7 +317,9 @@ const getYearFromVIN = vin => {
           break
       }
       break
-    case 'WV1':
+    }
+
+    case 'WV1': {
       switch (model) {
         case 'ZZZ2E':
           useNew = /^[A-Y1-6]$/.test(char)
@@ -321,7 +341,9 @@ const getYearFromVIN = vin => {
           break
       }
       break
-    case 'WV2':
+    }
+
+    case 'WV2': {
       switch (model) {
         case 'ZZZ2K':
           useNew = /^[A-Y1-4]$/.test(char)
@@ -331,14 +353,18 @@ const getYearFromVIN = vin => {
           break
       }
       break
-    case 'WV3':
+    }
+
+    case 'WV3': {
       switch (model) {
         case 'ZZZ7J':
           useNew = /^[A-Y1-4]$/.test(char)
           break
       }
       break
-    case 'WVG':
+    }
+
+    case 'WVG': {
       switch (model) {
         case 'ZZZ1T':
           useNew = /^[A-Y1-2]$/.test(char)
@@ -354,7 +380,9 @@ const getYearFromVIN = vin => {
           break
       }
       break
-    case 'WVW':
+    }
+
+    case 'WVW': {
       switch (model) {
         case 'ZZZ13':
           useNew = /^[A-Y1-8]$/.test(char)
@@ -386,7 +414,9 @@ const getYearFromVIN = vin => {
           break
       }
       break
-    case 'ZHW':
+    }
+
+    case 'ZHW': {
       switch (model) {
         case 'EC147':
         case 'GE51U':
@@ -397,31 +427,40 @@ const getYearFromVIN = vin => {
           break
       }
       break
+    }
   }
+
   let year = yearMap[char] || null
+
   if (year && useNew) {
     year += 30
   }
+
   return year
 }
 
 const acceptedMakes = [Make.AUDI, Make.SEAT, Make.SKODA, Make.VOLKSWAGEN]
 
 /**
- * This method retrieves the year for a vehicle from the VIN.
- * Year from VIN uses the 10th character according to the specification with 7th
- * character to determine whether it's in the 1980-2009 or 2010-2039 range. This
- * method has overrides for a bunch of different models not following the 7th
- * character specification.
+ * This method retrieves the year for a vehicle from the VIN. Year from VIN
+ * uses the 10th character according to the specification with 7th character to
+ * determine whether it's in the 1980-2009 or 2010-2039 range. This method has
+ * overrides for a bunch of different models not following the 7th character
+ * specification.
  *
- * @param {Object} vehicle
- * @param {string} vehicle.vin
- * @returns {number|null} Formatted with four digits
+ * @param vehicle Vehicle to get year from
+ * @returns Formatted with four digits
  */
-module.exports = vehicle => {
-  let year = null
-  if (validateVIN(vehicle.vin) && acceptedMakes.includes(getMake(vehicle))) {
-    year = getYearFromVIN(vehicle.vin)
+export function getYear(vehicle: Vehicle): number | null {
+  let year: number | null = null
+
+  if (vehicle.vin && validateVin(vehicle.vin)) {
+    const make = getMake(vehicle)
+
+    if (make && acceptedMakes.includes(make)) {
+      year = getYearFromVin(vehicle.vin)
+    }
   }
+
   return year
 }

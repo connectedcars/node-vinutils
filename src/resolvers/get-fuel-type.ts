@@ -1,23 +1,27 @@
-const Make = require('../constants/make')
-const Model = require('../constants/model')
-const FuelType = require('../constants/fuel-type')
-const getModel = require('./get-model')
-const getMake = require('./get-make')
+import { FuelType } from '../constants/fuel-type'
+import { Make } from '../constants/make'
+import { Model } from '../constants/model'
+import type { Vehicle } from '../types/vehicle-type'
+import { getMake } from './get-make'
+import { getModel } from './get-model'
 
 /**
  * This method retrieves the fuel type for a vehicle information such
  * as description and/or vin
  *
- * @param {Object} vehicle
- * @param {string} vehicle.vin
- * @param {string} vehicle.name
- * @returns {Fuels|null}
+ * @param vehicle Vehicle to get fuel type from
  */
-const getFuelTypeFromVehicleInfo = vehicle => {
+function getFuelTypeFromVehicleInfo(vehicle: Vehicle): FuelType | null {
   const description = vehicle.name
+
+  if (description == null) {
+    return null
+  }
+
   const make = getMake(vehicle)
+
   switch (make) {
-    case Make.AUDI:
+    case Make.AUDI: {
       if (description.match(/e-tron/i) && description.match(/tdi/i)) {
         return FuelType.HYBRID_DIESEL
       }
@@ -32,7 +36,9 @@ const getFuelTypeFromVehicleInfo = vehicle => {
         return FuelType.ELECTRIC
       }
       break
-    case Make.VOLKSWAGEN:
+    }
+
+    case Make.VOLKSWAGEN: {
       if (description.match(/gte/i)) {
         return FuelType.HYBRID
       }
@@ -40,7 +46,9 @@ const getFuelTypeFromVehicleInfo = vehicle => {
         return FuelType.ELECTRIC
       }
       break
-    case Make.SKODA:
+    }
+
+    case Make.SKODA: {
       if (description.match(/citigoe/i)) {
         return FuelType.ELECTRIC
       }
@@ -51,63 +59,66 @@ const getFuelTypeFromVehicleInfo = vehicle => {
         return FuelType.HYBRID
       }
       break
-    case Make.SEAT:
+    }
+
+    case Make.SEAT: {
       if (description.match(/mii electric/i)) {
         return FuelType.ELECTRIC
       }
       break
+    }
+
     default:
       break
   }
+
   if (description.match(/e-crafter/i)) {
     return FuelType.ELECTRIC
-  }
-  if (description.match(/hybrid/i) && !description.match(/mild hybrid/i)) {
+  } else if (description.match(/hybrid/i) && !description.match(/mild hybrid/i)) {
     return FuelType.HYBRID
-  }
-  if (description.match(/(sdi|tdi)/i)) {
+  } else if (description.match(/(sdi|tdi)/i)) {
     return FuelType.DIESEL
-  }
-  if (description.match(/(fsi|mpi|tfsi|tsi)/i)) {
+  } else if (description.match(/(fsi|mpi|tfsi|tsi)/i)) {
     return FuelType.GASOLINE
-  }
-  if (description.match(/(tgi)/i)) {
+  } else if (description.match(/(tgi)/i)) {
     return FuelType.NATURAL_GAS
   }
+
   return null
 }
 
-const mapFuelTypeVariation = invalidFuelType => {
+function mapFuelTypeVariation(invalidFuelType: string): FuelType | null {
   if (invalidFuelType.match(/(benzin)/i)) {
     return FuelType.GASOLINE
   }
+
   return null
 }
 
 /**
- * This method retrieves the fuel type for a vehicle from the description (name)
- * or by some predefined rules for specific models.
+ * This method retrieves the fuel type for a vehicle from the description
+ * (name) or by some predefined rules for specific models.
  *
- * @param {Object} vehicle
- * @param {string} vehicle.vin
- * @param {string} [vehicle.name]
- * @returns {Fuels|null}
+ * @param vehicle Vehicle to get fuel type from
  */
-module.exports = vehicle => {
-  let fuelType = null
+export function getFuelType(vehicle: Vehicle): FuelType | null {
+  let fuelType: FuelType | null = null
 
-  if (vehicle.fuelType && !Object.values(FuelType).includes(vehicle.fuelType)) {
+  if (vehicle.fuelType && !Object.keys(FuelType).includes(vehicle.fuelType)) {
     fuelType = mapFuelTypeVariation(vehicle.fuelType)
   }
 
   if (!fuelType && vehicle.name) {
     fuelType = getFuelTypeFromVehicleInfo(vehicle)
   }
+
   if (!fuelType) {
     const model = getModel(vehicle)
+
     if (model === Model[Make.SEAT].MII || model === Model[Make.SKODA].CITIGO || model === Model[Make.VOLKSWAGEN].UP) {
       fuelType = FuelType.GASOLINE
     }
   }
+
   return fuelType
 }

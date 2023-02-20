@@ -1,8 +1,33 @@
-const Make = require('./make')
+import { Make } from './make'
 
-module.exports = {
+type Values<T> = T[keyof T]
+
+type ModelType = typeof Model
+
+export type Models =
+  | Values<ModelType[Make.AUDI]>
+  | Values<ModelType[Make.CITROEN]>
+  | Values<ModelType[Make.DACIA]>
+  | Values<ModelType[Make.FIAT]>
+  | Values<ModelType[Make.FORD]>
+  | Values<ModelType[Make.GARIA]>
+  | Values<ModelType[Make.IVECO]>
+  | Values<ModelType[Make.MAXUS]>
+  | Values<ModelType[Make.MERCEDES_BENZ]>
+  | Values<ModelType[Make.NISSAN]>
+  | Values<ModelType[Make.OPEL]>
+  | Values<ModelType[Make.PEUGEOT]>
+  | Values<ModelType[Make.POLESTAR]>
+  | Values<ModelType[Make.RENAULT]>
+  | Values<ModelType[Make.SEAT]>
+  | Values<ModelType[Make.SKODA]>
+  | Values<ModelType[Make.TOYOTA]>
+  | Values<ModelType[Make.VOLKSWAGEN]>
+
+export const Model = {
   [Make.AUDI]: {
     A1: 'A1',
+    A2: 'A2',
     A3: 'A3',
     A4: 'A4',
     A5: 'A5',
@@ -191,4 +216,4 @@ module.exports = {
     TGE: 'TGE',
     TRUCK: 'Truck'
   }
-}
+} as const
