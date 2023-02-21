@@ -5,9 +5,3 @@ Utilities to extract model and engine information from vin and car description t
 ```
 npm install @connectedcars/vinutils
 ```
-
-## Test
-Run integration tests via (takes several minutes to run):
-```
-npm run integration
-```
