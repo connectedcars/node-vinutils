@@ -27,5 +27,3 @@ Dockerfile
 jest.config.js
 jsconfig.json
 tsconfig.json
-# Extra
-!src/
