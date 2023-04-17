@@ -13,11 +13,13 @@ export type Models =
   | Values<ModelType[Make.GARIA]>
   | Values<ModelType[Make.IVECO]>
   | Values<ModelType[Make.MAXUS]>
+  | Values<ModelType[Make.MAZDA]>
   | Values<ModelType[Make.MERCEDES_BENZ]>
   | Values<ModelType[Make.NISSAN]>
   | Values<ModelType[Make.OPEL]>
   | Values<ModelType[Make.PEUGEOT]>
   | Values<ModelType[Make.POLESTAR]>
+  | Values<ModelType[Make.PORSCHE]>
   | Values<ModelType[Make.RENAULT]>
   | Values<ModelType[Make.SEAT]>
   | Values<ModelType[Make.SKODA]>
@@ -83,6 +85,9 @@ export const Model = {
   [Make.MAXUS]: {
     EUNIQ5: 'Euniq5'
   },
+  [Make.MAZDA]: {
+    CX5: 'CX5'
+  },
   [Make.MERCEDES_BENZ]: {
     SPRINTER: 'Sprinter',
     VITO: 'Vito',
@@ -94,10 +99,12 @@ export const Model = {
   [Make.NISSAN]: {
     NV400: 'NV400',
     ENV200: 'e-NV200',
-    LEAF: 'Leaf'
+    LEAF: 'Leaf',
+    NAVARA: 'Navara'
   },
   [Make.OPEL]: {
     ASTRA: 'Astra',
+    COMBO: 'Combo',
     VIVARO: 'Vivaro',
     ZAFIRA: 'Zafira',
     MOVANO: 'Movano'
@@ -119,6 +126,7 @@ export const Model = {
   [Make.PORSCHE]: {
     BOXSTER: 'Boxster',
     MACAN: 'Macan',
+    PANAMERA: 'Panamera',
     TAYCAN: 'Taycan'
   },
   [Make.RENAULT]: {
@@ -169,7 +177,8 @@ export const Model = {
     DYNA: 'Dyna',
     COROLLA: 'Corolla',
     YARIS: 'Yaris',
-    PROACE: 'Proace'
+    PROACE: 'Proace',
+    SPORTSVAN: 'Sportsvan'
   },
   [Make.VOLKSWAGEN]: {
     AMAROK: 'Amarok',
@@ -198,6 +207,7 @@ export const Model = {
     SCIROCCO: 'Scirocco',
     SHARAN: 'Sharan',
     TAOS: 'Taos',
+    TERAMONT: 'Teramont',
     TCROSS: 'T-Cross',
     TROC: 'T-Roc',
     TIGUAN: 'Tiguan',
