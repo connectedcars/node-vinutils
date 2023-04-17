@@ -143,6 +143,12 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       break
     }
+    case Make.MAZDA: {
+      if (description.match(/(cx5|cx-5)/i)) {
+        return Model[make].CX5
+      }
+      break
+    }
     case Make.MERCEDES_BENZ: {
       if (description.match(/sprinter/i)) {
         return Model[make].SPRINTER
@@ -168,6 +174,10 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/leaf/i)) {
         return Model[make].LEAF
       }
+      if (description.match(/navara/i)) {
+        return Model[make].NAVARA
+      }
+
       break
     }
     case Make.OPEL: {
@@ -179,6 +189,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       if (description.match(/zafira/i)) {
         return Model[make].ZAFIRA
+      }
+      if (description.match(/combo/i)) {
+        return Model[make].COMBO
       }
       break
     }
@@ -213,6 +226,10 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/taycan/i)) {
         return Model[make].TAYCAN
       }
+      if (description.match(/panamera/i)) {
+        return Model[make].PANAMERA
+      }
+
       break
     }
     case Make.RENAULT: {
@@ -339,6 +356,10 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/proace/i)) {
         return Model[make].PROACE
       }
+      if (description.match(/sportsvan/i)) {
+        return Model[make].SPORTSVAN
+      }
+
       break
     }
     case Make.VOLKSWAGEN: {
@@ -422,6 +443,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       if (description.match(/(tcross|t-cross|t cross)/i)) {
         return Model[make].TCROSS
+      }
+      if (description.match(/teramont/i)) {
+        return Model[make].TERAMONT
       }
       if (description.match(/(troc|t-roc|t roc)/i)) {
         return Model[make].TROC

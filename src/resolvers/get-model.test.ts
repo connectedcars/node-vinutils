@@ -296,7 +296,8 @@ const cases = [
     { name: 'VW T5 CHASSIS LANG 2,0 TDI 140HK BMT 4MOT', result: Model[Make.VOLKSWAGEN].TRANSPORTER },
     { name: 'VW ComfortLine 2,0 TDI', result: Model[Make.VOLKSWAGEN].COMFORTLINE },
     { name: 'VW TaigO HK STAT', result: Model[Make.VOLKSWAGEN].TAIGO },
-    { name: 'VW gOL-SAvEiRo', result: Model[Make.VOLKSWAGEN].GOL_SAVEIRO }
+    { name: 'VW gOL-SAvEiRo', result: Model[Make.VOLKSWAGEN].GOL_SAVEIRO },
+    { name: 'Volkswagen Teramont 2.0L S', result: Model[Make.VOLKSWAGEN].TERAMONT }
   ].map(addVinToTest('WVWAAAAAAAA123456')),
 
   ...[
@@ -559,7 +560,8 @@ const cases = [
 
   ...[
     { name: 'Nissan NV400', result: Model[Make.NISSAN].NV400 },
-    { name: 'Nissan Leaf', result: Model[Make.NISSAN].LEAF }
+    { name: 'Nissan Leaf', result: Model[Make.NISSAN].LEAF },
+    { name: 'Nissan Navara', result: Model[Make.NISSAN].NAVARA }
   ].map(addVinToTest('SJNAAAAAAAA123456')),
 
   ...[
@@ -567,7 +569,8 @@ const cases = [
     { name: 'Opel Vivaro', result: Model[Make.OPEL].VIVARO },
     { name: 'Opel Zafira Flexivan', result: Model[Make.OPEL].ZAFIRA },
     { name: 'Opel Vivaro Van', result: Model[Make.OPEL].VIVARO },
-    { name: 'Opel Vivaro 2,0 CDTI', result: Model[Make.OPEL].VIVARO }
+    { name: 'Opel Vivaro 2,0 CDTI', result: Model[Make.OPEL].VIVARO },
+    { name: 'Opel Combo', result: Model[Make.OPEL].COMBO }
   ].map(addVinToTest('VN1AAAAAAAA123456')),
 
   ...[
@@ -580,6 +583,11 @@ const cases = [
   ].map(addVinToTest('LPSVSEDEENL046573')),
 
   ...[{ name: 'MaXuS EuNiQ5', result: Model[Make.MAXUS].EUNIQ5 }].map(addVinToTest('LSFAAAAAAAA123456')),
+
+  ...[
+    { name: 'Mazda CX-5', result: Model[Make.MAZDA].CX5 },
+    { name: 'Mazda CX5', result: Model[Make.MAZDA].CX5 }
+  ].map(addVinToTest('JMZAAAAAAAA123456')),
 
   ...[
     { name: 'Dacia Dokker', result: Model[Make.DACIA].DOKKER },
@@ -609,7 +617,8 @@ const cases = [
   ...[
     { name: 'Boxter', result: Model[Make.PORSCHE].BOXSTER },
     { name: 'Macan', result: Model[Make.PORSCHE].MACAN },
-    { name: 'Taycan', result: Model[Make.PORSCHE].TAYCAN }
+    { name: 'Taycan', result: Model[Make.PORSCHE].TAYCAN },
+    { name: 'Porsche Panamera 4 E-Hybrid (462 hk)', result: Model[Make.PORSCHE].PANAMERA }
   ].map(addVinToTest('WP0AAAAAAAA123456')),
 
   ...[
@@ -620,7 +629,8 @@ const cases = [
     { name: 'Toyota dyNA 2.1', result: Model[Make.TOYOTA].DYNA },
     { name: 'Toyota CorOLLa 5.3', result: Model[Make.TOYOTA].COROLLA },
     { name: 'Toyota YaRIS 4.2', result: Model[Make.TOYOTA].YARIS },
-    { name: 'Toyota PrOAce 4.2', result: Model[Make.TOYOTA].PROACE }
+    { name: 'Toyota PrOAce 4.2', result: Model[Make.TOYOTA].PROACE },
+    { name: 'Toyota Sportsvan', result: Model[Make.TOYOTA].SPORTSVAN }
   ].map(addVinToTest('VNKAAAAAAAA123456')),
 
   ...[{ name: 'Man TGe car', result: Model[Make.MAN].TGE }].map(addVinToTest('WMAL20S644G128551')),
