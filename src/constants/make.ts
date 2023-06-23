@@ -10,6 +10,7 @@ export enum Make {
   CHEVROLET = 'Chevrolet',
   CHRYSLER = 'Chrysler',
   CITROEN = 'Citroën',
+  CUPRA = 'CUPRA',
   DACIA = 'Dacia',
   DAF = 'DAF',
   DAEWOO = 'Daewoo',
@@ -78,6 +79,7 @@ export enum Make {
   TOYOTA = 'Toyota',
   TRIUMPH = 'Triumph',
   VOLKSWAGEN = 'Volkswagen',
+  VOLKSWAGEN_COMMERCIAL_VEHICLES = 'Volkswagen Commercial Vehicles',
   VOLVO = 'Volvo',
   YAMAHA = 'Yamaha',
   WESTERN_STAR = 'Western Star'
