@@ -79,6 +79,7 @@ export enum Make {
   TOYOTA = 'Toyota',
   TRIUMPH = 'Triumph',
   VOLKSWAGEN = 'Volkswagen',
+  VOLKSWAGEN_COMMERCIAL_VEHICLE = 'Volkswagen Commercial Vehicle',
   VOLVO = 'Volvo',
   YAMAHA = 'Yamaha',
   WESTERN_STAR = 'Western Star'
