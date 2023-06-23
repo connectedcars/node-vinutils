@@ -10,7 +10,7 @@ export enum Make {
   CHEVROLET = 'Chevrolet',
   CHRYSLER = 'Chrysler',
   CITROEN = 'Citroën',
-  CUPRA = 'Cupra',
+  CUPRA = 'CUPRA',
   DACIA = 'Dacia',
   DAF = 'DAF',
   DAEWOO = 'Daewoo',
