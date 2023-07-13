@@ -170,6 +170,7 @@ function getMakeFromVin(vin: string): Make | null {
     case 'XTA':
       return Make.LADA
     case 'ZHW':
+    case 'ZPB':
       return Make.LAMBORGHINI
     case 'ZLA':
       return Make.LANCIA
