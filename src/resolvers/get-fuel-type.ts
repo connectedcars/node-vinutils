@@ -87,11 +87,29 @@ function getFuelTypeFromVehicleInfo(vehicle: Vehicle): FuelType | null {
   return null
 }
 
-function mapFuelTypeVariation(invalidFuelType: string): FuelType | null {
-  if (invalidFuelType.match(/(benzin)/i)) {
+function parseRawFuelType(rawFuelType: string): FuelType | null {
+  rawFuelType = rawFuelType.trim()
+  if (rawFuelType.match(/^diesel$/i)) {
+    return FuelType.DIESEL
+  }
+  if (rawFuelType.match(/^(?:gasoline|benzin)$/i)) {
     return FuelType.GASOLINE
   }
-
+  if (rawFuelType.match(/^electric$/i)) {
+    return FuelType.ELECTRIC
+  }
+  if (rawFuelType.match(/^hybrid$/i)) {
+    return FuelType.HYBRID
+  }
+  if (rawFuelType.match(/^hybrid(?:_| )?diesel$/i)) {
+    return FuelType.HYBRID_DIESEL
+  }
+  if (rawFuelType.match(/^natural(?:_| )?gas$/i)) {
+    return FuelType.NATURAL_GAS
+  }
+  if (rawFuelType.match(/^hydrogen$/i)) {
+    return FuelType.HYDROGEN
+  }
   return null
 }
 
@@ -104,8 +122,11 @@ function mapFuelTypeVariation(invalidFuelType: string): FuelType | null {
 export function getFuelType(vehicle: Vehicle): FuelType | null {
   let fuelType: FuelType | null = null
 
-  if (vehicle.fuelType && !Object.keys(FuelType).includes(vehicle.fuelType)) {
-    fuelType = mapFuelTypeVariation(vehicle.fuelType)
+  if (vehicle.fuelType) {
+    const parsedFuelType = parseRawFuelType(vehicle.fuelType)
+    if (parsedFuelType) {
+      fuelType = parsedFuelType
+    }
   }
 
   if (!fuelType && vehicle.name) {
