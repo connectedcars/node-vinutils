@@ -215,9 +215,16 @@ export const Model = {
     TOURAN: 'Touran',
     TRANSPORTER: 'Transporter',
     UP: 'up!',
-    COMFORTLINE: 'Comfortline',
     TAIGO: 'Taigo',
-    GOL_SAVEIRO: 'Gol-Saveiro'
+    GOL_SAVEIRO: 'Gol-Saveiro',
+    CROSS_SPORT: 'Cross Sport',
+    CROSS_FOX: 'CrossFox',
+    GOL: 'Gol',
+    NIVUS: 'Nivus',
+    SAVEIRO: 'Saveiro',
+    TAIGUN: 'Taigun',
+    VENTO: 'Vento',
+    VIRTUS: 'Virtus'
   },
   [Make.VOLVO]: {
     TRUCK: 'Truck'

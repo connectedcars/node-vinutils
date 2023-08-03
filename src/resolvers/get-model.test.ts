@@ -294,10 +294,17 @@ const cases = [
     { name: 'VW SHARAN HLBMT 162 TSID6F', result: Model[Make.VOLKSWAGEN].SHARAN },
     { name: 'Amarok 3.0 V6', result: Model[Make.VOLKSWAGEN].AMAROK },
     { name: 'VW T5 CHASSIS LANG 2,0 TDI 140HK BMT 4MOT', result: Model[Make.VOLKSWAGEN].TRANSPORTER },
-    { name: 'VW ComfortLine 2,0 TDI', result: Model[Make.VOLKSWAGEN].COMFORTLINE },
     { name: 'VW TaigO HK STAT', result: Model[Make.VOLKSWAGEN].TAIGO },
     { name: 'VW gOL-SAvEiRo', result: Model[Make.VOLKSWAGEN].GOL_SAVEIRO },
-    { name: 'Volkswagen Teramont 2.0L S', result: Model[Make.VOLKSWAGEN].TERAMONT }
+    { name: 'Volkswagen Teramont 2.0L S', result: Model[Make.VOLKSWAGEN].TERAMONT },
+    { name: 'VW cROSs SporT 2', result: Model[Make.VOLKSWAGEN].CROSS_SPORT },
+    { name: 'VW cROSs FoX 2', result: Model[Make.VOLKSWAGEN].CROSS_FOX },
+    { name: 'VW goL', result: Model[Make.VOLKSWAGEN].GOL },
+    { name: 'VW NiVuS', result: Model[Make.VOLKSWAGEN].NIVUS },
+    { name: 'VW SAvEiRo', result: Model[Make.VOLKSWAGEN].SAVEIRO },
+    { name: 'VW TaIgUN 3', result: Model[Make.VOLKSWAGEN].TAIGUN },
+    { name: 'VW VeNtO', result: Model[Make.VOLKSWAGEN].VENTO },
+    { name: 'VW ViRtUs', result: Model[Make.VOLKSWAGEN].VIRTUS }
   ].map(addVinToTest('WVWAAAAAAAA123456')),
 
   ...[

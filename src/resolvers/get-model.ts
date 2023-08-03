@@ -396,6 +396,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/eos/i)) {
         return Model[make].EOS
       }
+      if (description.match(/cross fox/i)) {
+        return Model[make].CROSS_FOX
+      }
       if (description.match(/fox/i)) {
         return Model[make].FOX
       }
@@ -465,14 +468,32 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/(up!|up(\W| |$))/i)) {
         return Model[make].UP
       }
-      if (description.match(/comfortline/i)) {
-        return Model[make].COMFORTLINE
-      }
       if (description.match(/taigo/i)) {
         return Model[make].TAIGO
       }
       if (description.match(/gol-saveiro/i)) {
         return Model[make].GOL_SAVEIRO
+      }
+      if (description.match(/cross sport/i)) {
+        return Model[make].CROSS_SPORT
+      }
+      if (description.match(/gol/i)) {
+        return Model[make].GOL
+      }
+      if (description.match(/nivus/i)) {
+        return Model[make].NIVUS
+      }
+      if (description.match(/saveiro/i)) {
+        return Model[make].SAVEIRO
+      }
+      if (description.match(/taigun/i)) {
+        return Model[make].TAIGUN
+      }
+      if (description.match(/vento/i)) {
+        return Model[make].VENTO
+      }
+      if (description.match(/virtus/i)) {
+        return Model[make].VIRTUS
       }
       break
     }
