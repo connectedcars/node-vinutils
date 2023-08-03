@@ -1,6 +1,6 @@
 {
   "name": "@connectedcars/vinutils",
-  "version": "2.0.32",
+  "version": "2.0.33",
   "description": "Utilities to extract model and engine information from vin and car description text",
   "main": "build/dist/src/index.js",
   "scripts": {
