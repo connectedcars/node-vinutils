@@ -2,7 +2,7 @@ import { Make } from '../constants/make'
 import type { Vehicle } from '../types/vehicle-type'
 import { validateVin } from '../validators/validate-vin'
 
-function getMakeFromVin(vin: string): Make | null {
+function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
   switch (vin.substring(0, 3).toUpperCase()) {
     case 'ZAR':
       return Make.ALFA_ROMEO
@@ -311,7 +311,39 @@ function getMakeFromVin(vin: string): Make | null {
     case '9BS':
       return Make.SCANIA
     case 'VSS':
-      return Make.SEAT
+      switch (modelCode) {
+        case 'K11B3C':
+        case 'K11B4A':
+        case 'K11C5C':
+        case 'K11C5D':
+        case 'KBPCJS':
+        case 'KHPCJS':
+        case 'KL1BFZ':
+        case 'KL1CIZ':
+        case 'KL1CVY':
+        case 'KL8CQS':
+        case 'KL8CVY':
+        case 'KM7BEZ':
+        case 'KM7BHT':
+        case 'KM7BUY':
+        case 'KM7CQT':
+        case 'KM7CRZ':
+        case 'KM7CVY':
+        case 'KM7RZT':
+        case 'KU1BFZ':
+        case 'KU1BHZ':
+        case 'KU1BLZ':
+        case 'KU1CIZ':
+        case 'KU1CVY':
+        case 'KU8BFZ':
+        case 'KU8BHZ':
+        case 'KU8BLZ':
+        case 'KU8CQS':
+        case 'KU8CVY':
+          return Make.CUPRA
+        default:
+          return Make.SEAT
+      }
     case 'TMB':
     case 'TMP':
     case 'TM9':
@@ -358,9 +390,6 @@ function getMakeFromVin(vin: string): Make | null {
     case 'VWV':
     case 'WVG':
     case 'WVW':
-    case 'WV1':
-    case 'WV2':
-    case 'WV3':
     case 'XW8':
     case 'YBW':
     case '1VW':
@@ -370,6 +399,10 @@ function getMakeFromVin(vin: string): Make | null {
     case '8AW':
     case '9BW':
       return Make.VOLKSWAGEN
+    case 'WV1':
+    case 'WV2':
+    case 'WV3':
+      return Make.VOLKSWAGEN_COMMERCIAL_VEHICLES
     case 'MC2':
     case 'XLB':
     case 'YB1':
@@ -466,7 +499,7 @@ export function getMake(vehicle: Vehicle): Make | null {
   let make: Make | null = null
 
   if (vehicle.vin && validateVin(vehicle.vin)) {
-    make = getMakeFromVin(vehicle.vin)
+    make = getMakeFromVin(vehicle.vin, vehicle.modelCode)
   }
 
   if (!make && vehicle.name) {
