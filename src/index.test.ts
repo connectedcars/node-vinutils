@@ -101,6 +101,8 @@ describe('index', () => {
     expect(getMake({ vin: 'WAUZZZ8V1H1123456', name: 'Volkswagen' })).toBe(Make.AUDI)
     expect(getMake({ vin: 'VSSZZZ5FZGR123456', name: 'Audi' })).toBe(Make.SEAT)
     expect(getMake({ vin: 'VSSABC5FZGR123456', modelCode: 'K11B3C' })).toBe(Make.CUPRA)
+    expect(getMake({ vin: 'VSSZZZKMZGR123456' })).toBe(Make.CUPRA)
+    expect(getMake({ vin: 'VSSZZZK1ZGR123456' })).toBe(Make.CUPRA)
     expect(getMake({ vin: 'VSSABC5FZGR123456', modelCode: 'BOGUS' })).toBe(Make.SEAT)
     expect(getMake({ vin: 'VSSABC5FZGR123456' })).toBe(Make.SEAT)
     expect(getMake({ vin: 'VSSbogus', name: 'Audi' })).toBe(Make.AUDI)

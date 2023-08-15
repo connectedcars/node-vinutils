@@ -311,6 +311,11 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case '9BS':
       return Make.SCANIA
     case 'VSS':
+      // vins starting with VSSZZZKM will always be a CUPRA Formentor
+      // vins starting with VSSZZZK1 will always be a CUPRA Born
+      if (vin.startsWith('VSSZZZKM') || vin.startsWith('VSSZZZK1')) {
+        return Make.CUPRA
+      }
       switch (modelCode) {
         case 'K11B3C':
         case 'K11B4A':
