@@ -479,6 +479,8 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
 function getMakeFromDescription(description: string): Make | null {
   if (description.match(/audi/i)) {
     return Make.AUDI
+  } else if (description.match(/^(seat )?cupra/i)) {
+    return Make.CUPRA
   } else if (description.match(/lamborghini/i)) {
     return Make.LAMBORGHINI
   } else if (description.match(/porsche/i)) {
