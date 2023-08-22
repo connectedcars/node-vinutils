@@ -405,16 +405,16 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/golf/i)) {
         return Model[make].GOLF
       }
-      if (description.match(/id.3/i)) {
+      if (description.match(/id. ?3/i)) {
         return Model[make]['ID.3']
       }
-      if (description.match(/id.4/i)) {
+      if (description.match(/id. ?4/i)) {
         return Model[make]['ID.4']
       }
-      if (description.match(/id.5/i)) {
+      if (description.match(/id. ?5/i)) {
         return Model[make]['ID.5']
       }
-      if (description.match(/id.buzz/i)) {
+      if (description.match(/id. ?buzz/i)) {
         return Model[make]['ID.Buzz']
       }
       if (description.match(/jetta/i)) {
