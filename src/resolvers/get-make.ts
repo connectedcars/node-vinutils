@@ -15,6 +15,7 @@ function getMakeFromVin(vin: string): Make | null {
     case '93U':
     case '93V':
     case '99A':
+    case 'AAA':
       return Make.AUDI
     case 'WBA':
     case 'WBS':
@@ -369,6 +370,10 @@ function getMakeFromVin(vin: string): Make | null {
     case '3VW':
     case '8AW':
     case '9BW':
+    case '1V2':
+    case '3VV':
+    case 'VW1':
+    case 'VW2':
       return Make.VOLKSWAGEN
     case 'MC2':
     case 'XLB':
