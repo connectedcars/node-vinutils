@@ -190,8 +190,9 @@ describe('index', () => {
       [{ vin: 'WVWZZZAAZ7D123456' }, 2037],
       [{ vin: 'WVWZZZAAZ8D123456' }, 2038],
       [{ vin: 'WVWZZZAAZ9D123456' }, 2039],
-      [{ vin: 'AAAAAAAAAaAAAAAAA' }, null],
+      [{ vin: 'AAAAAAAAAaAAAAAAA' }, 2010],
       [{ vin: 'AAAAAAAAA0AAAAAAA' }, null],
+      [{ vin: 'BBBBBBBBBbBBBBBBB' }, null],
       [{ vin: 'VSS-invalid-vin' }, null],
       [{ vin: 'bogus' }, null],
       [{}, null]
