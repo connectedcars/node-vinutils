@@ -22,6 +22,10 @@ describe('index', () => {
     expect(getMake({ vin: '3VWZZZAAZFD123456' })).toBe(Make.VOLKSWAGEN)
     expect(getMake({ vin: '8AWZZZAAZFD123456' })).toBe(Make.VOLKSWAGEN)
     expect(getMake({ vin: '9BWZZZAAZFD123456' })).toBe(Make.VOLKSWAGEN)
+    expect(getMake({ vin: '1V2ZZZAAZFD123456' })).toBe(Make.VOLKSWAGEN)
+    expect(getMake({ vin: '3VVZZZAAZFD123456' })).toBe(Make.VOLKSWAGEN)
+    expect(getMake({ vin: 'VW1ZZZAAZFD123456' })).toBe(Make.VOLKSWAGEN)
+    expect(getMake({ vin: 'VW2ZZZAAZFD123456' })).toBe(Make.VOLKSWAGEN)
     expect(getMake({ vin: 'TMBJE73T3E9123456' })).toBe(Make.SKODA)
     expect(getMake({ vin: 'TMPJE73T3E9123456' })).toBe(Make.SKODA)
     expect(getMake({ vin: 'TM9JE73T3E9123456' })).toBe(Make.SKODA)
@@ -32,6 +36,7 @@ describe('index', () => {
     expect(getMake({ vin: '93UZZZ8V1H1123456' })).toBe(Make.AUDI)
     expect(getMake({ vin: '93VZZZ8V1H1123456' })).toBe(Make.AUDI)
     expect(getMake({ vin: '99AZZZ8V1H1123456' })).toBe(Make.AUDI)
+    expect(getMake({ vin: 'AAAZZZ8V1H1123456' })).toBe(Make.AUDI)
     expect(getMake({ vin: 'VSSZZZ5FZGR123456' })).toBe(Make.SEAT)
     expect(getMake({ vin: '1GCKF484J8C457238' })).toBe(Make.CHEVROLET)
     expect(getMake({ vin: '1C4GHB4R2RU505409' })).toBe(Make.CHRYSLER)
@@ -190,8 +195,9 @@ describe('index', () => {
       [{ vin: 'WVWZZZAAZ7D123456' }, 2037],
       [{ vin: 'WVWZZZAAZ8D123456' }, 2038],
       [{ vin: 'WVWZZZAAZ9D123456' }, 2039],
-      [{ vin: 'AAAAAAAAAaAAAAAAA' }, null],
+      [{ vin: 'AAAAAAAAAaAAAAAAA' }, 2010],
       [{ vin: 'AAAAAAAAA0AAAAAAA' }, null],
+      [{ vin: 'BBBBBBBBBbBBBBBBB' }, null],
       [{ vin: 'VSS-invalid-vin' }, null],
       [{ vin: 'bogus' }, null],
       [{}, null]
