@@ -46,8 +46,8 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
         return Model[make].Q7
       }
 
-      const matchesQ8 = /(audi ((rs ?)|s)?q8|((^| )((rs ?)|s)?q8( |$)))/i.test(description)
-      const matchesEtron = /(audi e-tron|((^| )e-tron( |$)))/i.test(description)
+      const matchesQ8 = description.match(/(audi ((rs ?)|s)?q8|((^| )((rs ?)|s)?q8( |$)))/i)
+      const matchesEtron = description.match(/(audi e-tron|((^| )e-tron( |$)))/i)
 
       if (matchesQ8 && matchesEtron) {
         return Model[make].Q8_ETRON
