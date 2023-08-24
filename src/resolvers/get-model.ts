@@ -37,7 +37,7 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
         return Model[make].Q3
       }
       if (description.match(/(audi ((rs ?)|s)?q4|((^| )((rs ?)|s)?q4( |$)))/i)) {
-        return Model[make].Q4
+        return Model[make].Q4_ETRON
       }
       if (description.match(/(audi ((rs ?)|s)?q5|((^| )((rs ?)|s)?q5( |$)))/i)) {
         return Model[make].Q5
