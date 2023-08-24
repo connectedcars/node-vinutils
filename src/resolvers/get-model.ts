@@ -48,15 +48,10 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/(audi ((rs ?)|s)?q7|((^| )((rs ?)|s)?q7( |$)))/i)) {
         return Model[make].Q7
       }
-
-      const matchesQ8 = description.match(/(audi ((rs ?)|s)?q8|((^| )((rs ?)|s)?q8( |$)))/i)
-      const matchesEtron = description.match(/(audi e-tron|((^| )e-tron( |$)))/i)
-
-      if (matchesQ8 && matchesEtron) {
-        return Model[make].Q8_ETRON
-      }
-
-      if (matchesQ8) {
+      if (description.match(/(audi ((rs ?)|s)?q8|((^| )((rs ?)|s)?q8( |$)))/i)) {
+        if (description.match(/((^| )e-tron( |$))/i)) {
+          return Model[make].Q8_ETRON
+        }
         return Model[make].Q8
       }
       if (description.match(/(audi r8|((^| )r8( |$)))/i)) {
@@ -68,7 +63,7 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/(audi e-tron gt|((^| )e-tron gt( |$)))/i)) {
         return Model[make].ETRON_GT
       }
-      if (matchesEtron) {
+      if (description.match(/(audi e-tron|((^| )e-tron( |$)))/i)) {
         return Model[make].ETRON
       }
       break

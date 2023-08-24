@@ -490,6 +490,7 @@ const cases = [
     { name: 'AUDI Q5 3,0 TDI AUT.', result: Model[Make.AUDI].Q5 },
     { name: 'AUDI RS Q3 2,5 TFSI 340 HK S TRON', result: Model[Make.AUDI].Q3 },
     { name: 'Audi Q8 50 TDI qua 286 HK tip', result: Model[Make.AUDI].Q8 },
+    { name: 'Audi e-tron 50 TDI qua RS Q8 286 HK tip', result: Model[Make.AUDI].Q8_ETRON },
     { name: 'Audi Q8 50 TDI qua e-Tron 286 HK tip', result: Model[Make.AUDI].Q8_ETRON },
     { name: 'Audi rsQ8 50 TDI qua e-Tron 286 HK tip', result: Model[Make.AUDI].Q8_ETRON },
     { name: 'Audi e-tRON rsQ8 50 TDI qua e-tron 286 HK tip', result: Model[Make.AUDI].Q8_ETRON },
