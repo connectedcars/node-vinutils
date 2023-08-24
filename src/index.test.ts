@@ -217,7 +217,7 @@ describe('index', () => {
     expect(getMake({ vin: 'MCBH2CEC4MA362596' })).toBe(Make.GENERAL_MOTORS)
     expect(getMake({ vin: 'XUFH2CEC4MA362596' })).toBe(Make.GENERAL_MOTORS)
     expect(getMake({ vin: '1GTH2CEC4MA362596' })).toBe(Make.GENERAL_MOTORS)
-    expect(getMake({ vin: '2GXH2CEC4MA362596' })).toBe(Make.GENERAL_MOTORS)
+    expect(getMake({ vin: '2GxH2CEC4MA362596' })).toBe(Make.GENERAL_MOTORS)
     expect(getMake({ vin: '6G1H2CEC4MA362596' })).toBe(Make.GENERAL_MOTORS)
     expect(getMake({ vin: '6H8H2CEC4MA362596' })).toBe(Make.GENERAL_MOTORS)
     expect(getMake({ vin: '2G0H2CEC4MA362596' })).toBe(Make.GENERAL_MOTORS)
