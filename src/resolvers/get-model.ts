@@ -37,15 +37,21 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
         return Model[make].Q3
       }
       if (description.match(/(audi ((rs ?)|s)?q4|((^| )((rs ?)|s)?q4( |$)))/i)) {
-        return Model[make].Q4
+        return Model[make].Q4_ETRON
       }
       if (description.match(/(audi ((rs ?)|s)?q5|((^| )((rs ?)|s)?q5( |$)))/i)) {
         return Model[make].Q5
+      }
+      if (description.match(/(audi ((rs ?)|s)?q6|((^| )((rs ?)|s)?q6( |$)))/i)) {
+        return Model[make].Q6_ETRON
       }
       if (description.match(/(audi ((rs ?)|s)?q7|((^| )((rs ?)|s)?q7( |$)))/i)) {
         return Model[make].Q7
       }
       if (description.match(/(audi ((rs ?)|s)?q8|((^| )((rs ?)|s)?q8( |$)))/i)) {
+        if (description.match(/((^| )e-tron( |$))/i)) {
+          return Model[make].Q8_ETRON
+        }
         return Model[make].Q8
       }
       if (description.match(/(audi r8|((^| )r8( |$)))/i)) {
