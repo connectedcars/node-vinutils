@@ -83,6 +83,21 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       break
     }
+    case Make.CUPRA: {
+      if (description.match(/ateca/i)) {
+        return Model[make].ATECA
+      }
+      if (description.match(/formentor/i)) {
+        return Model[make].FORMENTOR
+      }
+      if (description.match(/leon/i)) {
+        return Model[make].LEON
+      }
+      if (description.match(/born/i)) {
+        return Model[make].BORN
+      }
+      break
+    }
     case Make.DACIA: {
       if (description.match(/dokker/i)) {
         return Model[make].DOKKER
@@ -365,7 +380,6 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/sportsvan/i)) {
         return Model[make].SPORTSVAN
       }
-
       break
     }
     case Make.VOLKSWAGEN: {
@@ -500,6 +514,30 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       if (description.match(/virtus/i)) {
         return Model[make].VIRTUS
+      }
+      break
+    }
+    case Make.VOLKSWAGEN_COMMERCIAL_VEHICLES: {
+      if (description.match(/amarok/i)) {
+        return Model[make].AMAROK
+      }
+      if (description.match(/caddy/i)) {
+        return Model[make].CADDY
+      }
+      if (description.match(/grand california/i)) {
+        return Model[make].GRAND_CALIFORNIA
+      }
+      if (description.match(/california/i)) {
+        return Model[make].CALIFORNIA
+      }
+      if (description.match(/caravelle/i)) {
+        return Model[make].CARAVELLE
+      }
+      if (description.match(/multivan/i)) {
+        return Model[make].MULTIVAN
+      }
+      if (description.match(/(kassevogn|transporter|vw t5|(^t5)|vw t6|(^t6)|(^TRP))/i)) {
+        return Model[make].TRANSPORTER
       }
       break
     }
