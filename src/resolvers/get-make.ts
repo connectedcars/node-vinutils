@@ -15,6 +15,7 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case '93U':
     case '93V':
     case '99A':
+    case 'AAA':
       return Make.AUDI
     case 'WBA':
     case 'WBS':
@@ -39,6 +40,7 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case '8AG':
     case '8GG':
     case '9BG':
+    case '2GA':
       return Make.CHEVROLET
     case '1C3':
     case '1C4':
@@ -68,6 +70,10 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case '2D3':
     case '3D3':
     case '3D4':
+    case '2B5':
+    case 'WDW':
+    case 'WD8':
+    case 'WD0':
       return Make.DODGE
     case 'ZDM':
       return Make.DUCATI
@@ -117,9 +123,11 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case 'MCB':
     case 'XUF':
     case '1GT':
-    case '2Gx':
+    case '2GX':
     case '6G1':
     case '6H8':
+    case '2G0':
+    case '2GJ':
       return Make.GENERAL_MOTORS
     case 'MAK':
     case 'MHR':
@@ -221,6 +229,15 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case 'W1V':
     case '4JG':
     case '9BM':
+    case '8BR':
+    case 'W1Z':
+    case 'WDZ':
+    case '8BT':
+    case 'W1W':
+    case 'WD4':
+    case '8BU':
+    case 'W1Y':
+    case 'WD3':
       return Make.MERCEDES_BENZ
     case '1ME':
       return Make.MERCURY
@@ -249,6 +266,7 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case '5N1':
     case '6F4':
     case '94D':
+    case '5BZ':
       return Make.NISSAN
     case '2NV':
     case '4RK':
@@ -271,6 +289,7 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case '1P3':
     case '2P3':
     case '3P3':
+    case '2P5':
       return Make.PLYMOUTH
     case 'LPS':
       return Make.POLESTAR
@@ -354,6 +373,8 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case 'TM9':
       return Make.SKODA
     case 'WME':
+    case 'W1A':
+    case 'HES':
       return Make.SMART
     case 'SUU':
       return Make.SOLARIS
@@ -403,6 +424,11 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case '3VW':
     case '8AW':
     case '9BW':
+    case '1V2':
+    case '3VV':
+    case 'VW1':
+    case 'VW2':
+    case 'WV4':
       return Make.VOLKSWAGEN
     case 'WV1':
     case 'WV2':
