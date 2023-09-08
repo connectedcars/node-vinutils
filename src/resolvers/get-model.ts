@@ -96,6 +96,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/born/i)) {
         return Model[make].BORN
       }
+      if (description.match(/tavascan/i)) {
+        return Model[make].TAVASCAN
+      }
       break
     }
     case Make.DACIA: {
@@ -538,6 +541,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       if (description.match(/(kassevogn|transporter|vw t5|(^t5)|vw t6|(^t6)|(^TRP))/i)) {
         return Model[make].TRANSPORTER
+      }
+      if (description.match(/id. ?buzz/i)) {
+        return Model[make]['ID.Buzz']
       }
       break
     }

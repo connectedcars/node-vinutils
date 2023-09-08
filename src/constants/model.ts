@@ -59,9 +59,10 @@ export const Model = {
   },
   [Make.CUPRA]: {
     ATECA: 'Ateca',
+    BORN: 'Born',
     FORMENTOR: 'Formentor',
     LEON: 'Leon',
-    BORN: 'Born'
+    TAVASCAN: 'Tavascan'
   },
   [Make.DACIA]: {
     DOKKER: 'Dokker',
@@ -243,6 +244,7 @@ export const Model = {
     CARAVELLE: 'Caravelle',
     CRAFTER: 'Crafter',
     GRAND_CALIFORNIA: 'Grand California',
+    'ID.Buzz': 'ID.Buzz',
     MULTIVAN: 'Multivan',
     TRANSPORTER: 'Transporter'
   },

@@ -664,7 +664,8 @@ const cases = [
 
   ...[
     { name: 'Ateca', modelCode: 'K11B3C', result: Model[Make.CUPRA].ATECA },
-    { name: 'Seat Cupra Leon', modelCode: 'K11C5C', result: Model[Make.CUPRA].LEON }
+    { name: 'Seat Cupra Leon', modelCode: 'K11C5C', result: Model[Make.CUPRA].LEON },
+    { name: 'Tavascan', modelCode: 'KM7BUY', result: Model[Make.CUPRA].TAVASCAN }
   ].map(addVinToTest('VSSABC5FZGR123456')),
 
   ...[{ name: 'Formentor', result: Model[Make.CUPRA].FORMENTOR }].map(addVinToTest('VSSZZZKMZGR123456')),
@@ -686,15 +687,16 @@ const cases = [
     { name: 'VW T6 CARAVELLE LANG CL 2,0 TDI 150', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].CARAVELLE },
     { name: 'Multivan 2,0 TDI', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].MULTIVAN },
     { name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].TRANSPORTER },
-    { name: 'TRP PROLINE P-U DH 102HK 340', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].TRANSPORTER }
+    { name: 'TRP PROLINE P-U DH 102HK 340', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].TRANSPORTER },
+    { name: 'ID.Buzz', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES]['ID.Buzz'] }
   ].map(addVinToTest('WV1ZZZAAZFD123456'))
 ]
 
 describe('get-model', () => {
   describe('getModel', () => {
-    for (const { vin, name, result } of cases) {
-      it(`resolves model for ${name} (${vin})`, () => {
-        expect(getModel({ vin, name })).toEqual(result)
+    for (const testVehicle of cases) {
+      it(`resolves model for ${testVehicle.name} (${testVehicle.vin})`, () => {
+        expect(getModel(testVehicle)).toEqual(testVehicle.result)
       })
     }
   })
