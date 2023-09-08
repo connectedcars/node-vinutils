@@ -527,6 +527,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/caddy/i)) {
         return Model[make].CADDY
       }
+      if (description.match(/crafter/i)) {
+        return Model[make].CRAFTER
+      }
       if (description.match(/grand california/i)) {
         return Model[make].GRAND_CALIFORNIA
       }
