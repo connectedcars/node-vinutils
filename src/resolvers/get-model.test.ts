@@ -688,7 +688,8 @@ const cases = [
     { name: 'Multivan 2,0 TDI', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].MULTIVAN },
     { name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].TRANSPORTER },
     { name: 'TRP PROLINE P-U DH 102HK 340', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].TRANSPORTER },
-    { name: 'ID.Buzz', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES]['ID.Buzz'] }
+    { name: 'ID.Buzz', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES]['ID.Buzz'] },
+    { name: 'VW Crafter 35 Enka 4325mm 2,0 TDI 136 hk', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].CRAFTER }
   ].map(addVinToTest('WV1ZZZAAZFD123456'))
 ]
 
