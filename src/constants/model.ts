@@ -7,6 +7,7 @@ type ModelType = typeof Model
 export type Models =
   | Values<ModelType[Make.AUDI]>
   | Values<ModelType[Make.CITROEN]>
+  | Values<ModelType[Make.CUPRA]>
   | Values<ModelType[Make.DACIA]>
   | Values<ModelType[Make.FIAT]>
   | Values<ModelType[Make.FORD]>
@@ -25,6 +26,7 @@ export type Models =
   | Values<ModelType[Make.SKODA]>
   | Values<ModelType[Make.TOYOTA]>
   | Values<ModelType[Make.VOLKSWAGEN]>
+  | Values<ModelType[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES]>
 
 export const Model = {
   [Make.AUDI]: {
@@ -54,6 +56,13 @@ export const Model = {
     C3: 'C3',
     JUMPER: 'Jumper',
     JUMPY: 'Jumpy'
+  },
+  [Make.CUPRA]: {
+    ATECA: 'Ateca',
+    BORN: 'Born',
+    FORMENTOR: 'Formentor',
+    LEON: 'Leon',
+    TAVASCAN: 'Tavascan'
   },
   [Make.DACIA]: {
     DOKKER: 'Dokker',
@@ -227,6 +236,17 @@ export const Model = {
     TAIGUN: 'Taigun',
     VENTO: 'Vento',
     VIRTUS: 'Virtus'
+  },
+  [Make.VOLKSWAGEN_COMMERCIAL_VEHICLES]: {
+    AMAROK: 'Amarok',
+    CADDY: 'Caddy',
+    CALIFORNIA: 'California',
+    CARAVELLE: 'Caravelle',
+    CRAFTER: 'Crafter',
+    GRAND_CALIFORNIA: 'Grand California',
+    'ID.Buzz': 'ID.Buzz',
+    MULTIVAN: 'Multivan',
+    TRANSPORTER: 'Transporter'
   },
   [Make.VOLVO]: {
     TRUCK: 'Truck'

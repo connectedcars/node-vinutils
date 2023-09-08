@@ -4,8 +4,9 @@ import { getModel } from './get-model'
 
 type Testcase = {
   vin: string
-  name: string
-  result: string
+  result: string | null
+  name?: string
+  modelCode?: string
 }
 
 function addVinToTest(vin: string): (a: Omit<Testcase, 'vin'>) => Testcase {
@@ -659,14 +660,43 @@ const cases = [
     { vin: 'WVWAAAAAAAA123456', name: 'Bogus CCS', result: null },
     { vin: '', name: 'bogus', result: null },
     { vin: '', name: undefined, result: null }
-  ]
+  ],
+
+  ...[
+    { name: 'Ateca', modelCode: 'K11B3C', result: Model[Make.CUPRA].ATECA },
+    { name: 'Seat Cupra Leon', modelCode: 'K11C5C', result: Model[Make.CUPRA].LEON },
+    { name: 'Tavascan', modelCode: 'KM7BUY', result: Model[Make.CUPRA].TAVASCAN }
+  ].map(addVinToTest('VSSABC5FZGR123456')),
+
+  ...[{ name: 'Formentor', result: Model[Make.CUPRA].FORMENTOR }].map(addVinToTest('VSSZZZKMZGR123456')),
+  ...[{ name: 'Born', result: Model[Make.CUPRA].BORN }].map(addVinToTest('VSSZZZK1ZGR123456')),
+
+  ...[
+    { name: 'Ateca', result: Model[Make.SEAT].ATECA },
+    { name: 'Seat Leon', result: Model[Make.SEAT].LEON },
+    { name: 'Formentor', result: Model[Make.SEAT].FORMENTOR },
+    { name: 'Born', result: Model[Make.SEAT].BORN }
+  ].map(addVinToTest('VSSZZZMMZGR123456')),
+
+  ...[
+    { name: 'Amarok 3.0 TDI', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].AMAROK },
+    { name: 'Amarok 2.0 TDI', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].AMAROK },
+    { name: 'CADDY MAXI WVHIGH 125 CRD6AT', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].CADDY },
+    { name: 'Grand California', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].GRAND_CALIFORNIA },
+    { name: 'California', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].CALIFORNIA },
+    { name: 'VW T6 CARAVELLE LANG CL 2,0 TDI 150', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].CARAVELLE },
+    { name: 'Multivan 2,0 TDI', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].MULTIVAN },
+    { name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].TRANSPORTER },
+    { name: 'TRP PROLINE P-U DH 102HK 340', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].TRANSPORTER },
+    { name: 'ID.Buzz', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES]['ID.Buzz'] }
+  ].map(addVinToTest('WV1ZZZAAZFD123456'))
 ]
 
 describe('get-model', () => {
   describe('getModel', () => {
-    for (const { vin, name, result } of cases) {
+    for (const { vin, result, name, modelCode } of cases) {
       it(`resolves model for ${name} (${vin})`, () => {
-        expect(getModel({ vin, name })).toEqual(result)
+        expect(getModel({ name, vin, modelCode })).toEqual(result)
       })
     }
   })
