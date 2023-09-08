@@ -4,8 +4,8 @@ import { getModel } from './get-model'
 
 type Testcase = {
   vin: string
-  name: string
-  result: string
+  result: string | null
+  name?: string
   modelCode?: string
 }
 
@@ -16,7 +16,7 @@ function addVinToTest(vin: string): (a: Omit<Testcase, 'vin'>) => Testcase {
   })
 }
 
-const cases = [
+const cases: Testcase[] = [
   ...[
     { name: 'VW Touran CL 1,4TSI 150HK DSG7 BMT 110kW', result: Model[Make.VOLKSWAGEN].TOURAN },
     { name: 'MOVE UP! 1,0MPI 60HK 5G BMT ', result: Model[Make.VOLKSWAGEN].UP },
@@ -694,9 +694,9 @@ const cases = [
 
 describe('get-model', () => {
   describe('getModel', () => {
-    for (const testVehicle of cases) {
-      it(`resolves model for ${testVehicle.name} (${testVehicle.vin})`, () => {
-        expect(getModel(testVehicle)).toEqual(testVehicle.result)
+    for (const { vin, result, name, modelCode } of cases) {
+      it(`resolves model for ${name} (${vin})`, () => {
+        expect(getModel({ name, vin, modelCode })).toEqual(result)
       })
     }
   })
