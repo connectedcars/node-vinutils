@@ -16,7 +16,7 @@ function addVinToTest(vin: string): (a: Omit<Testcase, 'vin'>) => Testcase {
   })
 }
 
-const cases: Testcase[] = [
+const cases = [
   ...[
     { name: 'VW Touran CL 1,4TSI 150HK DSG7 BMT 110kW', result: Model[Make.VOLKSWAGEN].TOURAN },
     { name: 'MOVE UP! 1,0MPI 60HK 5G BMT ', result: Model[Make.VOLKSWAGEN].UP },
