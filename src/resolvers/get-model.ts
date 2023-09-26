@@ -1,7 +1,9 @@
 import { Make } from '../constants/make'
 import { Model } from '../constants/model'
 import type { Vehicle } from '../types/vehicle-type'
+import { validateVin } from '../validators/validate-vin'
 import { getMake } from './get-make'
+import { getModelFromVin } from './get-model-from-vin'
 
 function getModelFromMakeDescription(make: Make, description: string): string | null {
   switch (make) {
@@ -574,7 +576,12 @@ export function getModel(vehicle: Vehicle): string | null {
     const make = getMake(vehicle)
 
     if (make) {
-      model = getModelFromMakeDescription(make, vehicle.name)
+      if (vehicle.vin && validateVin(vehicle.vin)) {
+        model = getModelFromVin(make, vehicle.vin)
+      }
+      if (!model) {
+        model = getModelFromMakeDescription(make, vehicle.name)
+      }
     }
   }
 
