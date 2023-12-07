@@ -292,6 +292,8 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case '2P5':
       return Make.PLYMOUTH
     case 'LPS':
+    case 'YSM':
+    case 'YSR':
       return Make.POLESTAR
     case '1G2':
     case '1GM':

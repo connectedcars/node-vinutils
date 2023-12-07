@@ -600,6 +600,24 @@ const cases = [
     { name: 'Polestar 3', result: Model[Make.POLESTAR][3] }
   ].map(addVinToTest('LPSVSEDEENL046573')),
 
+  ...[
+    { name: 'Polestar 1 HP 233', result: Model[Make.POLESTAR][1] },
+    { name: 'Polestar 2 HP 233', result: Model[Make.POLESTAR][2] },
+    { name: 'Polestar 3 HP 233', result: Model[Make.POLESTAR][3] },
+    { name: 'Polestar 1', result: Model[Make.POLESTAR][1] },
+    { name: 'Polestar 2', result: Model[Make.POLESTAR][2] },
+    { name: 'Polestar 3', result: Model[Make.POLESTAR][3] }
+  ].map(addVinToTest('YSMVSEDEENL046573')),
+
+  ...[
+    { name: 'Polestar 1 HP 233', result: Model[Make.POLESTAR][1] },
+    { name: 'Polestar 2 HP 233', result: Model[Make.POLESTAR][2] },
+    { name: 'Polestar 3 HP 233', result: Model[Make.POLESTAR][3] },
+    { name: 'Polestar 1', result: Model[Make.POLESTAR][1] },
+    { name: 'Polestar 2', result: Model[Make.POLESTAR][2] },
+    { name: 'Polestar 3', result: Model[Make.POLESTAR][3] }
+  ].map(addVinToTest('YSRVSEDEENL046573')),
+
   ...[{ name: 'MaXuS EuNiQ5', result: Model[Make.MAXUS].EUNIQ5 }].map(addVinToTest('LSFAAAAAAAA123456')),
 
   ...[
