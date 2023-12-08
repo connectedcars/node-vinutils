@@ -202,6 +202,8 @@ describe('index', () => {
     expect(getMake({ vin: 'LPSVSEDEEML017784' })).toBe(Make.POLESTAR)
     expect(getMake({ vin: 'LPSVSEDEENL046573' })).toBe(Make.POLESTAR)
     expect(getMake({ vin: 'LPSVSEDEEPL069938' })).toBe(Make.POLESTAR)
+    expect(getMake({ vin: 'YSMVSEDEEPL069938' })).toBe(Make.POLESTAR)
+    expect(getMake({ vin: 'YSRVSEDEEPL069938' })).toBe(Make.POLESTAR)
     expect(getMake({ vin: 'YS3CD48U8T1002862' })).toBe(Make.SAAB)
     expect(getMake({ vin: 'YS2R4X20001263612' })).toBe(Make.SCANIA)
     expect(getMake({ vin: 'WME01MC01YH040937' })).toBe(Make.SMART)
