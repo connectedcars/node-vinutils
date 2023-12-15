@@ -592,6 +592,17 @@ const cases = [
   ].map(addVinToTest('VN1AAAAAAAA123456')),
 
   ...[
+    { name: 'BMW i3', result: Model[Make.BMW].I3 },
+    { name: 'BMW i4', result: Model[Make.BMW].I4 },
+    { name: 'BMW i5', result: Model[Make.BMW].I5 },
+    { name: 'BMW iX', result: Model[Make.BMW].IX },
+    { name: 'BMW ix1', result: Model[Make.BMW].IX1 },
+    { name: 'BMW ix2', result: Model[Make.BMW].IX2 },
+    { name: 'BMW ix3', result: Model[Make.BMW].IX3 },
+    { name: 'BMW 330e', result: Model[Make.BMW]['3'] }
+  ].map(addVinToTest('WBY41DU01NS510982')),
+
+  ...[
     { name: 'Polestar 1 HP 233', result: Model[Make.POLESTAR][1] },
     { name: 'Polestar 2 HP 233', result: Model[Make.POLESTAR][2] },
     { name: 'Polestar 3 HP 233', result: Model[Make.POLESTAR][3] },
