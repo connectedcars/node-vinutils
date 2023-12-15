@@ -439,7 +439,7 @@ function getYearFromVin(vin: string): number | null {
   return year
 }
 
-const acceptedMakes = [Make.AUDI, Make.SEAT, Make.SKODA, Make.VOLKSWAGEN]
+const acceptedMakes = [Make.AUDI, Make.SEAT, Make.SKODA, Make.VOLKSWAGEN, Make.CUPRA]
 
 /**
  * This method retrieves the year for a vehicle from the VIN. Year from VIN

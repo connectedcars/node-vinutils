@@ -70,6 +70,36 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       break
     }
+    case Make.BMW: {
+      if (description.match(/(i3)/i)) {
+        return Model[make].I3
+      }
+      if (description.match(/(i4)/i)) {
+        return Model[make].I4
+      }
+      if (description.match(/(i5)/i)) {
+        return Model[make].I5
+      }
+      if (description.match(/(i7)/i)) {
+        return Model[make].I7
+      }
+      if (description.match(/(ix1)/i)) {
+        return Model[make].IX1
+      }
+      if (description.match(/(ix2)/i)) {
+        return Model[make].IX2
+      }
+      if (description.match(/(ix3)/i)) {
+        return Model[make].IX3
+      }
+      if (description.match(/(ix)/i)) {
+        return Model[make].IX
+      }
+      if (description.match(/(3[0-9]{2})/i)) {
+        return Model[make]['3']
+      }
+      break
+    }
     case Make.CITROEN: {
       if (description.match(/berlingo/i)) {
         return Model[make].BERLINGO
