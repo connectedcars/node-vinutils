@@ -672,7 +672,7 @@ const cases = [
     { name: 'Lexus LC', result: Model[Make.LEXUS].LC }
   ].map(addVinToTest('JTJAABABX0A001483')),
   ...[
-    { name: 'Boxter', result: Model[Make.PORSCHE].BOXSTER },
+    { name: 'Boxster', result: Model[Make.PORSCHE].BOXSTER },
     { name: 'Macan', result: Model[Make.PORSCHE].MACAN },
     { name: 'Taycan', result: Model[Make.PORSCHE].TAYCAN },
     { name: 'Porsche Panamera 4 E-Hybrid (462 hk)', result: Model[Make.PORSCHE].PANAMERA }

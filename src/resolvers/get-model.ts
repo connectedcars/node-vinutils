@@ -300,7 +300,7 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       break
     }
     case Make.PORSCHE: {
-      if (description.match(/boxter/i)) {
+      if (description.match(/boxster/i)) {
         return Model[make].BOXSTER
       }
       if (description.match(/macan/i)) {
