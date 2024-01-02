@@ -40,6 +40,7 @@ export enum Make {
   LAMBORGHINI = 'Lamborghini',
   LANCIA = 'Lancia',
   LAND_ROVER = 'Land Rover',
+  LEXUS = 'Lexus',
   LINCOLN = 'Lincoln',
   LOTUS = 'Lotus',
   MAN = 'MAN',

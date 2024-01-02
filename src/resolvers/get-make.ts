@@ -187,6 +187,8 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
       return Make.LAND_ROVER
     case 'SCC':
       return Make.LOTUS
+    case 'JTJ':
+      return Make.LEXUS
     case 'LZM':
     case 'VAN':
     case 'WMA':
