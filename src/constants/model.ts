@@ -104,6 +104,16 @@ export const Model = {
   [Make.KIA]: {
     CEED: 'Ceed'
   },
+  [Make.LEXUS]: {
+    RZ: 'RZ',
+    UX: 'UX',
+    ES: 'ES',
+    NX: 'NX',
+    LBX: 'LBX',
+    LS: 'LS',
+    LC_CV: 'LC CV',
+    LC: 'LC'
+  },
   [Make.MAXUS]: {
     EUNIQ5: 'Euniq5'
   },

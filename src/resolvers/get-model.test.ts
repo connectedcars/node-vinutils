@@ -662,6 +662,16 @@ const cases = [
   ...[{ name: 'Kia Ceed', result: Model[Make.KIA].CEED }].map(addVinToTest('MS0AAAAAAAA123456')),
 
   ...[
+    { name: 'Lexus Rz 450e', result: Model[Make.LEXUS].RZ },
+    { name: 'Lexus UX', result: Model[Make.LEXUS].UX },
+    { name: 'Lexus ES', result: Model[Make.LEXUS].ES },
+    { name: 'Lexus NX', result: Model[Make.LEXUS].NX },
+    { name: 'Lexus LBX', result: Model[Make.LEXUS].LBX },
+    { name: 'Lexus LS', result: Model[Make.LEXUS].LS },
+    { name: 'Lexus LC CV', result: Model[Make.LEXUS].LC_CV },
+    { name: 'Lexus LC', result: Model[Make.LEXUS].LC }
+  ].map(addVinToTest('JTJAABABX0A001483')),
+  ...[
     { name: 'Boxter', result: Model[Make.PORSCHE].BOXSTER },
     { name: 'Macan', result: Model[Make.PORSCHE].MACAN },
     { name: 'Taycan', result: Model[Make.PORSCHE].TAYCAN },
