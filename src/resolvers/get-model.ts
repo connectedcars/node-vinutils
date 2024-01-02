@@ -193,6 +193,33 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       break
     }
+    case Make.LEXUS: {
+      if (description.match(/ rz/i)) {
+        return Model[make].RZ
+      }
+      if (description.match(/ ux/i)) {
+        return Model[make].UX
+      }
+      if (description.match(/ es/i)) {
+        return Model[make].ES
+      }
+      if (description.match(/ nx/i)) {
+        return Model[make].NX
+      }
+      if (description.match(/ lbx/i)) {
+        return Model[make].LBX
+      }
+      if (description.match(/ ls/i)) {
+        return Model[make].LS
+      }
+      if (description.match(/ lc cv/i)) {
+        return Model[make].LC_CV
+      }
+      if (description.match(/ lc/i)) {
+        return Model[make].LC
+      }
+      break
+    }
     case Make.MAXUS: {
       if (description.match(/euniq5/i)) {
         return Model[make].EUNIQ5
@@ -273,7 +300,7 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       break
     }
     case Make.PORSCHE: {
-      if (description.match(/boxter/i)) {
+      if (description.match(/boxster/i)) {
         return Model[make].BOXSTER
       }
       if (description.match(/macan/i)) {
