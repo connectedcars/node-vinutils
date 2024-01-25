@@ -189,7 +189,7 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
     }
     case Make.HYUNDAI: {
       if (description.match(/ioniq 5/i)) {
-          return Model[make].IONIQ5
+        return Model[make].IONIQ5
       }
       break
     }
@@ -281,9 +281,6 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/eqv/i)) {
         return Model[make].EQV
       }
-      if (description.match(/e/i)) {
-        return Model[make].E
-      }
       if (description.match(/eqc/i)) {
         return Model[make].EQC
       }
@@ -292,6 +289,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       if (description.match(/gle/i)) {
         return Model[make].GLE
+      }
+      if (description.match(/e/i)) {
+        return Model[make].E
       }
       break
     }
@@ -341,13 +341,13 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       break
     }
     case Make.POLESTAR: {
-      if (description.match(/ 1$/i) || description.match(/1/i)) {
+      if (description.match(/ 1$/i) || description.match(/polestar 1/i)) {
         return Model[make][1]
       }
-      if (description.match(/ 2$/i) || description.match(/2/i)) {
+      if (description.match(/ 2$/i) || description.match(/polestar 2/i)) {
         return Model[make][2]
       }
-      if (description.match(/ 3$/i) || description.match(/3/i)) {
+      if (description.match(/ 3$/i) || description.match(/polestar 3/i)) {
         return Model[make][3]
       }
       break
@@ -684,28 +684,25 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       break
     }
     case Make.VOLVO: {
-      if (description.match(/truck/i)) {
-        return Model[make].TRUCK
-      }
-      if (description.match(/s60/i)) {
+      if (description.match(/ s60/i)) {
         return Model[make].S60
       }
-      if (description.match(/v60/i)) {
+      if (description.match(/ v60/i)) {
         return Model[make].V60
       }
-      if (description.match(/s90/i)) {
+      if (description.match(/ s90/i)) {
         return Model[make].S90
       }
-      if (description.match(/v90/i)) {
+      if (description.match(/ v90/i)) {
         return Model[make].V90
       }
-      if (description.match(/xc40/i)) {
+      if (description.match(/ xc40/i)) {
         return Model[make].XC40
       }
       break
     }
     case Make.MAN: {
-      if (description.match(/tge/i)) {
+      if (description.match(/ tge/i)) {
         return Model[make].TGE
       }
       break

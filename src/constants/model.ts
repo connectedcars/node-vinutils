@@ -114,7 +114,7 @@ export const Model = {
     CEED: 'Ceed',
     EV6: 'EV6',
     EV9: 'EV9',
-    NIRO: 'NIRO',
+    NIRO: 'NIRO'
   },
   [Make.LAMBORGHINI]: {
     REVUELTO: 'Revuelto'
@@ -144,8 +144,8 @@ export const Model = {
     EQB: 'EQB',
     CITAN: 'Citan',
     EQV: 'EQV',
-    E: 'E',
     EQC: 'EQC',
+    E: 'E',
     GLB: 'GLB',
     GLE: 'GLE'
   },
@@ -157,7 +157,7 @@ export const Model = {
     ENV200: 'e-NV200',
     LEAF: 'Leaf',
     NAVARA: 'Navara',
-    SYLPHY: 'Sylphy',
+    SYLPHY: 'Sylphy'
   },
   [Make.OPEL]: {
     ASTRA: 'Astra',

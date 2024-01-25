@@ -565,7 +565,7 @@ const cases = [
     { name: 'Mercedes E', result: Model[Make.MERCEDES_BENZ].E },
     { name: 'Mercedes EQC', result: Model[Make.MERCEDES_BENZ].EQC },
     { name: 'Mercedes GLB', result: Model[Make.MERCEDES_BENZ].GLB },
-    { name: 'Mercedes GLE', result: Model[Make.MERCEDES_BENZ].GLE },
+    { name: 'Mercedes GLE', result: Model[Make.MERCEDES_BENZ].GLE }
   ].map(addVinToTest('WDFAAAAAAAA123456')),
 
   ...[
@@ -679,7 +679,9 @@ const cases = [
     { name: 'Kia Niro', result: Model[Make.KIA].NIRO }
   ].map(addVinToTest('MS0AAAAAAAA123456')),
 
-  ...[{ name: 'Lamborghini Revuelto', result: Model[Make.LAMBORGHINI].REVUELTO }].map(addVinToTest('ZHWAAAAAAAA123456')),
+  ...[{ name: 'Lamborghini Revuelto', result: Model[Make.LAMBORGHINI].REVUELTO }].map(
+    addVinToTest('ZHWAAAAAAAA123456')
+  ),
 
   ...[
     { name: 'Lexus Rz 450e', result: Model[Make.LEXUS].RZ },
@@ -719,7 +721,7 @@ const cases = [
 
   ...[
     { name: 'Tesla Model 3', result: Model[Make.TESLA].MODEL_3 },
-    { name: 'Tesla Model Y', result: Model[Make.TESLA].MODEL_Y }  
+    { name: 'Tesla Model Y', result: Model[Make.TESLA].MODEL_Y }
   ].map(addVinToTest('5YJAAAAAAAA123456')),
 
   ...[
@@ -765,7 +767,7 @@ const cases = [
     { name: 'Volvo S90', result: Model[Make.VOLVO].S90 },
     { name: 'Volvo V90', result: Model[Make.VOLVO].V90 },
     { name: 'Volvo XC40', result: Model[Make.VOLVO].XC40 }
-  ].map(addVinToTest('YV1AAAAAAAA123456')),
+  ].map(addVinToTest('YV1AAAAAAAA123456'))
 ]
 
 describe('get-model', () => {
