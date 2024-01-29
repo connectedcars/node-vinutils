@@ -12,10 +12,13 @@ export type Models =
   | Values<ModelType[Make.FIAT]>
   | Values<ModelType[Make.FORD]>
   | Values<ModelType[Make.GARIA]>
+  | Values<ModelType[Make.HONDA]>
+  | Values<ModelType[Make.HYUNDAI]>
   | Values<ModelType[Make.IVECO]>
   | Values<ModelType[Make.MAXUS]>
   | Values<ModelType[Make.MAZDA]>
   | Values<ModelType[Make.MERCEDES_BENZ]>
+  | Values<ModelType[Make.MINI]>
   | Values<ModelType[Make.NISSAN]>
   | Values<ModelType[Make.OPEL]>
   | Values<ModelType[Make.PEUGEOT]>
@@ -98,11 +101,23 @@ export const Model = {
   [Make.GARIA]: {
     UTILITY_CITY: 'Utility City'
   },
+  [Make.HONDA]: {
+    HR_V: 'HR-V'
+  },
+  [Make.HYUNDAI]: {
+    IONIQ5: 'IONIQ 5'
+  },
   [Make.IVECO]: {
     DAILY: 'Daily'
   },
   [Make.KIA]: {
-    CEED: 'Ceed'
+    CEED: 'Ceed',
+    EV6: 'EV6',
+    EV9: 'EV9',
+    NIRO: 'NIRO'
+  },
+  [Make.LAMBORGHINI]: {
+    REVUELTO: 'Revuelto'
   },
   [Make.LEXUS]: {
     RZ: 'RZ',
@@ -118,7 +133,9 @@ export const Model = {
     EUNIQ5: 'Euniq5'
   },
   [Make.MAZDA]: {
-    CX5: 'CX5'
+    2: '2',
+    3: '3',
+    CX5: 'CX-5'
   },
   [Make.MERCEDES_BENZ]: {
     SPRINTER: 'Sprinter',
@@ -126,13 +143,21 @@ export const Model = {
     TRUCK: 'Truck',
     EQB: 'EQB',
     CITAN: 'Citan',
-    EQV: 'EQV'
+    EQV: 'EQV',
+    EQC: 'EQC',
+    E: 'E',
+    GLB: 'GLB',
+    GLE: 'GLE'
+  },
+  [Make.MINI]: {
+    COOPER: 'Cooper'
   },
   [Make.NISSAN]: {
     NV400: 'NV400',
     ENV200: 'e-NV200',
     LEAF: 'Leaf',
-    NAVARA: 'Navara'
+    NAVARA: 'Navara',
+    SYLPHY: 'Sylphy'
   },
   [Make.OPEL]: {
     ASTRA: 'Astra',
@@ -199,7 +224,8 @@ export const Model = {
     YETI: 'Yeti'
   },
   [Make.TESLA]: {
-    MODEL_3: 'Model 3'
+    MODEL_3: 'Model 3',
+    MODEL_Y: 'Model Y'
   },
   [Make.TOYOTA]: {
     HIACE: 'Hiace',
@@ -210,7 +236,12 @@ export const Model = {
     COROLLA: 'Corolla',
     YARIS: 'Yaris',
     PROACE: 'Proace',
-    SPORTSVAN: 'Sportsvan'
+    SPORTSVAN: 'Sportsvan',
+    AYGO_X: 'Aygo X',
+    BZ4X: 'bZ4X',
+    C_HR: 'C-HR',
+    LAND_CRUISER: 'Land Cruiser',
+    RAV4: 'RAV4'
   },
   [Make.VOLKSWAGEN]: {
     AMAROK: 'Amarok',
@@ -229,6 +260,7 @@ export const Model = {
     'ID.3': 'ID.3',
     'ID.4': 'ID.4',
     'ID.5': 'ID.5',
+    'ID.7': 'ID.7',
     'ID.Buzz': 'ID.Buzz',
     JETTA: 'Jetta',
     LUPO: 'Lupo',
@@ -270,7 +302,12 @@ export const Model = {
     TRANSPORTER: 'Transporter'
   },
   [Make.VOLVO]: {
-    TRUCK: 'Truck'
+    TRUCK: 'Truck',
+    S60: 'S60',
+    V60: 'V60',
+    S90: 'S90',
+    V90: 'V90',
+    XC40: 'XC40'
   },
   [Make.MAN]: {
     TGE: 'TGE',

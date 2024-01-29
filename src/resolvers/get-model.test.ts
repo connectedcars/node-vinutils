@@ -30,10 +30,12 @@ const cases = [
     { name: 'ID.3', result: Model[Make.VOLKSWAGEN]['ID.3'] },
     { name: 'ID.4', result: Model[Make.VOLKSWAGEN]['ID.4'] },
     { name: 'ID.5', result: Model[Make.VOLKSWAGEN]['ID.5'] },
+    { name: 'ID.7', result: Model[Make.VOLKSWAGEN]['ID.7'] },
     { name: 'ID.Buzz', result: Model[Make.VOLKSWAGEN]['ID.Buzz'] },
     { name: 'ID. 3', result: Model[Make.VOLKSWAGEN]['ID.3'] },
     { name: 'ID. 4', result: Model[Make.VOLKSWAGEN]['ID.4'] },
     { name: 'ID. 5', result: Model[Make.VOLKSWAGEN]['ID.5'] },
+    { name: 'ID. 7', result: Model[Make.VOLKSWAGEN]['ID.7'] },
     { name: 'ID. Buzz', result: Model[Make.VOLKSWAGEN]['ID.Buzz'] },
     { name: 'Taos', result: Model[Make.VOLKSWAGEN].TAOS },
     { name: 'up!', result: Model[Make.VOLKSWAGEN].UP },
@@ -559,7 +561,11 @@ const cases = [
     { name: 'Mercedes Sprinter', result: Model[Make.MERCEDES_BENZ].SPRINTER },
     { name: 'Mercedes EQB', result: Model[Make.MERCEDES_BENZ].EQB },
     { name: 'Mercedes Benz Sprinter', result: Model[Make.MERCEDES_BENZ].SPRINTER },
-    { name: 'Mercedes-benz Vito Kassevogn 111 Cdi Ksv Lang', result: Model[Make.MERCEDES_BENZ].VITO }
+    { name: 'Mercedes-benz Vito Kassevogn 111 Cdi Ksv Lang', result: Model[Make.MERCEDES_BENZ].VITO },
+    { name: 'Mercedes E', result: Model[Make.MERCEDES_BENZ].E },
+    { name: 'Mercedes EQC', result: Model[Make.MERCEDES_BENZ].EQC },
+    { name: 'Mercedes GLB', result: Model[Make.MERCEDES_BENZ].GLB },
+    { name: 'Mercedes GLE', result: Model[Make.MERCEDES_BENZ].GLE }
   ].map(addVinToTest('WDFAAAAAAAA123456')),
 
   ...[
@@ -579,7 +585,8 @@ const cases = [
   ...[
     { name: 'Nissan NV400', result: Model[Make.NISSAN].NV400 },
     { name: 'Nissan Leaf', result: Model[Make.NISSAN].LEAF },
-    { name: 'Nissan Navara', result: Model[Make.NISSAN].NAVARA }
+    { name: 'Nissan Navara', result: Model[Make.NISSAN].NAVARA },
+    { name: 'Nissan Sylphy', result: Model[Make.NISSAN].SYLPHY }
   ].map(addVinToTest('SJNAAAAAAAA123456')),
 
   ...[
@@ -633,7 +640,9 @@ const cases = [
 
   ...[
     { name: 'Mazda CX-5', result: Model[Make.MAZDA].CX5 },
-    { name: 'Mazda CX5', result: Model[Make.MAZDA].CX5 }
+    { name: 'Mazda CX5', result: Model[Make.MAZDA].CX5 },
+    { name: 'Mazda  2', result: Model[Make.MAZDA][2] },
+    { name: 'Mazda  3', result: Model[Make.MAZDA][3] }
   ].map(addVinToTest('JMZAAAAAAAA123456')),
 
   ...[
@@ -657,9 +666,22 @@ const cases = [
     { name: 'Zoe', result: Model[Make.RENAULT].ZOE }
   ].map(addVinToTest('VF1AAAAAAAA123456')),
 
+  ...[{ name: 'Honda HR-V', result: Model[Make.HONDA].HR_V }].map(addVinToTest('NLAAAAAAAAA123456')),
+
+  ...[{ name: 'Hyundai Ioniq 5', result: Model[Make.HYUNDAI].IONIQ5 }].map(addVinToTest('TMAAAAAAAAA123456')),
+
   ...[{ name: 'Iveco Daily', result: Model[Make.IVECO].DAILY }].map(addVinToTest('ZFCAAAAAAAA123456')),
 
-  ...[{ name: 'Kia Ceed', result: Model[Make.KIA].CEED }].map(addVinToTest('MS0AAAAAAAA123456')),
+  ...[
+    { name: 'Kia Ceed', result: Model[Make.KIA].CEED },
+    { name: 'Kia EV6', result: Model[Make.KIA].EV6 },
+    { name: 'Kia EV9', result: Model[Make.KIA].EV9 },
+    { name: 'Kia Niro', result: Model[Make.KIA].NIRO }
+  ].map(addVinToTest('MS0AAAAAAAA123456')),
+
+  ...[{ name: 'Lamborghini Revuelto', result: Model[Make.LAMBORGHINI].REVUELTO }].map(
+    addVinToTest('ZHWAAAAAAAA123456')
+  ),
 
   ...[
     { name: 'Lexus Rz 450e', result: Model[Make.LEXUS].RZ },
@@ -687,12 +709,20 @@ const cases = [
     { name: 'Toyota CorOLLa 5.3', result: Model[Make.TOYOTA].COROLLA },
     { name: 'Toyota YaRIS 4.2', result: Model[Make.TOYOTA].YARIS },
     { name: 'Toyota PrOAce 4.2', result: Model[Make.TOYOTA].PROACE },
-    { name: 'Toyota Sportsvan', result: Model[Make.TOYOTA].SPORTSVAN }
+    { name: 'Toyota Sportsvan', result: Model[Make.TOYOTA].SPORTSVAN },
+    { name: 'Toyota Aygo X', result: Model[Make.TOYOTA].AYGO_X },
+    { name: 'Toyota bZ4X', result: Model[Make.TOYOTA].BZ4X },
+    { name: 'Toyota C-HR', result: Model[Make.TOYOTA].C_HR },
+    { name: 'Toyota Land Cruiser', result: Model[Make.TOYOTA].LAND_CRUISER },
+    { name: 'Toyota RAV4', result: Model[Make.TOYOTA].RAV4 }
   ].map(addVinToTest('VNKAAAAAAAA123456')),
 
   ...[{ name: 'Man TGe car', result: Model[Make.MAN].TGE }].map(addVinToTest('WMAL20S644G128551')),
 
-  ...[{ name: 'Tesla Model 3', result: Model[Make.TESLA].MODEL_3 }].map(addVinToTest('5YJAAAAAAAA123456')),
+  ...[
+    { name: 'Tesla Model 3', result: Model[Make.TESLA].MODEL_3 },
+    { name: 'Tesla Model Y', result: Model[Make.TESLA].MODEL_Y }
+  ].map(addVinToTest('5YJAAAAAAAA123456')),
 
   ...[
     { vin: 'WAUAAAAAAAA123456', name: 'NotA4', result: null },
@@ -729,7 +759,15 @@ const cases = [
     { name: 'TRP PROLINE P-U DH 102HK 340', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].TRANSPORTER },
     { name: 'ID.Buzz', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES]['ID.Buzz'] },
     { name: 'VW Crafter 35 Enka 4325mm 2,0 TDI 136 hk', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].CRAFTER }
-  ].map(addVinToTest('WV1ZZZAAZFD123456'))
+  ].map(addVinToTest('WV1ZZZAAZFD123456')),
+
+  ...[
+    { name: 'Volvo S60', result: Model[Make.VOLVO].S60 },
+    { name: 'Volvo V60', result: Model[Make.VOLVO].V60 },
+    { name: 'Volvo S90', result: Model[Make.VOLVO].S90 },
+    { name: 'Volvo V90', result: Model[Make.VOLVO].V90 },
+    { name: 'Volvo XC40', result: Model[Make.VOLVO].XC40 }
+  ].map(addVinToTest('YV1AAAAAAAA123456'))
 ]
 
 describe('get-model', () => {
