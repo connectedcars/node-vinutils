@@ -65,6 +65,14 @@ export const Model = {
     IX3: 'iX3',
     '3': '3'
   },
+  [Make.BYD]: {
+    ATTO_3: 'Atto 3',
+    DOLPHIN: 'Dolphin',
+    HAN: 'Han',
+    SEAL: 'Seal',
+    SEAL_U: 'Seal U',
+    TANG: 'Tang'
+  },
   [Make.CITROEN]: {
     BERLINGO: 'Berlingo',
     C3: 'C3',
@@ -128,6 +136,10 @@ export const Model = {
     LS: 'LS',
     LC_CV: 'LC CV',
     LC: 'LC'
+  },
+  [Make.MAN]: {
+    TGE: 'TGE',
+    TRUCK: 'Truck'
   },
   [Make.MAXUS]: {
     EUNIQ5: 'Euniq5'
@@ -225,6 +237,8 @@ export const Model = {
   },
   [Make.TESLA]: {
     MODEL_3: 'Model 3',
+    MODEL_S: 'Model S',
+    MODEL_X: 'Model X',
     MODEL_Y: 'Model Y'
   },
   [Make.TOYOTA]: {
@@ -309,8 +323,8 @@ export const Model = {
     V90: 'V90',
     XC40: 'XC40'
   },
-  [Make.MAN]: {
-    TGE: 'TGE',
-    TRUCK: 'Truck'
+  [Make.XPENG]: {
+    G9: 'G9',
+    P7: 'P7'
   }
 } as const
