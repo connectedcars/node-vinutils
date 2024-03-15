@@ -100,6 +100,27 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       break
     }
+    case Make.BYD: {
+      if (description.match(/atto 3/i)) {
+        return Model[make].ATTO_3
+      }
+      if (description.match(/dolphin/i)) {
+        return Model[make].DOLPHIN
+      }
+      if (description.match(/han/i)) {
+        return Model[make].HAN
+      }
+      if (description.match(/seal/i)) {
+        if (description.match(/seal u( |$)/i)) {
+          return Model[make].SEAL_U
+        }
+        return Model[make].SEAL
+      }
+      if (description.match(/tang/i)) {
+        return Model[make].TANG
+      }
+      break
+    }
     case Make.CITROEN: {
       if (description.match(/berlingo/i)) {
         return Model[make].BERLINGO
@@ -244,6 +265,12 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       if (description.match(/ lc/i)) {
         return Model[make].LC
+      }
+      break
+    }
+    case Make.MAN: {
+      if (description.match(/ tge/i)) {
+        return Model[make].TGE
       }
       break
     }
@@ -462,10 +489,16 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       break
     }
     case Make.TESLA: {
-      if (description.match(/model 3/i)) {
+      if (description.match(/model 3/i) || description.match(/( |^)3( |$)/i)) {
         return Model[make].MODEL_3
       }
-      if (description.match(/model y/i)) {
+      if (description.match(/model s/i) || description.match(/( |^)s( |$)/i)) {
+        return Model[make].MODEL_S
+      }
+      if (description.match(/model x/i) || description.match(/( |^)x( |$)/i)) {
+        return Model[make].MODEL_X
+      }
+      if (description.match(/model y/i) || description.match(/( |^)y( |$)/i)) {
         return Model[make].MODEL_Y
       }
       break
@@ -701,9 +734,12 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       break
     }
-    case Make.MAN: {
-      if (description.match(/ tge/i)) {
-        return Model[make].TGE
+    case Make.XPENG: {
+      if (description.match(/ g9/i)) {
+        return Model[make].G9
+      }
+      if (description.match(/ p7/i)) {
+        return Model[make].P7
       }
       break
     }

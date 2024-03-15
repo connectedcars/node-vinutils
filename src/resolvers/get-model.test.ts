@@ -610,6 +610,15 @@ const cases = [
   ].map(addVinToTest('WBY41DU01NS510982')),
 
   ...[
+    { name: 'BYD Atto 3', result: Model[Make.BYD].ATTO_3 },
+    { name: 'BYD Dolphin', result: Model[Make.BYD].DOLPHIN },
+    { name: 'BYD Han', result: Model[Make.BYD].HAN },
+    { name: 'BYD Seal', result: Model[Make.BYD].SEAL },
+    { name: 'BYD Seal U', result: Model[Make.BYD].SEAL_U },
+    { name: 'BYD Tang', result: Model[Make.BYD].TANG }
+  ].map(addVinToTest('LGXCF6CD3P2169783')),
+
+  ...[
     { name: 'Polestar 1 HP 233', result: Model[Make.POLESTAR][1] },
     { name: 'Polestar 2 HP 233', result: Model[Make.POLESTAR][2] },
     { name: 'Polestar 3 HP 233', result: Model[Make.POLESTAR][3] },
@@ -636,7 +645,7 @@ const cases = [
     { name: 'Polestar 3', result: Model[Make.POLESTAR][3] }
   ].map(addVinToTest('YSRVSEDEENL046573')),
 
-  ...[{ name: 'MaXuS EuNiQ5', result: Model[Make.MAXUS].EUNIQ5 }].map(addVinToTest('LSFAAAAAAAA123456')),
+  ...[{ name: 'MaXuS EuNiQ5', result: Model[Make.MAXUS].EUNIQ5 }].map(addVinToTest('LSHAAAAAAAA123456')),
 
   ...[
     { name: 'Mazda CX-5', result: Model[Make.MAZDA].CX5 },
@@ -721,7 +730,13 @@ const cases = [
 
   ...[
     { name: 'Tesla Model 3', result: Model[Make.TESLA].MODEL_3 },
-    { name: 'Tesla Model Y', result: Model[Make.TESLA].MODEL_Y }
+    { name: 'Tesla 3', result: Model[Make.TESLA].MODEL_3 },
+    { name: 'Tesla Model S', result: Model[Make.TESLA].MODEL_S },
+    { name: 'Tesla S', result: Model[Make.TESLA].MODEL_S },
+    { name: 'Tesla Model X', result: Model[Make.TESLA].MODEL_X },
+    { name: 'Tesla X', result: Model[Make.TESLA].MODEL_X },
+    { name: 'Tesla Model Y', result: Model[Make.TESLA].MODEL_Y },
+    { name: 'Tesla Y', result: Model[Make.TESLA].MODEL_Y }
   ].map(addVinToTest('5YJAAAAAAAA123456')),
 
   ...[
@@ -767,7 +782,12 @@ const cases = [
     { name: 'Volvo S90', result: Model[Make.VOLVO].S90 },
     { name: 'Volvo V90', result: Model[Make.VOLVO].V90 },
     { name: 'Volvo XC40', result: Model[Make.VOLVO].XC40 }
-  ].map(addVinToTest('YV1AAAAAAAA123456'))
+  ].map(addVinToTest('YV1AAAAAAAA123456')),
+
+  ...[
+    { name: 'XPeng G9', result: Model[Make.XPENG].G9 },
+    { name: 'XPeng P7', result: Model[Make.XPENG].P7 }
+  ].map(addVinToTest('L1NSPGHB0PA020668'))
 ]
 
 describe('get-model', () => {
