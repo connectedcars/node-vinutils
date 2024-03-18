@@ -35,6 +35,7 @@ export enum Make {
   GAC = 'GAC',
   GARIA = 'Garia',
   GEELY = 'Geely',
+  GENERAL_MOTORS = 'General Motors',
   GENESIS = 'Genesis',
   GMC = 'GMC',
   HARLEY_DAVIDSON = 'Harley Davidson',
