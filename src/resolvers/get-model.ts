@@ -329,8 +329,17 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       break
     }
     case Make.NISSAN: {
-      if (description.match(/nv400/i)) {
-        return Model[make].NV400
+      if (description.match(/ariya/i)) {
+        return Model[make].ARIYA
+      }
+      if (description.match(/e-nv200/i)) {
+        return Model[make].ENV200
+      }
+      if (description.match(/interstar/i)) {
+        return Model[make].INTERSTAR
+      }
+      if (description.match(/juke/i)) {
+        return Model[make].JUKE
       }
       if (description.match(/leaf/i)) {
         return Model[make].LEAF
@@ -338,8 +347,26 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/navara/i)) {
         return Model[make].NAVARA
       }
+      if (description.match(/note/i)) {
+        return Model[make].NOTE
+      }
+      if (description.match(/nv400/i)) {
+        return Model[make].NV400
+      }
+      if (description.match(/primastar/i)) {
+        return Model[make].PRIMASTAR
+      }
+      if (description.match(/qashqai/i)) {
+        return Model[make].QASHQAI
+      }
       if (description.match(/sylphy/i)) {
         return Model[make].SYLPHY
+      }
+      if (description.match(/townstar/i)) {
+        return Model[make].TOWNSTAR
+      }
+      if (description.match(/x-trail/i)) {
+        return Model[make].X_TRAIL
       }
       break
     }
@@ -396,11 +423,32 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       break
     }
     case Make.RENAULT: {
+      if (description.match(/austral/i)) {
+        return Model[make].AUSTRAL
+      }
+      if (description.match(/captur/i)) {
+        return Model[make].CAPTUR
+      }
+      if (description.match(/clio/i)) {
+        return Model[make].CLIO
+      }
+      if (description.match(/espace/i)) {
+        return Model[make].ESPACE
+      }
       if (description.match(/kangoo/i)) {
         return Model[make].KANGOO
       }
       if (description.match(/master/i)) {
         return Model[make].MASTER
+      }
+      if (description.match(/megane/i)) {
+        return Model[make].MEGANE
+      }
+      if (description.match(/rafale/i)) {
+        return Model[make].RAFALE
+      }
+      if (description.match(/scenic/i)) {
+        return Model[make].SCENIC
       }
       if (description.match(/trafic/i)) {
         return Model[make].TRAFIC
