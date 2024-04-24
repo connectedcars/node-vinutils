@@ -165,11 +165,19 @@ export const Model = {
     COOPER: 'Cooper'
   },
   [Make.NISSAN]: {
-    NV400: 'NV400',
+    ARIYA: 'Ariya',
     ENV200: 'e-NV200',
+    INTERSTAR: 'Interstar',
+    JUKE: 'Juke',
     LEAF: 'Leaf',
     NAVARA: 'Navara',
-    SYLPHY: 'Sylphy'
+    NOTE: 'Note',
+    NV400: 'NV400',
+    PRIMASTAR: 'Primastar',
+    QASHQAI: 'Qashqai',
+    SYLPHY: 'Sylphy',
+    TOWNSTAR: 'Townstar',
+    X_TRAIL: 'X-Trail'
   },
   [Make.OPEL]: {
     ASTRA: 'Astra',
@@ -199,8 +207,15 @@ export const Model = {
     TAYCAN: 'Taycan'
   },
   [Make.RENAULT]: {
+    AUSTRAL: 'Austral',
+    CAPTUR: 'Captur',
+    CLIO: 'Clio',
+    ESPACE: 'Espace',
     KANGOO: 'Kangoo',
     MASTER: 'Master',
+    MEGANE: 'Megane',
+    RAFALE: 'Rafale',
+    SCENIC: 'Scenic',
     TRAFIC: 'Trafic',
     ZOE: 'Zoe'
   },
