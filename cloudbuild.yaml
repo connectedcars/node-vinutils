@@ -1,5 +1,5 @@
 steps:
-  - name: 'gcr.io/connectedcars-staging/cloudbuilder-wrapper.master:latest'
+  - name: 'europe-west1-docker.pkg.dev/connectedcars-build/cloudbuilder-wrapper/master'
     args: ['--update-url=https://build-api.connectedcars.io/cloudbuilder']
     env:
       - 'REPO_NAME=$REPO_NAME'
