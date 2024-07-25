@@ -4,7 +4,7 @@ function getEngineSizeFromDescription(description: string): string | null {
   const match = description.match(/(?:[^\d]|^)(\d[,.]\d)(?:[^\d]|$)/)
 
   if (match) {
-    return match[1].replace(',', '.')
+    return match[1].replaceAll(',', '.')
   }
 
   return null

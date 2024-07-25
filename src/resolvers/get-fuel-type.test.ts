@@ -3,7 +3,7 @@ import { getFuelType } from './get-fuel-type'
 
 describe('get-fuel-type', () => {
   describe('getFuelType', () => {
-    test.each([
+    it.each([
       { name: 'VW Touran CL 1,4TSI 150HK DSG7 BMT 110kW', result: FuelType.GASOLINE },
       { name: 'Audi A3 SB PRE 40 TFSI e 204 HK S tro', result: FuelType.HYBRID },
       { name: 'Audi A6 Limo Sport PRE 50 TFSI e qua 299 HK S', result: FuelType.HYBRID },
