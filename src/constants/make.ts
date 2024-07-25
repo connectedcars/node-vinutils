@@ -61,6 +61,7 @@ export enum Make {
   LAMBORGHINI = 'Lamborghini',
   LANCIA = 'Lancia',
   LAND_ROVER = 'Land Rover',
+  LDV = 'LDV',
   LEAP_MOTORS = 'Leap motors',
   LEXUS = 'Lexus',
   LIGIER = 'Ligier',

@@ -553,6 +553,20 @@ const cases = [
   ].map(addVinToTest('VS6AAAAAAAA123456')),
 
   ...[
+    { name: 'LDV Deliver7', result: Model[Make.LDV].DELIVER_7 },
+    { name: 'LDV Deliver 7', result: Model[Make.LDV].DELIVER_7 },
+    { name: 'LDV Deliver9', result: Model[Make.LDV].DELIVER_9 },
+    { name: 'LDV Deliver 9', result: Model[Make.LDV].DELIVER_9 },
+    { name: 'LDV D90', result: Model[Make.LDV].D90 },
+    { name: 'LDV G10', result: Model[Make.LDV].G10 },
+    { name: 'LDV MIFA People Mover', result: Model[Make.LDV].MIFA_PEOPLE_MOVER },
+    { name: 'LDV Mifa9', result: Model[Make.LDV].MIFA_9 },
+    { name: 'LDV Mifa 9', result: Model[Make.LDV].MIFA_9 },
+    { name: 'LDV T60', result: Model[Make.LDV].T60 },
+    { name: 'LDV V80', result: Model[Make.LDV].V80 }
+  ].map(addVinToTest('SEYAAAAAAAA123456')),
+
+  ...[
     { name: 'Mercedes-Benz CiTAN', result: Model[Make.MERCEDES_BENZ].CITAN },
     { name: 'Mercedes-Benz EqV', result: Model[Make.MERCEDES_BENZ].EQV },
     { name: 'Mercedes-Benz Sprinter 316 Cdi Kassevogn Standard', result: Model[Make.MERCEDES_BENZ].SPRINTER },
@@ -645,7 +659,22 @@ const cases = [
     { name: 'Polestar 3', result: Model[Make.POLESTAR][3] }
   ].map(addVinToTest('YSRVSEDEENL046573')),
 
-  ...[{ name: 'MaXuS EuNiQ5', result: Model[Make.MAXUS].EUNIQ5 }].map(addVinToTest('LSHAAAAAAAA123456')),
+  ...[
+    { name: 'Maxus Deliver3', result: Model[Make.MAXUS].DELIVER_3 },
+    { name: 'Maxus Deliver 3', result: Model[Make.MAXUS].DELIVER_3 },
+    { name: 'Maxus Deliver7', result: Model[Make.MAXUS].DELIVER_7 },
+    { name: 'Maxus Deliver 7', result: Model[Make.MAXUS].DELIVER_7 },
+    { name: 'Maxus Deliver9', result: Model[Make.MAXUS].DELIVER_9 },
+    { name: 'Maxus Deliver 9', result: Model[Make.MAXUS].DELIVER_9 },
+    { name: 'MaXuS EuNiQ5', result: Model[Make.MAXUS].EUNIQ5 },
+    { name: 'Maxus Euniq 5', result: Model[Make.MAXUS].EUNIQ5 },
+    { name: 'Maxus Euniq6', result: Model[Make.MAXUS].EUNIQ6 },
+    { name: 'Maxus Euniq 6', result: Model[Make.MAXUS].EUNIQ6 },
+    { name: 'Maxus Mifa9', result: Model[Make.MAXUS].MIFA_9 },
+    { name: 'Maxus Mifa 9', result: Model[Make.MAXUS].MIFA_9 },
+    { name: 'Maxus T90 EV', result: Model[Make.MAXUS].T90 },
+    { name: 'Maxus T90', result: Model[Make.MAXUS].T90 }
+  ].map(addVinToTest('LSHAAAAAAAA123456')),
 
   ...[
     { name: 'Mazda CX-5', result: Model[Make.MAZDA].CX5 },
@@ -679,6 +708,7 @@ const cases = [
   ].map(addVinToTest('JN3AAAAAAAA123456')),
 
   ...[
+    { name: 'Renault Arkana', result: Model[Make.RENAULT].ARKANA },
     { name: 'Renault Austral', result: Model[Make.RENAULT].AUSTRAL },
     { name: 'Renault Captur', result: Model[Make.RENAULT].CAPTUR },
     { name: 'Renault Clio', result: Model[Make.RENAULT].CLIO },
