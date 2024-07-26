@@ -127,6 +127,16 @@ export const Model = {
   [Make.LAMBORGHINI]: {
     REVUELTO: 'Revuelto'
   },
+  [Make.LDV]: {
+    DELIVER_7: 'Deliver 7',
+    DELIVER_9: 'Deliver 9',
+    D90: 'D90',
+    G10: 'G10',
+    MIFA_PEOPLE_MOVER: 'MIFA People Mover',
+    MIFA_9: 'MIFA 9',
+    T60: 'T60',
+    V80: 'V80'
+  },
   [Make.LEXUS]: {
     RZ: 'RZ',
     UX: 'UX',
@@ -142,7 +152,13 @@ export const Model = {
     TRUCK: 'Truck'
   },
   [Make.MAXUS]: {
-    EUNIQ5: 'Euniq5'
+    DELIVER_3: 'Deliver 3',
+    DELIVER_7: 'Deliver 7',
+    DELIVER_9: 'Deliver 9',
+    EUNIQ5: 'Euniq5',
+    EUNIQ6: 'Euniq6',
+    MIFA_9: 'MIFA 9',
+    T90: 'T90'
   },
   [Make.MAZDA]: {
     2: '2',
@@ -207,6 +223,7 @@ export const Model = {
     TAYCAN: 'Taycan'
   },
   [Make.RENAULT]: {
+    ARKANA: 'Arkana',
     AUSTRAL: 'Austral',
     CAPTUR: 'Captur',
     CLIO: 'Clio',

@@ -321,6 +321,9 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case 'SAR': {
       return Make.LAND_ROVER
     }
+    case 'SEY': {
+      return Make.LDV
+    }
     case 'LFZ': {
       return Make.LEAP_MOTORS
     }

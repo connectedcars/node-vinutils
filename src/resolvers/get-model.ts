@@ -241,6 +241,33 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       break
     }
+    case Make.LDV: {
+      if (description.match(/deliver ?7/i)) {
+        return Model[make].DELIVER_7
+      }
+      if (description.match(/deliver ?9/i)) {
+        return Model[make].DELIVER_9
+      }
+      if (description.match(/d90/i)) {
+        return Model[make].D90
+      }
+      if (description.match(/g10/i)) {
+        return Model[make].G10
+      }
+      if (description.match(/mifa people mover/i)) {
+        return Model[make].MIFA_PEOPLE_MOVER
+      }
+      if (description.match(/mifa ?9/i)) {
+        return Model[make].MIFA_9
+      }
+      if (description.match(/t60/i)) {
+        return Model[make].T60
+      }
+      if (description.match(/v80/i)) {
+        return Model[make].V80
+      }
+      break
+    }
     case Make.LEXUS: {
       if (description.match(/ rz/i)) {
         return Model[make].RZ
@@ -275,8 +302,26 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       break
     }
     case Make.MAXUS: {
-      if (description.match(/euniq5/i)) {
+      if (description.match(/deliver ?3/i)) {
+        return Model[make].DELIVER_3
+      }
+      if (description.match(/deliver ?7/i)) {
+        return Model[make].DELIVER_7
+      }
+      if (description.match(/deliver ?9/i)) {
+        return Model[make].DELIVER_9
+      }
+      if (description.match(/euniq ?5/i)) {
         return Model[make].EUNIQ5
+      }
+      if (description.match(/euniq ?6/i)) {
+        return Model[make].EUNIQ6
+      }
+      if (description.match(/mifa ?9/i)) {
+        return Model[make].MIFA_9
+      }
+      if (description.match(/t90/i)) {
+        return Model[make].T90
       }
       break
     }
@@ -423,6 +468,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       break
     }
     case Make.RENAULT: {
+      if (description.match(/arkana/i)) {
+        return Model[make].ARKANA
+      }
       if (description.match(/austral/i)) {
         return Model[make].AUSTRAL
       }
