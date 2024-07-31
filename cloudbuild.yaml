@@ -1,6 +1,6 @@
 steps:
   - name: 'europe-west1-docker.pkg.dev/connectedcars-build/cloudbuilder-wrapper/master'
-    args: ['--update-url=https://build-api.connectedcars.io/cloudbuilder']
+    args: ['--skip-push', '--update-url=https://build-api.connectedcars.io/cloudbuilder']
     env:
       - 'REPO_NAME=$REPO_NAME'
       - 'GCP_PROJECT_ID=$PROJECT_ID'
