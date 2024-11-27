@@ -20,7 +20,11 @@ const cases = [
   { description: 'Transporter T5 2.0 TDI Pickup (140hk)', result: 140 },
   { description: 'Transporter skåp', result: null },
   { description: 'TRP PROLINE P-U EH 102HP 300', result: 102 },
-  { description: 'TRP PROLINE P-U DH 102 HP 340', result: 102 }
+  { description: 'TRP PROLINE P-U DH 102 HP 340', result: 102 },
+  {
+    description: 'Tiguan Allspace Comfortline 2.0 l TDI SCR 110 kW (150 PS) 7-speed dual-clutch transmission DS',
+    result: 150
+  }
 ]
 
 describe('get-engine-hp', () => {

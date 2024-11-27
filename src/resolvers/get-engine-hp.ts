@@ -1,5 +1,5 @@
 function getEngineHorsepowerFromDescription(description: string): number | null {
-  const match = description.match(/(\d{2}|\d{3})(| )hk|(\d{2}|\d{3})(| )hp/)
+  const match = description.match(/(\d{2}|\d{3})(| )(hk|hp|ps)/)
 
   if (match) {
     return parseInt(match[1] || match[3])
