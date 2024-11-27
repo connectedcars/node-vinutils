@@ -42,7 +42,7 @@ function getFuelTypeFromVehicleInfo(vehicle: Vehicle): FuelType | null {
       if (description.match(/gte/i)) {
         return FuelType.HYBRID
       }
-      if (description.match(/(e-golf|e-up!|e-up( |$)|id\.[3-5])/i)) {
+      if (description.match(/(e-golf|e-up!|e-up( |$)|id\.[3-7])/i)) {
         return FuelType.ELECTRIC
       }
       break
@@ -63,6 +63,12 @@ function getFuelTypeFromVehicleInfo(vehicle: Vehicle): FuelType | null {
 
     case Make.SEAT: {
       if (description.match(/mii electric/i)) {
+        return FuelType.ELECTRIC
+      }
+      break
+    }
+    case Make.CUPRA: {
+      if (description.match(/born|tavascan/i)) {
         return FuelType.ELECTRIC
       }
       break
