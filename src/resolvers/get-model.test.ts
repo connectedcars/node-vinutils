@@ -807,6 +807,8 @@ const cases = [
 
   ...[{ name: 'Formentor', result: Model[Make.CUPRA].FORMENTOR }].map(addVinToTest('VSSZZZKMZGR123456')),
   ...[{ name: 'Born', result: Model[Make.CUPRA].BORN }].map(addVinToTest('VSSZZZK1ZGR123456')),
+  ...[{ name: 'Tavascan', result: Model[Make.CUPRA].TAVASCAN }].map(addVinToTest('VSSZZZKRZGR123456')),
+  ...[{ name: 'Terramar', result: Model[Make.CUPRA].TERRAMAR }].map(addVinToTest('VSSZZZKPZGR123456')),
 
   ...[
     { name: 'Ateca', result: Model[Make.SEAT].ATECA },

@@ -523,7 +523,10 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case 'VSS': {
       // vins starting with VSSZZZKM will always be a CUPRA Formentor
       // vins starting with VSSZZZK1 will always be a CUPRA Born
-      if (vin.startsWith('VSSZZZKM') || vin.startsWith('VSSZZZK1')) {
+      // vins starting with VSSZZZKR will always be a CUPRA Tavascan
+      // vins starting with VSSZZZKP will always be a CUPRA Terramar
+      const cupraVins = ['VSSZZZKM', 'VSSZZZK1', 'VSSZZZKR', 'VSSZZZKP']
+      if (cupraVins.includes(vin.substring(0, 8).toUpperCase())) {
         return Make.CUPRA
       }
       switch (modelCode) {

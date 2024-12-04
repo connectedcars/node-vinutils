@@ -152,6 +152,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/tavascan/i)) {
         return Model[make].TAVASCAN
       }
+      if (description.match(/terramar/i)) {
+        return Model[make].TERRAMAR
+      }
       break
     }
     case Make.DACIA: {

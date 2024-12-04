@@ -84,7 +84,8 @@ export const Model = {
     BORN: 'Born',
     FORMENTOR: 'Formentor',
     LEON: 'Leon',
-    TAVASCAN: 'Tavascan'
+    TAVASCAN: 'Tavascan',
+    TERRAMAR: 'Terramar'
   },
   [Make.DACIA]: {
     DOKKER: 'Dokker',
