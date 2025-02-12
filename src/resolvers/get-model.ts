@@ -386,13 +386,13 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/gle/i)) {
         return Model[make].GLE
       }
-      if (description.match(/ a/i)) {
+      if (description.match(/\ba\b/i)) {
         return Model[make].A
       }
-      if (description.match(/ c/i)) {
+      if (description.match(/\bc\b/i)) {
         return Model[make].C
       }
-      if (description.match(/ e/i)) {
+      if (description.match(/\be\b/i)) {
         return Model[make].E
       }
       break
