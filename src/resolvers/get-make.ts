@@ -682,9 +682,12 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case 'LMV': {
       return Make.XPENG
     }
+    case 'VJR': {
+      return Make.LIGIER
+    }
   }
 
-  switch (vin.substring(0, 2)) {
+  switch (vin.substring(0, 2).toUpperCase()) {
     case 'KL': {
       return Make.DAEWOO
     }
@@ -758,6 +761,8 @@ function getMakeFromDescription(description: string): Make | null {
     return Make.SKODA
   } else if (description.match(/(volkswagen|vw)/i)) {
     return Make.VOLKSWAGEN
+  } else if (description.match(/ligier/i)) {
+    return Make.LIGIER
   }
 
   return null

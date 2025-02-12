@@ -63,7 +63,8 @@ export const Model = {
     IX1: 'iX1',
     IX2: 'iX2',
     IX3: 'iX3',
-    '3': '3'
+    '3': '3',
+    '1': '1'
   },
   [Make.BYD]: {
     ATTO_3: 'Atto 3',
@@ -77,7 +78,8 @@ export const Model = {
     BERLINGO: 'Berlingo',
     C3: 'C3',
     JUMPER: 'Jumper',
-    JUMPY: 'Jumpy'
+    JUMPY: 'Jumpy',
+    C_ELYSEE: 'C-Elysée'
   },
   [Make.CUPRA]: {
     ATECA: 'Ateca',
@@ -91,12 +93,15 @@ export const Model = {
     DOKKER: 'Dokker',
     DUSTER: 'Duster',
     SANDERO: 'Sandero',
-    SPRING: 'Spring'
+    SPRING: 'Spring',
+    JOGGER: 'Jogger',
+    LODGY: 'Lodgy'
   },
   [Make.FIAT]: {
     DUCATO: 'Ducato',
     DOBLO: 'Doblò',
-    FIORINO: 'Fiorino'
+    FIORINO: 'Fiorino',
+    EGEA: 'Egea'
   },
   [Make.FORD]: {
     C_MAX: 'C-MAX',
@@ -148,6 +153,9 @@ export const Model = {
     LC_CV: 'LC CV',
     LC: 'LC'
   },
+  [Make.LIGIER]: {
+    JS48: 'JS48'
+  },
   [Make.MAN]: {
     TGE: 'TGE',
     TRUCK: 'Truck'
@@ -176,7 +184,9 @@ export const Model = {
     EQC: 'EQC',
     E: 'E',
     GLB: 'GLB',
-    GLE: 'GLE'
+    GLE: 'GLE',
+    A: 'A',
+    C: 'C'
   },
   [Make.MINI]: {
     COOPER: 'Cooper'
@@ -194,14 +204,18 @@ export const Model = {
     QASHQAI: 'Qashqai',
     SYLPHY: 'Sylphy',
     TOWNSTAR: 'Townstar',
-    X_TRAIL: 'X-Trail'
+    X_TRAIL: 'X-Trail',
+    NV_200: 'NV-200'
   },
   [Make.OPEL]: {
     ASTRA: 'Astra',
     COMBO: 'Combo',
     VIVARO: 'Vivaro',
     ZAFIRA: 'Zafira',
-    MOVANO: 'Movano'
+    MOVANO: 'Movano',
+    CORSA: 'Corsa',
+    MOKKA: 'Mokka',
+    MOKKA_E: 'Mokka-e'
   },
   [Make.OTHER]: {
     TRUCK: 'Truck',
@@ -210,7 +224,10 @@ export const Model = {
   },
   [Make.PEUGEOT]: {
     EXPERT: 'Expert',
-    PARTNER: 'Partner'
+    PARTNER: 'Partner',
+    2008: '2008',
+    E_2008: 'e-2008',
+    3008: '3008'
   },
   [Make.POLESTAR]: {
     1: '1',
@@ -221,7 +238,8 @@ export const Model = {
     BOXSTER: 'Boxster',
     MACAN: 'Macan',
     PANAMERA: 'Panamera',
-    TAYCAN: 'Taycan'
+    TAYCAN: 'Taycan',
+    911: '911'
   },
   [Make.RENAULT]: {
     ARKANA: 'Arkana',
@@ -268,6 +286,9 @@ export const Model = {
     SUPERB: 'Superb',
     YETI: 'Yeti'
   },
+  [Make.SUZUKI]: {
+    ALTO: 'Alto'
+  },
   [Make.TESLA]: {
     MODEL_3: 'Model 3',
     MODEL_S: 'Model S',
@@ -288,7 +309,9 @@ export const Model = {
     BZ4X: 'bZ4X',
     C_HR: 'C-HR',
     LAND_CRUISER: 'Land Cruiser',
-    RAV4: 'RAV4'
+    RAV4: 'RAV4',
+    PROACE_CITY: 'Proace City',
+    PROACE_CITY_ELECTRIC: 'Proace City Electric'
   },
   [Make.VOLKSWAGEN]: {
     AMAROK: 'Amarok',

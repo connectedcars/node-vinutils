@@ -98,6 +98,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/(3[0-9]{2})/i)) {
         return Model[make]['3']
       }
+      if (description.match(/(1[0-9]{2})/i)) {
+        return Model[make]['1']
+      }
       break
     }
     case Make.BYD: {
@@ -133,6 +136,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       if (description.match(/jumpy/i)) {
         return Model[make].JUMPY
+      }
+      if (description.match(/c-elys(é|e)e/i)) {
+        return Model[make].C_ELYSEE
       }
       break
     }
@@ -170,6 +176,12 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/spring/i)) {
         return Model[make].SPRING
       }
+      if (description.match(/jogger/i)) {
+        return Model[make].JOGGER
+      }
+      if (description.match(/lodgy/i)) {
+        return Model[make].LODGY
+      }
       break
     }
     case Make.FIAT: {
@@ -178,6 +190,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       if (description.match(/ducato/i)) {
         return Model[make].DUCATO
+      }
+      if (description.match(/egea/i)) {
+        return Model[make].EGEA
       }
       break
     }
@@ -298,6 +313,12 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       break
     }
+    case Make.LIGIER: {
+      if (description.match(/js48/i)) {
+        return Model[make].JS48
+      }
+      break
+    }
     case Make.MAN: {
       if (description.match(/ tge/i)) {
         return Model[make].TGE
@@ -365,7 +386,13 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/gle/i)) {
         return Model[make].GLE
       }
-      if (description.match(/e/i)) {
+      if (description.match(/\ba\b/i)) {
+        return Model[make].A
+      }
+      if (description.match(/\bc\b/i)) {
+        return Model[make].C
+      }
+      if (description.match(/\be\b/i)) {
         return Model[make].E
       }
       break
@@ -416,6 +443,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/x-trail/i)) {
         return Model[make].X_TRAIL
       }
+      if (description.match(/nv-200/i)) {
+        return Model[make].NV_200
+      }
       break
     }
     case Make.OPEL: {
@@ -431,6 +461,15 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/combo/i)) {
         return Model[make].COMBO
       }
+      if (description.match(/corsa/i)) {
+        return Model[make].CORSA
+      }
+      if (description.match(/mokka-e/i)) {
+        return Model[make].MOKKA_E
+      }
+      if (description.match(/mokka/i)) {
+        return Model[make].MOKKA
+      }
       break
     }
     case Make.PEUGEOT: {
@@ -439,6 +478,15 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       if (description.match(/partner/i)) {
         return Model[make].PARTNER
+      }
+      if (description.match(/e-2008/i)) {
+        return Model[make].E_2008
+      }
+      if (description.match(/2008/i)) {
+        return Model[make][2008]
+      }
+      if (description.match(/3008/i)) {
+        return Model[make][3008]
       }
       break
     }
@@ -467,7 +515,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/panamera/i)) {
         return Model[make].PANAMERA
       }
-
+      if (description.match(/911/i)) {
+        return Model[make][911]
+      }
       break
     }
     case Make.RENAULT: {
@@ -587,6 +637,12 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       break
     }
+    case Make.SUZUKI: {
+      if (description.match(/alto/i)) {
+        return Model[make].ALTO
+      }
+      break
+    }
     case Make.TESLA: {
       if (description.match(/model 3/i) || description.match(/( |^)3( |$)/i)) {
         return Model[make].MODEL_3
@@ -623,6 +679,12 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       if (description.match(/yaris/i)) {
         return Model[make].YARIS
+      }
+      if (description.match(/proace city electric/i)) {
+        return Model[make].PROACE_CITY_ELECTRIC
+      }
+      if (description.match(/proace city/i)) {
+        return Model[make].PROACE_CITY
       }
       if (description.match(/proace/i)) {
         return Model[make].PROACE
@@ -786,7 +848,7 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       break
     }
     case Make.VOLKSWAGEN_COMMERCIAL_VEHICLES: {
-      if (description.match(/amarok/i)) {
+      if (description.match(/(amarok|amk)/i)) {
         return Model[make].AMAROK
       }
       if (description.match(/caddy/i)) {
