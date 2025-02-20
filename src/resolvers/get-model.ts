@@ -815,7 +815,7 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/(kassevogn|transporter|vw t5|(^t5)|vw t6|(^t6)|(^TRP))/i)) {
         return Model[make].TRANSPORTER
       }
-      if (description.match(/(up!|up(\W| |$))/i)) {
+      if (description.match(/\b(up!|up)\b/i)) {
         return Model[make].UP
       }
       if (description.match(/taigo/i)) {
@@ -922,11 +922,10 @@ export function getModel(vehicle: Vehicle): string | null {
     const make = getMake(vehicle)
 
     if (make) {
-      if (vehicle.vin && validateVin(vehicle.vin)) {
+      model = getModelFromMakeDescription(make, vehicle.name)
+      if (!model && vehicle.vin && validateVin(vehicle.vin)) {
+        // This needs to be prioritized lower than the description due to overlap between Transporter and other models (for example California and Caravelle might be caught by this)
         model = getModelFromVin(make, vehicle.vin)
-      }
-      if (!model) {
-        model = getModelFromMakeDescription(make, vehicle.name)
       }
     }
   }

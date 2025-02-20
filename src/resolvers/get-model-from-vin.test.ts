@@ -26,7 +26,7 @@ const cases: Testcase[] = [
   },
   // WRONG VIN
   {
-    vin: 'WV2ZZZ7HZPH000002',
+    vin: 'WV2ZZZ7KZPH000002',
     make: Make.VOLKSWAGEN_COMMERCIAL_VEHICLES,
     result: null
   },
