@@ -315,6 +315,13 @@ const cases = [
     { name: 'VW ViRtUs', result: Model[Make.VOLKSWAGEN].VIRTUS }
   ].map(addVinToTest('WVWAAAAAAAA123456')),
 
+  { vin: 'WVGZZZ5NZKW123456', name: 'VW Highline PLUS 2,0TDI 150HK DSG7 SCR', result: Model[Make.VOLKSWAGEN].TIGUAN },
+  {
+    vin: 'WVGZZZ5NZKW123456',
+    name: 'VW Comfortline PLUS 2,0TDI 150HK DSG7 SCR',
+    result: Model[Make.VOLKSWAGEN].TIGUAN
+  },
+
   ...[
     { name: 'Skoda Octavia', result: Model[Make.SKODA].OCTAVIA },
     { name: 'SKODA Octavia HB Style 1,4 TSI 150 HK DSG', result: Model[Make.SKODA].OCTAVIA },
@@ -849,6 +856,21 @@ const cases = [
     { name: 'ID.Buzz', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES]['ID.Buzz'] },
     { name: 'VW Crafter 35 Enka 4325mm 2,0 TDI 136 hk', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].CRAFTER }
   ].map(addVinToTest('WV1ZZZAAZFD123456')),
+
+  ...[
+    { name: 'Amarok 3.0 TDI', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].AMAROK },
+    { name: 'Amarok 2.0 TDI', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].AMAROK },
+    { name: 'AmK 3.0 TDI', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].AMAROK },
+    { name: 'CADDY MAXI WVHIGH 125 CRD6AT', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].CADDY },
+    { name: 'Grand California', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].GRAND_CALIFORNIA },
+    { name: 'California', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].CALIFORNIA },
+    { name: 'VW T6 CARAVELLE LANG CL 2,0 TDI 150', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].CARAVELLE },
+    { name: 'Multivan 2,0 TDI', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].MULTIVAN },
+    { name: 'VW T6 DKLAD Lang Enkeltkabine 2,0 TDI', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].TRANSPORTER },
+    { name: 'TRP PROLINE P-U DH 102HK 340', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].TRANSPORTER },
+    { name: 'ID.Buzz', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES]['ID.Buzz'] },
+    { name: 'VW Crafter 35 Enka 4325mm 2,0 TDI 136 hk', result: Model[Make.VOLKSWAGEN_COMMERCIAL_VEHICLES].CRAFTER }
+  ].map(addVinToTest('WV2ZZZ7HZLH123456')),
 
   ...[
     { name: 'Volvo S60', result: Model[Make.VOLVO].S60 },
