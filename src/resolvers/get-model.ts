@@ -170,17 +170,20 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/duster/i)) {
         return Model[make].DUSTER
       }
-      if (description.match(/sandero/i)) {
-        return Model[make].SANDERO
-      }
-      if (description.match(/spring/i)) {
-        return Model[make].SPRING
-      }
       if (description.match(/jogger/i)) {
         return Model[make].JOGGER
       }
       if (description.match(/lodgy/i)) {
         return Model[make].LODGY
+      }
+      if (description.match(/logan/i)) {
+        return Model[make].LOGAN
+      }
+      if (description.match(/sandero/i)) {
+        return Model[make].SANDERO
+      }
+      if (description.match(/spring/i)) {
+        return Model[make].SPRING
       }
       break
     }
@@ -506,6 +509,12 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/boxster/i)) {
         return Model[make].BOXSTER
       }
+      if (description.match(/cayenne/i)) {
+        return Model[make].CAYENNE
+      }
+      if (description.match(/cayman/i)) {
+        return Model[make].CAYMAN
+      }
       if (description.match(/macan/i)) {
         return Model[make].MACAN
       }
@@ -550,6 +559,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       if (description.match(/scenic/i)) {
         return Model[make].SCENIC
+      }
+      if (description.match(/taliant/i)) {
+        return Model[make].TALIANT
       }
       if (description.match(/trafic/i)) {
         return Model[make].TRAFIC
