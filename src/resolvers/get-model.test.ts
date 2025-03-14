@@ -699,10 +699,11 @@ const cases = [
     { name: 'Dacia Dokker', result: Model[Make.DACIA].DOKKER },
     { name: 'Dacia Duster', result: Model[Make.DACIA].DUSTER },
     { name: 'DACIA Duster dCi 115 6MT (115 HP)', result: Model[Make.DACIA].DUSTER },
-    { name: 'Dacia Sandero', result: Model[Make.DACIA].SANDERO },
-    { name: 'DaCIa sPRIng', result: Model[Make.DACIA].SPRING },
     { name: 'DACia JoggeR', result: Model[Make.DACIA].JOGGER },
-    { name: 'DaCIa lODGy', result: Model[Make.DACIA].LODGY }
+    { name: 'DaCIa lODGy', result: Model[Make.DACIA].LODGY },
+    { name: 'Dacia Logan', result: Model[Make.DACIA].LOGAN },
+    { name: 'Dacia Sandero', result: Model[Make.DACIA].SANDERO },
+    { name: 'DaCIa sPRIng', result: Model[Make.DACIA].SPRING }
   ].map(addVinToTest('UU1AAAAAAAA123456')),
 
   ...[
@@ -743,6 +744,7 @@ const cases = [
     { name: 'Renault Megane', result: Model[Make.RENAULT].MEGANE },
     { name: 'Renault Rafale', result: Model[Make.RENAULT].RAFALE },
     { name: 'Renault Scenic', result: Model[Make.RENAULT].SCENIC },
+    { name: 'Renault Taliant', result: Model[Make.RENAULT].TALIANT },
     { name: 'Trafic', result: Model[Make.RENAULT].TRAFIC },
     { name: 'Renault Trafic', result: Model[Make.RENAULT].TRAFIC },
     { name: 'Renaul Trafic', result: Model[Make.RENAULT].TRAFIC },
@@ -779,6 +781,8 @@ const cases = [
   ].map(addVinToTest('JTJAABABX0A001483')),
   ...[
     { name: 'Boxster', result: Model[Make.PORSCHE].BOXSTER },
+    { name: 'Cayenne', result: Model[Make.PORSCHE].CAYENNE },
+    { name: 'Cayman', result: Model[Make.PORSCHE].CAYMAN },
     { name: 'Macan', result: Model[Make.PORSCHE].MACAN },
     { name: 'Taycan', result: Model[Make.PORSCHE].TAYCAN },
     { name: 'Porsche Panamera 4 E-Hybrid (462 hk)', result: Model[Make.PORSCHE].PANAMERA },

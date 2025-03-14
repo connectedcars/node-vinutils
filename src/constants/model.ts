@@ -92,10 +92,11 @@ export const Model = {
   [Make.DACIA]: {
     DOKKER: 'Dokker',
     DUSTER: 'Duster',
-    SANDERO: 'Sandero',
-    SPRING: 'Spring',
     JOGGER: 'Jogger',
-    LODGY: 'Lodgy'
+    LODGY: 'Lodgy',
+    LOGAN: 'Logan',
+    SANDERO: 'Sandero',
+    SPRING: 'Spring'
   },
   [Make.FIAT]: {
     DUCATO: 'Ducato',
@@ -236,6 +237,8 @@ export const Model = {
   },
   [Make.PORSCHE]: {
     BOXSTER: 'Boxster',
+    CAYENNE: 'Cayenne',
+    CAYMAN: 'Cayman',
     MACAN: 'Macan',
     PANAMERA: 'Panamera',
     TAYCAN: 'Taycan',
@@ -252,6 +255,7 @@ export const Model = {
     MEGANE: 'Megane',
     RAFALE: 'Rafale',
     SCENIC: 'Scenic',
+    TALIANT: 'Taliant',
     TRAFIC: 'Trafic',
     ZOE: 'Zoe'
   },
