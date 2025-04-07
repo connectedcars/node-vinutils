@@ -64,7 +64,13 @@ export const Model = {
     IX2: 'iX2',
     IX3: 'iX3',
     '3': '3',
-    '1': '1'
+    '1': '1',
+    X1: 'X1',
+    X2: 'X2',
+    X3: 'X3',
+    X4: 'X4',
+    X5: 'X5',
+    X6: 'X6'
   },
   [Make.BYD]: {
     ATTO_3: 'Atto 3',
@@ -106,12 +112,15 @@ export const Model = {
   },
   [Make.FORD]: {
     C_MAX: 'C-MAX',
-    MONDEO: 'Mondeo',
-    TRANSIT: 'Transit',
-    FOCUS: 'Focus',
-    S_MAX: 'S-MAX',
+    CAPRI: 'Capri',
+    EXPLORER: 'Explorer',
     FIESTA: 'Fiesta',
-    MUSTANG_MACH_E: 'Mustang Mach-E'
+    FOCUS: 'Focus',
+    KUGA: 'Kuga',
+    MONDEO: 'Mondeo',
+    MUSTANG_MACH_E: 'Mustang Mach-E',
+    TRANSIT: 'Transit',
+    S_MAX: 'S-MAX'
   },
   [Make.GARIA]: {
     UTILITY_CITY: 'Utility City'
@@ -173,7 +182,8 @@ export const Model = {
   [Make.MAZDA]: {
     2: '2',
     3: '3',
-    CX5: 'CX-5'
+    CX5: 'CX-5',
+    MX30: 'MX-30'
   },
   [Make.MERCEDES_BENZ]: {
     SPRINTER: 'Sprinter',

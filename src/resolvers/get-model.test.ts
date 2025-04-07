@@ -546,20 +546,23 @@ const cases = [
 
   ...[
     { name: 'Ford C-max', result: Model[Make.FORD].C_MAX },
-    { name: 'Ford Transit', result: Model[Make.FORD].TRANSIT },
-    { name: 'Ford Focus', result: Model[Make.FORD].FOCUS },
-    { name: 'Ford S-Max', result: Model[Make.FORD].S_MAX },
-    { name: 'Ford fiesTA', result: Model[Make.FORD].FIESTA },
-    { name: 'Ford Mustang Mach-e', result: Model[Make.FORD].MUSTANG_MACH_E },
-    { name: 'Ford Transit 2.2 Tdci (140 Hk) 350m Van Fwd Manuel', result: Model[Make.FORD].TRANSIT },
-    { name: 'Ford Transit 2.2 Tdci (140 Hk) Kassevogn Man.', result: Model[Make.FORD].TRANSIT },
-    { name: 'Ford Transit Custom 2.2 Tdci (100 Hk) 270 L1 Van Forhjulstræk Manuel', result: Model[Make.FORD].TRANSIT },
     { name: 'Ny C-max 2.0 tdci (170 Hk) Van Forhjulstræk Automatisk', result: Model[Make.FORD].C_MAX },
     { name: 'C-max Van 1,6 Tdci', result: Model[Make.FORD].C_MAX },
     { name: 'Focus C-max 1,6', result: Model[Make.FORD].C_MAX },
     { name: 'C-max 1.6 Tdci (115 Hk) Van Forhjulstræk Manuel', result: Model[Make.FORD].C_MAX },
+    { name: 'Ford Capri', result: Model[Make.FORD].CAPRI },
+    { name: 'Ford Explorer', result: Model[Make.FORD].EXPLORER },
+    { name: 'Ford fiesTA', result: Model[Make.FORD].FIESTA },
+    { name: 'Ford Focus', result: Model[Make.FORD].FOCUS },
+    { name: 'Ford Kuga', result: Model[Make.FORD].KUGA },
     { name: 'Ford Mondeo 2.0 TDCi 150 HK STAT', result: Model[Make.FORD].MONDEO },
-    { name: 'Ford Mondeo', result: Model[Make.FORD].MONDEO }
+    { name: 'Ford Mondeo', result: Model[Make.FORD].MONDEO },
+    { name: 'Ford Mustang Mach-e', result: Model[Make.FORD].MUSTANG_MACH_E },
+    { name: 'Ford S-Max', result: Model[Make.FORD].S_MAX },
+    { name: 'Ford Transit', result: Model[Make.FORD].TRANSIT },
+    { name: 'Ford Transit 2.2 Tdci (140 Hk) 350m Van Fwd Manuel', result: Model[Make.FORD].TRANSIT },
+    { name: 'Ford Transit 2.2 Tdci (140 Hk) Kassevogn Man.', result: Model[Make.FORD].TRANSIT },
+    { name: 'Ford Transit Custom 2.2 Tdci (100 Hk) 270 L1 Van Forhjulstræk Manuel', result: Model[Make.FORD].TRANSIT }
   ].map(addVinToTest('VS6AAAAAAAA123456')),
 
   ...[
@@ -631,6 +634,12 @@ const cases = [
     { name: 'BMW ix1', result: Model[Make.BMW].IX1 },
     { name: 'BMW ix2', result: Model[Make.BMW].IX2 },
     { name: 'BMW ix3', result: Model[Make.BMW].IX3 },
+    { name: 'BMW X1', result: Model[Make.BMW].X1 },
+    { name: 'BMW X2', result: Model[Make.BMW].X2 },
+    { name: 'BMW X3', result: Model[Make.BMW].X3 },
+    { name: 'BMW X4', result: Model[Make.BMW].X4 },
+    { name: 'BMW X5', result: Model[Make.BMW].X5 },
+    { name: 'BMW X6', result: Model[Make.BMW].X6 },
     { name: 'BMW 330e', result: Model[Make.BMW]['3'] },
     { name: 'BMW 120 M', result: Model[Make.BMW]['1'] }
   ].map(addVinToTest('WBY41DU01NS510982')),
@@ -691,6 +700,8 @@ const cases = [
   ...[
     { name: 'Mazda CX-5', result: Model[Make.MAZDA].CX5 },
     { name: 'Mazda CX5', result: Model[Make.MAZDA].CX5 },
+    { name: 'Mazda MX-30', result: Model[Make.MAZDA].MX30 },
+    { name: 'Mazda MX30', result: Model[Make.MAZDA].MX30 },
     { name: 'Mazda  2', result: Model[Make.MAZDA][2] },
     { name: 'Mazda  3', result: Model[Make.MAZDA][3] }
   ].map(addVinToTest('JMZAAAAAAAA123456')),
