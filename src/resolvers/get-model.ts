@@ -95,6 +95,24 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/(ix)/i)) {
         return Model[make].IX
       }
+      if (description.match(/(x1)/i)) {
+        return Model[make].X1
+      }
+      if (description.match(/(x2)/i)) {
+        return Model[make].X2
+      }
+      if (description.match(/(x3)/i)) {
+        return Model[make].X3
+      }
+      if (description.match(/(x4)/i)) {
+        return Model[make].X4
+      }
+      if (description.match(/(x5)/i)) {
+        return Model[make].X5
+      }
+      if (description.match(/(x6)/i)) {
+        return Model[make].X6
+      }
       if (description.match(/(3[0-9]{2})/i)) {
         return Model[make]['3']
       }
@@ -203,23 +221,32 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/c-max/i)) {
         return Model[make].C_MAX
       }
-      if (description.match(/mondeo/i)) {
-        return Model[make].MONDEO
+      if (description.match(/capri/i)) {
+        return Model[make].CAPRI
       }
-      if (description.match(/transit/i)) {
-        return Model[make].TRANSIT
-      }
-      if (description.match(/focus/i)) {
-        return Model[make].FOCUS
-      }
-      if (description.match(/s-max/i)) {
-        return Model[make].S_MAX
+      if (description.match(/explorer/i)) {
+        return Model[make].EXPLORER
       }
       if (description.match(/fiesta/i)) {
         return Model[make].FIESTA
       }
+      if (description.match(/focus/i)) {
+        return Model[make].FOCUS
+      }
+      if (description.match(/kuga/i)) {
+        return Model[make].KUGA
+      }
+      if (description.match(/mondeo/i)) {
+        return Model[make].MONDEO
+      }
       if (description.match(/mustang mach-e/i)) {
         return Model[make].MUSTANG_MACH_E
+      }
+      if (description.match(/s-max/i)) {
+        return Model[make].S_MAX
+      }
+      if (description.match(/transit/i)) {
+        return Model[make].TRANSIT
       }
       break
     }
@@ -355,6 +382,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
     case Make.MAZDA: {
       if (description.match(/(cx5|cx-5)/i)) {
         return Model[make].CX5
+      }
+      if (description.match(/(mx30|mx-30)/i)) {
+        return Model[make].MX30
       }
       if (description.match(/ 2$/i) || description.match(/2/i)) {
         return Model[make][2]
