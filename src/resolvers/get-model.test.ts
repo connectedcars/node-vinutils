@@ -311,6 +311,7 @@ const cases = [
     { name: 'VW NiVuS', result: Model[Make.VOLKSWAGEN].NIVUS },
     { name: 'VW SAvEiRo', result: Model[Make.VOLKSWAGEN].SAVEIRO },
     { name: 'VW TaIgUN 3', result: Model[Make.VOLKSWAGEN].TAIGUN },
+    { name: 'VW Tayron', result: Model[Make.VOLKSWAGEN].TAYRON },
     { name: 'VW VeNtO', result: Model[Make.VOLKSWAGEN].VENTO },
     { name: 'VW ViRtUs', result: Model[Make.VOLKSWAGEN].VIRTUS }
   ].map(addVinToTest('WVWAAAAAAAA123456')),
@@ -380,7 +381,9 @@ const cases = [
     { name: 'Skoda Kodiaq', result: Model[Make.SKODA].KODIAQ },
     { name: 'SKODA Kodiaq Style 2,0 TDI 150 hk 4x4', result: Model[Make.SKODA].KODIAQ },
     { name: 'Skoda Karoq', result: Model[Make.SKODA].KAROQ },
-    { name: 'SKODA Karoq Style 1,5 TSI 150 hk DSG', result: Model[Make.SKODA].KAROQ }
+    { name: 'SKODA Karoq Style 1,5 TSI 150 hk DSG', result: Model[Make.SKODA].KAROQ },
+    { name: 'Skoda Elroq', result: Model[Make.SKODA].ELROQ },
+    { name: 'Skoda Enyaq', result: Model[Make.SKODA].ENYAQ }
   ].map(addVinToTest('TMBAAAAAAAA123456')),
 
   ...[
@@ -763,6 +766,9 @@ const cases = [
     { name: 'Zoe', result: Model[Make.RENAULT].ZOE }
   ].map(addVinToTest('VF1AAAAAAAA123456')),
 
+  ...[{ name: 'Honda e:Ny1', result: Model[Make.HONDA].E_NY1 }].map(addVinToTest('NLAAAAAAAAA123456')),
+  ...[{ name: 'Honda e-ny1', result: Model[Make.HONDA].E_NY1 }].map(addVinToTest('NLAAAAAAAAA123456')),
+  ...[{ name: 'Honda E NY1', result: Model[Make.HONDA].E_NY1 }].map(addVinToTest('NLAAAAAAAAA123456')),
   ...[{ name: 'Honda HR-V', result: Model[Make.HONDA].HR_V }].map(addVinToTest('NLAAAAAAAAA123456')),
 
   ...[{ name: 'Hyundai Ioniq 5', result: Model[Make.HYUNDAI].IONIQ5 }].map(addVinToTest('TMAAAAAAAAA123456')),
