@@ -251,6 +251,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       break
     }
     case Make.HONDA: {
+      if (description.match(/e:ny1|e ny1|e-ny1/i)) {
+        return Model[make].E_NY1
+      }
       if (description.match(/hr-v/i)) {
         return Model[make].HR_V
       }
@@ -644,6 +647,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/citigo/i)) {
         return Model[make].CITIGO
       }
+      if (description.match(/elroq/i)) {
+        return Model[make].ELROQ
+      }
       if (description.match(/enyaq/i)) {
         return Model[make].ENYAQ
       }
@@ -794,6 +800,12 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/golf/i)) {
         return Model[make].GOLF
       }
+      if (description.match(/gol-saveiro/i)) {
+        return Model[make].GOL_SAVEIRO
+      }
+      if (description.match(/gol/i)) {
+        return Model[make].GOL
+      }
       if (description.match(/id. ?3/i)) {
         return Model[make]['ID.3']
       }
@@ -818,6 +830,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/multivan/i)) {
         return Model[make].MULTIVAN
       }
+      if (description.match(/nivus/i)) {
+        return Model[make].NIVUS
+      }
       if (description.match(/passat/i)) {
         return Model[make].PASSAT
       }
@@ -827,17 +842,32 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/polo/i)) {
         return Model[make].POLO
       }
+      if (description.match(/saveiro/i)) {
+        return Model[make].SAVEIRO
+      }
       if (description.match(/scirocco/i)) {
         return Model[make].SCIROCCO
       }
       if (description.match(/sharan/i)) {
         return Model[make].SHARAN
       }
+      if (description.match(/taigo/i)) {
+        return Model[make].TAIGO
+      }
+      if (description.match(/taigun/i)) {
+        return Model[make].TAIGUN
+      }
+      if (description.match(/tayron/i)) {
+        return Model[make].TAYRON
+      }
       if (description.match(/taos/i)) {
         return Model[make].TAOS
       }
       if (description.match(/(tcross|t-cross|t cross)/i)) {
         return Model[make].TCROSS
+      }
+      if (description.match(/cross sport/i)) {
+        return Model[make].CROSS_SPORT
       }
       if (description.match(/teramont/i)) {
         return Model[make].TERAMONT
@@ -859,27 +889,6 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       if (description.match(/\b(up!|up)\b/i)) {
         return Model[make].UP
-      }
-      if (description.match(/taigo/i)) {
-        return Model[make].TAIGO
-      }
-      if (description.match(/gol-saveiro/i)) {
-        return Model[make].GOL_SAVEIRO
-      }
-      if (description.match(/cross sport/i)) {
-        return Model[make].CROSS_SPORT
-      }
-      if (description.match(/gol/i)) {
-        return Model[make].GOL
-      }
-      if (description.match(/nivus/i)) {
-        return Model[make].NIVUS
-      }
-      if (description.match(/saveiro/i)) {
-        return Model[make].SAVEIRO
-      }
-      if (description.match(/taigun/i)) {
-        return Model[make].TAIGUN
       }
       if (description.match(/vento/i)) {
         return Model[make].VENTO

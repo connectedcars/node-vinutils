@@ -126,6 +126,7 @@ export const Model = {
     UTILITY_CITY: 'Utility City'
   },
   [Make.HONDA]: {
+    E_NY1: 'e:Ny1',
     HR_V: 'HR-V'
   },
   [Make.HYUNDAI]: {
@@ -288,6 +289,7 @@ export const Model = {
   },
   [Make.SKODA]: {
     CITIGO: 'Citigo',
+    ELROQ: 'Elroq',
     ENYAQ: 'Enyaq',
     FABIA: 'Fabia',
     KAMIQ: 'Kamiq',
@@ -371,6 +373,7 @@ export const Model = {
     NIVUS: 'Nivus',
     SAVEIRO: 'Saveiro',
     TAIGUN: 'Taigun',
+    TAYRON: 'Tayron',
     VENTO: 'Vento',
     VIRTUS: 'Virtus'
   },
