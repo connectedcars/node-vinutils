@@ -646,13 +646,13 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case '1V2':
     case '3VV':
     case 'VW1':
-    case 'VW2':
-    case 'WV4': {
+    case 'VW2': {
       return Make.VOLKSWAGEN
     }
     case 'WV1':
     case 'WV2':
-    case 'WV3': {
+    case 'WV3':
+    case 'WV4': {
       return Make.VOLKSWAGEN_COMMERCIAL_VEHICLES
     }
     case 'MC2':
