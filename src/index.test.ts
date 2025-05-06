@@ -28,7 +28,7 @@ describe('index', () => {
     expect(getMake({ vin: '3VVZZZAAZFD123456' })).toBe(Make.VOLKSWAGEN)
     expect(getMake({ vin: 'VW1ZZZAAZFD123456' })).toBe(Make.VOLKSWAGEN)
     expect(getMake({ vin: 'VW2ZZZAAZFD123456' })).toBe(Make.VOLKSWAGEN)
-    expect(getMake({ vin: 'WV4ZZZAAZFD123456' })).toBe(Make.VOLKSWAGEN)
+    expect(getMake({ vin: 'WV4ZZZAAZFD123456' })).toBe(Make.VOLKSWAGEN_COMMERCIAL_VEHICLES)
     expect(getMake({ vin: 'TMBJE73T3E9123456' })).toBe(Make.SKODA)
     expect(getMake({ vin: 'TMPJE73T3E9123456' })).toBe(Make.SKODA)
     expect(getMake({ vin: 'TM9JE73T3E9123456' })).toBe(Make.SKODA)
