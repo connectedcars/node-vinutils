@@ -898,7 +898,9 @@ const cases = [
     { name: 'Volvo V60', result: Model[Make.VOLVO].V60 },
     { name: 'Volvo S90', result: Model[Make.VOLVO].S90 },
     { name: 'Volvo V90', result: Model[Make.VOLVO].V90 },
-    { name: 'Volvo XC40', result: Model[Make.VOLVO].XC40 }
+    { name: 'Volvo XC40', result: Model[Make.VOLVO].XC40 },
+    { name: 'Volvo XC60', result: Model[Make.VOLVO].XC60 },
+    { name: 'Volvo XC90', result: Model[Make.VOLVO].XC90 }
   ].map(addVinToTest('YV1AAAAAAAA123456')),
 
   ...[

@@ -394,7 +394,9 @@ export const Model = {
     V60: 'V60',
     S90: 'S90',
     V90: 'V90',
-    XC40: 'XC40'
+    XC40: 'XC40',
+    XC60: 'XC60',
+    XC90: 'XC90'
   },
   [Make.XPENG]: {
     G9: 'G9',
