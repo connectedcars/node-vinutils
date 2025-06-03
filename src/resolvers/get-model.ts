@@ -944,6 +944,12 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/ xc40/i)) {
         return Model[make].XC40
       }
+      if (description.match(/ xc60/i)) {
+        return Model[make].XC60
+      }
+      if (description.match(/ xc90/i)) {
+        return Model[make].XC90
+      }
       break
     }
     case Make.XPENG: {
