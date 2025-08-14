@@ -239,7 +239,8 @@ export const Model = {
     PARTNER: 'Partner',
     2008: '2008',
     E_2008: 'e-2008',
-    3008: '3008'
+    3008: '3008',
+    508: '508'
   },
   [Make.POLESTAR]: {
     1: '1',
