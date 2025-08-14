@@ -78,7 +78,7 @@ function getFuelTypeFromVehicleInfo(vehicle: Vehicle): FuelType | null {
       break
   }
 
-  if (description.match(/e-crafter|abt|caddy/i)) {
+  if (description.match(/e-crafter|e-caddy|e-transporter/i)) {
     return FuelType.ELECTRIC
   } else if (description.match(/hybrid/i) && !description.match(/mild hybrid/i)) {
     return FuelType.HYBRID
