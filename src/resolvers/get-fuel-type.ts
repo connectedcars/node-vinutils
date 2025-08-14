@@ -65,6 +65,9 @@ function getFuelTypeFromVehicleInfo(vehicle: Vehicle): FuelType | null {
       if (description.match(/mii electric/i)) {
         return FuelType.ELECTRIC
       }
+      if (description.match(/tarraco/i)) {
+        return FuelType.HYBRID
+      }
       break
     }
     case Make.CUPRA: {

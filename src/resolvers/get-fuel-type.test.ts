@@ -26,6 +26,7 @@ describe('get-fuel-type', () => {
       { name: 'VW e-Crafter L3 Kassevogn EL 136HK AUT1G', result: FuelType.ELECTRIC },
       { name: 'SEAT CUPRA Tavascan VZ adrena EL 340 HK 4x4 A', result: FuelType.ELECTRIC },
       { name: 'SEAT CUPRA Born Pasión EL 231 HK AUT1', result: FuelType.ELECTRIC },
+      { name: 'SEAT Tarraco e-HYB 1,4 TSI 245 HK Plug-in', result: FuelType.HYBRID },
       { name: 'AUDI A6 ALLROAD 3,0 TFSIe 333 HK 245 KW QUATTR', result: FuelType.HYBRID },
       { name: 'SKODA ENYAQ 60 Plus EL 179 hk AUT', result: FuelType.ELECTRIC },
       { vin: 'WVWZZZZZZAZ000000', name: 'gte', result: FuelType.HYBRID },
