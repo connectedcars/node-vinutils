@@ -24,7 +24,7 @@ describe('get-fuel-type', () => {
       { name: 'VW ID.4 1st 204HK AUT1 Performance', result: FuelType.ELECTRIC },
       { name: 'VW ID.7 1st 204HK AUT1 Performance', result: FuelType.ELECTRIC },
       { name: 'VW e-Crafter L3 Kassevogn EL 136HK AUT1G', result: FuelType.ELECTRIC },
-      { name: 'Volkswagen Caddy Panel Van 2.0 TDI BlueMotion DSG Sequential', result: FuelType.ELECTRIC },
+      { name: 'ABT e-Caddy Maxi skåp 2,0 102hk,300', result: FuelType.ELECTRIC },
       { name: 'SEAT CUPRA Tavascan VZ adrena EL 340 HK 4x4 A', result: FuelType.ELECTRIC },
       { name: 'ABT T6.1 e-Transporter 113hk,DSG,3400mm', result: FuelType.ELECTRIC },
       { name: 'SEAT CUPRA Born Pasión EL 231 HK AUT1', result: FuelType.ELECTRIC },
