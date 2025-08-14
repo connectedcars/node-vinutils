@@ -544,7 +544,8 @@ const cases = [
     { name: 'Expert Varebil G9 2,0 Hdi 128 Hk L1h1', result: Model[Make.PEUGEOT].EXPERT },
     { name: 'Peugeot e-2008', result: Model[Make.PEUGEOT].E_2008 },
     { name: 'Peugeot 2008', result: Model[Make.PEUGEOT][2008] },
-    { name: 'Peugeot 3008', result: Model[Make.PEUGEOT][3008] }
+    { name: 'Peugeot 3008', result: Model[Make.PEUGEOT][3008] },
+    { name: 'Peugeot 508', result: Model[Make.PEUGEOT][508] }
   ].map(addVinToTest('VF3AAAAAAAA123456')),
 
   ...[

@@ -524,6 +524,9 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       if (description.match(/3008/i)) {
         return Model[make][3008]
       }
+      if (description.match(/508/i)) {
+        return Model[make][508]
+      }
       break
     }
     case Make.POLESTAR: {
