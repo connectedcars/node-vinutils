@@ -370,26 +370,27 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case 'SBM': {
       return Make.MCLAREN
     }
+    case '4JG':
+    case '8BR':
+    case '8BT':
+    case '8BU':
+    case '9BM':
+    case 'ADB':
     case 'MBR':
     case 'NLE':
     case 'NMB':
     case 'VSA':
+    case 'W1V':
+    case 'W1W':
+    case 'W1Y':
+    case 'W1Z':
+    case 'WD3':
+    case 'WD4':
     case 'WDB':
     case 'WDD':
     case 'WDF':
-    case 'WMX':
-    case 'W1V':
-    case '4JG':
-    case '9BM':
-    case '8BR':
-    case 'W1Z':
     case 'WDZ':
-    case '8BT':
-    case 'W1W':
-    case 'WD4':
-    case '8BU':
-    case 'W1Y':
-    case 'WD3': {
+    case 'WMX': {
       return Make.MERCEDES_BENZ
     }
     case '1ME': {
@@ -652,7 +653,8 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     case 'WV1':
     case 'WV2':
     case 'WV3':
-    case 'WV4': {
+    case 'WV4':
+    case 'WV5': {
       return Make.VOLKSWAGEN_COMMERCIAL_VEHICLES
     }
     case 'MC2':
