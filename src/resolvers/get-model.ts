@@ -292,6 +292,18 @@ function getModelFromMakeDescription(make: Make, description: string): string | 
       }
       break
     }
+    case Make.LAND_ROVER: {
+      if (description.match(/range rover/i)) {
+        return Model[make].RANGE_ROVER
+      }
+      if (description.match(/defender/i)) {
+        return Model[make].DEFENDER
+      }
+      if (description.match(/discovery/i)) {
+        return Model[make].DISCOVERY
+      }
+      break
+    }
     case Make.LDV: {
       if (description.match(/deliver ?7/i)) {
         return Model[make].DELIVER_7

@@ -6,6 +6,7 @@ type ModelType = typeof Model
 
 export type Models =
   | Values<ModelType[Make.AUDI]>
+  | Values<ModelType[Make.BYD]>
   | Values<ModelType[Make.CITROEN]>
   | Values<ModelType[Make.CUPRA]>
   | Values<ModelType[Make.DACIA]>
@@ -15,6 +16,7 @@ export type Models =
   | Values<ModelType[Make.HONDA]>
   | Values<ModelType[Make.HYUNDAI]>
   | Values<ModelType[Make.IVECO]>
+  | Values<ModelType[Make.LAND_ROVER]>
   | Values<ModelType[Make.MAXUS]>
   | Values<ModelType[Make.MAZDA]>
   | Values<ModelType[Make.MERCEDES_BENZ]>
@@ -143,6 +145,11 @@ export const Model = {
   },
   [Make.LAMBORGHINI]: {
     REVUELTO: 'Revuelto'
+  },
+  [Make.LAND_ROVER]: {
+    RANGE_ROVER: 'Range Rover',
+    DEFENDER: 'Defender',
+    DISCOVERY: 'Discovery'
   },
   [Make.LDV]: {
     DELIVER_7: 'Deliver 7',
