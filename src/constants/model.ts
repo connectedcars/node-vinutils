@@ -6,6 +6,7 @@ type ModelType = typeof Model
 
 export type Models =
   | Values<ModelType[Make.AUDI]>
+  | Values<ModelType[Make.BYD]>
   | Values<ModelType[Make.CITROEN]>
   | Values<ModelType[Make.CUPRA]>
   | Values<ModelType[Make.DACIA]>
