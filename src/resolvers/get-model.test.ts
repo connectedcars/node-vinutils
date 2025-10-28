@@ -788,6 +788,12 @@ const cases = [
   ),
 
   ...[
+    { name: 'Land Rover Range Rover', result: Model[Make.LAND_ROVER].RANGE_ROVER },
+    { name: 'Land Rover Defender', result: Model[Make.LAND_ROVER].DEFENDER },
+    { name: 'Land Rover Discovery', result: Model[Make.LAND_ROVER].DISCOVERY }
+  ].map(addVinToTest('SALAAAAAAAA123456')),
+
+  ...[
     { name: 'Lexus Rz 450e', result: Model[Make.LEXUS].RZ },
     { name: 'Lexus UX', result: Model[Make.LEXUS].UX },
     { name: 'Lexus ES', result: Model[Make.LEXUS].ES },
