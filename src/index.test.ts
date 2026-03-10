@@ -272,6 +272,8 @@ describe('index', () => {
     expect(getMake({ vin: 'AAAUNKNOWNMAKEAAA' })).toBeNull()
     expect(getMake({ vin: 'VSS-invalid-vin' })).toBeNull()
     expect(getMake({ name: 'bogus' })).toBeNull()
+    expect(getMake({ name: 'VW Nutzfahrzeuge' })).toBe(Make.VOLKSWAGEN_COMMERCIAL_VEHICLES)
+
     expect(getMake({})).toBeNull()
   })
 
