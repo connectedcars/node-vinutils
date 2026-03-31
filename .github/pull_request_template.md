@@ -10,3 +10,4 @@
 | https://github.com/connectedcars/notifier/               | `node-vinutils`, `node-backend`, `node-integration` |
 | https://github.com/connectedcars/job-runner-rollouts/    | `node-backend`                                      |
 | https://github.com/connectedcars/job-runner-integration/ | `node-backend`, `vehicle-configs`, `node-vinutils`  |
+| https://github.com/connectedcars/external-lookup/        | `node-vinutils`, `node-backend`.                    |
