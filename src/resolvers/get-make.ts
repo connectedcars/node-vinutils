@@ -762,6 +762,9 @@ function getMakeFromDescription(description: string): Make | null {
   } else if (description.match(/(škoda|skoda)/i)) {
     return Make.SKODA
   } else if (description.match(/(volkswagen|vw)/i)) {
+    if (description.match(/nutzfahrzeuge/i)) {
+      return Make.VOLKSWAGEN_COMMERCIAL_VEHICLES
+    }
     return Make.VOLKSWAGEN
   } else if (description.match(/ligier/i)) {
     return Make.LIGIER
