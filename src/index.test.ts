@@ -69,6 +69,7 @@ describe('index', () => {
     expect(getMake({ vin: 'VF7YDDMFC11473862' })).toBe(Make.CITROEN)
     expect(getMake({ vin: 'VS7YDDMFC11473862' })).toBe(Make.CITROEN)
     expect(getMake({ vin: '935YDDMFC11473862' })).toBe(Make.CITROEN)
+    expect(getMake({ vin: 'VR7YDDMFC11473862' })).toBe(Make.CITROEN)
     expect(getMake({ vin: 'UU18SDPJ560466667' })).toBe(Make.DACIA)
     expect(getMake({ vin: 'XLR8SDPJ560466667' })).toBe(Make.DAF)
     expect(getMake({ vin: 'SUPJF356EXK301059' })).toBe(Make.DAEWOO)

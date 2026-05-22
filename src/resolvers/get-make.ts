@@ -93,7 +93,8 @@ function getMakeFromVin(vin: string, modelCode?: string | null): Make | null {
     }
     case 'VF7':
     case 'VS7':
-    case '935': {
+    case '935':
+    case 'VR7': {
       return Make.CITROEN
     }
     case 'UU1': {
