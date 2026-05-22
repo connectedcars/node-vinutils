@@ -52,7 +52,9 @@
     "prettier": "3.3.2",
     "typescript": "5.5.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@connectedcars/vinutils": "^2.2.18"
+  },
   "engines": {
     "node": ">=20.0.0"
   }
